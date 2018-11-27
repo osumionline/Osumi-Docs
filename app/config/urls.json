@@ -9,6 +9,18 @@
           "url": "/",
           "action": "start",
           "comment": "Página de inicio"
+        },
+        {
+          "id": "page_installation",
+          "url": "/installation",
+          "action": "installation",
+          "comment": "Página de Instalación"
+        },
+        {
+          "id": "page_structure",
+          "url": "/structure",
+          "action": "structure",
+          "comment": "Página de Estructura"
         }
       ]
     }
