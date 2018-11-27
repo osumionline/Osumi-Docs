@@ -1,0 +1,16 @@
+{
+  "urls": [
+    {
+      "id": "pages",
+      "module": "home",
+      "urls": [
+        {
+          "id": "page_start",
+          "url": "/",
+          "action": "start",
+          "comment": "Página de inicio"
+        }
+      ]
+    }
+  ]
+}
