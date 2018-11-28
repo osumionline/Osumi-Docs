@@ -5,22 +5,76 @@
       "module": "home",
       "urls": [
         {
-          "id": "page_start",
+          "id": "page_es_start",
           "url": "/",
-          "action": "start",
+          "action": "esStart",
           "comment": "Página de inicio"
         },
         {
-          "id": "page_installation",
-          "url": "/installation",
-          "action": "installation",
+          "id": "page_en_start",
+          "url": "/en",
+          "action": "enStart",
+          "comment": "Página de inicio (inglés)"
+        },
+        {
+          "id": "page_eu_start",
+          "url": "/eu",
+          "action": "euStart",
+          "comment": "Página de inicio (euskara)"
+        },
+        {
+          "id": "page_es_installation",
+          "url": "/es/instalacion",
+          "action": "esInstallation",
           "comment": "Página de Instalación"
         },
         {
-          "id": "page_structure",
-          "url": "/structure",
-          "action": "structure",
+          "id": "page_en_installation",
+          "url": "/en/installation",
+          "action": "enInstallation",
+          "comment": "Página de Instalación (inglés)"
+        },
+        {
+          "id": "page_eu_installation",
+          "url": "/eu/instalazioa",
+          "action": "euInstallation",
+          "comment": "Página de Instalación (euskara)"
+        },
+        {
+          "id": "page_es_structure",
+          "url": "/es/estructura",
+          "action": "esStructure",
           "comment": "Página de Estructura"
+        },
+        {
+          "id": "page_en_structure",
+          "url": "/en/structure",
+          "action": "enStructure",
+          "comment": "Página de Estructura (inglés)"
+        },
+        {
+          "id": "page_eu_structure",
+          "url": "/eu/estruktura",
+          "action": "euStructure",
+          "comment": "Página de Estructura (euskara)"
+        },
+        {
+          "id": "page_es_configuration",
+          "url": "/es/configuracion",
+          "action": "esConfiguration",
+          "comment": "Página de Configuración"
+        },
+        {
+          "id": "page_en_configuration",
+          "url": "/en/configuration",
+          "action": "enConfiguration",
+          "comment": "Página de Configuración (inglés)"
+        },
+        {
+          "id": "page_eu_configuration",
+          "url": "/eu/konfigurazioa",
+          "action": "euConfiguration",
+          "comment": "Página de Configuración (euskara)"
         }
       ]
     }

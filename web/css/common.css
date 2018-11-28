@@ -19,6 +19,12 @@ body{
   margin: 0;
   padding: 0;
 }
+p{
+  margin: 8px 16px;
+}
+ol li{
+  margin-bottom: 16px;
+}
 .container{
   width: 100%;
   height: 100%;
@@ -78,12 +84,13 @@ header button.pressed{
   list-style-type: none;
   position: absolute;
   right: 0;
-  top: 50px;
+  top: 51px;
   border: 1px solid #ccc;
   border-top: 0;
   border-right: 0;
   border-bottom-left-radius: 6px;
   z-index: 10;
+  background-color: #fff;
 }
 .language-selector-sm.open{
   display: block;
@@ -110,7 +117,7 @@ aside{
 aside.open{
   position: absolute;
   left: 0;
-  top: 50px;
+  top: 51px;
   z-index: 10;
   display: block;
 }
@@ -134,6 +141,31 @@ main h1{
   margin-top: 0;
   line-height: 40px;
 }
+.previous-next{
+  margin-top: 16px;
+  border-top: 1px solid #ccc;
+  padding-top: 16px;
+  overflow: hidden;
+}
+.previous-next a{
+  display: inline-block;
+  border: 1px solid #ccc;
+  padding: 16px;
+  border-radius: 6px;
+}
+.previous-next a:hover{
+  border: 1px solid #000;
+}
+.previous-next a.previous{
+  float: left;
+  padding-left: 40px;
+  background: url(/img/previous.svg) no-repeat scroll 10% center transparent;
+}
+.previous-next a.next{
+  float: right;
+  padding-right: 40px;
+  background: url(/img/next.svg) no-repeat scroll 90% center transparent;
+}
 footer{
   clear: both;
   line-height: 50px;
@@ -146,6 +178,13 @@ footer a{
 }
 footer a.footer-version{
   float: left;
+}
+code{
+  background-color: rgba(27,31,35,.05);
+  border-radius: 3px;
+  font-size: 85%;
+  margin: 0;
+  padding: .2em .4em;
 }
 @media screen and (min-width: 66.25em) {
   header{

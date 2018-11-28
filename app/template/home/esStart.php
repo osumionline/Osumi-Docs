@@ -15,6 +15,9 @@
     <p>Y así llegamos a la versión 4.0, una nueva versión en la que se ha cambiado la estructura del framework, la configuración, gestión de tareas...</p>
     <p>Si has llegado a leer hasta aquí, muchas gracias por interesarte :D</p>
     <p>Iñigo Gorosabel <a href="https://twitter.com/igorosabel">@Twitter</a></p>
+    <div class="previous-next">
+      <a href="/es/instalacion" class="next">Instalación</a>
+    </div>
   </main>
   {{footer}}
 </div>
