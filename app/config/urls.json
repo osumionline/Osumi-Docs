@@ -1,7 +1,7 @@
 {
   "urls": [
     {
-      "id": "pages",
+      "id": "home",
       "module": "home",
       "urls": [
         {
@@ -21,7 +21,13 @@
           "url": "/eu",
           "action": "euStart",
           "comment": "Página de inicio (euskara)"
-        },
+        }
+      ]
+    },
+    {
+      "id": "installation",
+      "module": "installation",
+      "urls": [
         {
           "id": "page_es_installation",
           "url": "/es/instalacion",
@@ -39,7 +45,13 @@
           "url": "/eu/instalazioa",
           "action": "euInstallation",
           "comment": "Página de Instalación (euskara)"
-        },
+        }
+      ]
+    },
+    {
+      "id": "structure",
+      "module": "structure",
+      "urls": [
         {
           "id": "page_es_structure",
           "url": "/es/estructura",
@@ -57,7 +69,13 @@
           "url": "/eu/estruktura",
           "action": "euStructure",
           "comment": "Página de Estructura (euskara)"
-        },
+        }
+      ]
+    },
+    {
+      "id": "configuration",
+      "module": "configuration",
+      "urls": [
         {
           "id": "page_es_configuration",
           "url": "/es/configuracion",
