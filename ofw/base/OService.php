@@ -2,7 +2,12 @@
   class OService{
     protected $controller = null;
 
-    public final function setController($controller){
+    public final function setController($controller=null){
+      if (is_null($controller)){
+        $controller = new OController();
+        $controller->blankController();
+        
+      }
       $this->controller = $controller;
     }
 

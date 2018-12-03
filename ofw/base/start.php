@@ -66,7 +66,14 @@
   // Libs
   $lib_list = $c->getLibs();
   foreach ($lib_list as $lib){
-    require($c->getDir('ofw_lib').$lib.'.php');
+    $lib_file = $c->getDir('ofw_lib').$lib.'.php';
+    if (file_exists($lib_file)){
+      require($c->getDir('ofw_lib').$lib.'.php');
+    }
+    else{
+      echo "ERROR: Lib file \"".$lib_file."\" not found.\n";
+      exit();
+    }
   }
 
   // User services

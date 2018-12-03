@@ -1,5 +1,5 @@
 {
-  "base_url": "https://ofw.osumi.es/",
+  "base_url": "https://framework.osumi.es/",
   "default_title": "Osumi Framework",
   "lang": "es",
   "css": ["common"],

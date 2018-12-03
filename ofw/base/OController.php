@@ -6,8 +6,8 @@ class OController{
 	protected $log      = null;
 	protected $session  = null;
 	protected $cookie   = null;
-
-	public final function loadController($url_result){
+	
+	public final function blankController(){
   	global $c;
 
   	$this->config   = $c;
@@ -16,6 +16,10 @@ class OController{
 		$this->log      = new OLog();
 		$this->session  = new OSession();
 		$this->cookie   = new OCookie();
+	}
+
+	public final function loadController($url_result){
+  	$this->blankController();
 
 	  // Módulo/acción actual y anterior
 	  if ($this->session->getParam('current') != ''){

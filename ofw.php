@@ -1,6 +1,5 @@
 <?php
 session_start();
-$start_time = microtime(true);
 $where = 'task_ofw';
 
 require(dirname(__FILE__).'/ofw/base/start.php');

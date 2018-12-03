@@ -20,9 +20,9 @@ class OBase{
   protected $updated = null;
   protected $show_in_backend = true;
 
-  function load($model_name, $table_name, $model){
+  function load($table_name, $model){
     $this->db         = new ODB();
-    $this->model_name = $model_name;
+    $this->model_name = get_class($this);
     $this->table_name = $table_name;
     $this->model      = $model;
 
@@ -111,7 +111,7 @@ class OBase{
           return $field['value'];
         }
       }
-      if ($field['type']==Base::NUM){
+      if ($field['type']==Base::NUM || $field['type']==Base::PK){
         return (int)$field['value'];
       }
       if ($field['type']==Base::BOOL){

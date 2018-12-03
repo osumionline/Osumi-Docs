@@ -12,7 +12,7 @@ Options +FollowSymLinks +ExecCGI
 
   # Descomentar para redirigir todas las llamadas a https
   RewriteCond %{SERVER_PORT} 80
-  RewriteRule ^(.*)$ https://ofw.osumi.es/$1 [R,L]
+  RewriteRule ^(.*)$ https://framework.osumi.es/$1 [R,L]
 
   RewriteCond %{REQUEST_FILENAME} !-f
   # Redirigimos todo al controlador frontal
