@@ -4,6 +4,7 @@ class Base{
     Field types
   */
   const PK       = 1;
+  const PK_STR   = 10;
   const CREATED  = 2;
   const UPDATED  = 3;
   const NUM      = 4;
@@ -438,7 +439,10 @@ class Base{
     }
     foreach ($models as $model) {
       if (method_exists($model, 'generateRefs')) {
-        $sql .= $model->generateRefs() . "\n\n";
+        $refs = $model->generateRefs();
+        if ($refs!=''){
+          $sql .= $refs . "\n\n";
+        }
       }
     }
 

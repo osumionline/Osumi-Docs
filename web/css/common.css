@@ -197,6 +197,40 @@ pre{
   overflow: auto;
   padding: 16px;
 }
+.data-table{
+  margin: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+.data-header{
+  background-color: #eee;
+}
+.data-row{
+  display: flex;
+}
+.data-param{
+  flex: 1;
+  padding: 16px;
+  font-weight: bold;
+  border-right: 1px solid #ccc;
+}
+.data-default{
+  flex: 1;
+  padding: 16px;
+  border-right: 1px solid #ccc;
+}
+.data-explanation{
+  flex: 5;
+  padding: 16px;
+}
+.data-long{
+  flex: 6;
+  padding: 16px;
+}
+.data-divider{
+  height: 2px;
+  background-color: #eee;
+}
 @media screen and (min-width: 66.25em) {
   header{
     text-align: left;

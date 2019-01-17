@@ -4,19 +4,31 @@ $urls = [
     'start'         => OUrl::generateUrl('page_es_start'),
     'installation'  => OUrl::generateUrl('page_es_installation'),
     'structure'     => OUrl::generateUrl('page_es_structure'),
-    'configuration' => OUrl::generateUrl('page_es_configuration')
+    'configuration' => OUrl::generateUrl('page_es_configuration'),
+    'urls'          => OUrl::generateUrl('page_es_urls'),
+    'modules'       => OUrl::generateUrl('page_es_modules'),
+    'filters'       => OUrl::generateUrl('page_es_filters'),
+    'translations'  => OUrl::generateUrl('page_es_translations')
   ],
   'en' => [
     'start'         => OUrl::generateUrl('page_en_start'),
     'installation'  => OUrl::generateUrl('page_en_installation'),
     'structure'     => OUrl::generateUrl('page_en_structure'),
-    'configuration' => OUrl::generateUrl('page_en_configuration')
+    'configuration' => OUrl::generateUrl('page_en_configuration'),
+    'urls'          => OUrl::generateUrl('page_en_urls'),
+    'modules'       => OUrl::generateUrl('page_en_modules'),
+    'filters'       => OUrl::generateUrl('page_en_filters'),
+    'translations'  => OUrl::generateUrl('page_en_translations')
   ],
   'eu' => [
     'start'         => OUrl::generateUrl('page_eu_start'),
     'installation'  => OUrl::generateUrl('page_eu_installation'),
     'structure'     => OUrl::generateUrl('page_eu_structure'),
-    'configuration' => OUrl::generateUrl('page_eu_configuration')
+    'configuration' => OUrl::generateUrl('page_eu_configuration'),
+    'urls'          => OUrl::generateUrl('page_eu_urls'),
+    'modules'       => OUrl::generateUrl('page_eu_modules'),
+    'filters'       => OUrl::generateUrl('page_eu_filters'),
+    'translations'  => OUrl::generateUrl('page_eu_translations')
   ]
 ];
 ?>

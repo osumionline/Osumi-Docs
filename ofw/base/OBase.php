@@ -5,6 +5,7 @@ class OBase{
   protected $table_name = '';
   protected $default_model = [
     Base::PK       => ['default'=>null,  'original'=>null,  'value'=>null,  'clean'=>false, 'incr'=>true,  'size'=>11, 'nullable'=>false, 'comment'=>'', 'ref'=>'', 'by'=>'', 'expose'=>true],
+    Base::PK_STR   => ['default'=>null,  'original'=>null,  'value'=>null,  'clean'=>false, 'incr'=>false, 'size'=>50, 'nullable'=>false, 'comment'=>'', 'ref'=>'', 'by'=>'', 'expose'=>true],
     Base::CREATED  => ['default'=>null,  'original'=>null,  'value'=>null,  'clean'=>false, 'incr'=>false, 'size'=>0,  'nullable'=>false, 'comment'=>'', 'ref'=>'', 'by'=>'', 'expose'=>true],
     Base::UPDATED  => ['default'=>null,  'original'=>null,  'value'=>null,  'clean'=>false, 'incr'=>false, 'size'=>0,  'nullable'=>true,  'comment'=>'', 'ref'=>'', 'by'=>'', 'expose'=>true],
     Base::NUM      => ['default'=>0,     'original'=>0,     'value'=>0,     'clean'=>false, 'incr'=>false, 'size'=>11, 'nullable'=>false, 'comment'=>'', 'ref'=>'', 'by'=>'', 'expose'=>true],
@@ -28,7 +29,7 @@ class OBase{
 
     $full_model = [];
     foreach ($model as $field_name => $row){
-      if ($row['type']===Base::PK){
+      if ($row['type']===Base::PK || $row['type']===Base::PK_STR){
         array_push($this->pk, $field_name);
       }
       if ($row['type']===Base::CREATED){
@@ -132,7 +133,7 @@ class OBase{
     $model = $this->getModel();
 
     foreach ($model as $field_name => $row){
-      if ($row['type']==Base::PK){
+      if ($row['type']===Base::PK || $row['type']===Base::PK_STR){
         array_push($ret, $field_name);
       }
     }
@@ -168,12 +169,12 @@ class OBase{
           $holder = "";
           $value  = "NULL";
         }
-        if ($field['type']!=Base::PK && $field['original']!=$value){
+        if ($field['type']!=Base::PK && $field['type']!=Base::PK_STR && $field['original']!==$value){
           if ($field['clean']){
-            $cad = "`".$fieldname."` = ".$holder.$this->db->cleanStr($value).$holder;
+            $cad = "`".$field_name."` = ".$holder.$this->db->cleanStr($value).$holder;
           }
           else{
-            $cad = "`".$fieldname."` = ".$holder.$value.$holder;
+            $cad = "`".$field_name."` = ".$holder.$value.$holder;
           }
           array_push($updated_fields, $cad);
         }
@@ -351,6 +352,7 @@ class OBase{
               $sql .= "INT(11)";
             }
             break;
+            case Base::PK_STR:
             case Base::TEXT:{
               if ($field['size']<256){
                 $sql .= "VARCHAR(".$field['size'].") COLLATE utf8_unicode_ci";
