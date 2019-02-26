@@ -136,7 +136,7 @@ aside a.active{
 main{
   float: left;
   width: 100%;
-  height: calc(100% - 102px);
+  height: calc(100% - 134px);
   padding: 16px;
   overflow: auto;
 }
