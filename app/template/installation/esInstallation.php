@@ -10,15 +10,19 @@
       <li>Instalación mediante git</li>
       <li>Descargar el código en zip</li>
       <li>Composer</li>
+      <li>Creador</li>
     </ol>
+
     <h3>Instalación mediante git</h3>
     <p>Ejecutando el siguiente comando se puede obtener una copia completa:</p>
     <p><code>git clone https://github.com/igorosabel/Osumi-Framework.git</code></p>
     <p>Esto creará una carpeta llamada <code>Osumi-Framework</code> en el directorio en el que se haya ejecutado el comando</p>
+
     <h3>Descargar el código en zip</h3>
     <p>Pulsando en el siguiente enlace se puede bajar un archivo zip con todo el contenido del repositorio desde Github:</p>
     <p><a href="https://github.com/igorosabel/Osumi-Framework/archive/master.zip">Descargar zip (529 KB)</a></p>
     <p>Al pulsar, se descargará un archivo llamado <code>Osumi-Framework-master.zip</code> con el contenido del repositorio.</p>
+
     <h3>Composer</h3>
     <p>El framework dispone de una utilidad llamada <code>Composer</code> que permite exportar todo el contenido de una aplicación a un solo archivo PHP que luego se puede copiar o llevar donde sea necesario.</p>
     <p>Por ejemplo para mover una aplicación de un sitio a otro, hacer una copia de seguridad...</p>
@@ -27,6 +31,35 @@
     <p>Dentro de este archivo zip hay un archivo llamado <code>ofw_composer.php</code></p>
     <p>Ejecutando el siguiente comando se extrae todo el contenido de este archivo <code>Composer</code>:</p>
     <p><code>php ofw_composer.php</code></p>
+
+    <h3>Creador</h3>
+    <p>He creado una aplicación llamada <strong>Creador</strong> que permite mediante una interfaz web diseñar y configurar una aplicación desde cero.</p>
+    <p><a href="https://creador.osumi.es" target="_blank">https://creador.osumi.es</a></p>
+    <p>En esta aplicación se puede diseñar toda la configuración del sitio, los modelos de base de datos, librerías que se pueden añadir a la parte frontal (Angular, jQuery, Bootstrap...) y finalmente se puede generar un archivo ZIP que se puede descargar.</p>
+    <p>El Creador deja los apartados de URLs y controladores vacíos para empezar a programar.</p>
+    <div class="image-gallery">
+      <div class="image-container">
+        <img class="image-item" src="/img/cr1.png" alt="Creador: Proyecto" title="Creador: Proyecto">
+      </div>
+      <div class="image-container">
+        <img class="image-item" src="/img/cr2.png" alt="Creador: Módulos" title="Creador: Módulos">
+      </div>
+      <div class="image-container">
+        <img class="image-item" src="/img/cr3.png" alt="Creador: Modelo" title="Creador: Modelo">
+      </div>
+      <div class="image-container">
+        <img class="image-item" src="/img/cr4.png" alt="Creador: Incluir" title="Creador: Incluir">
+      </div>
+      <div class="image-container">
+        <img class="image-item" src="/img/cr5.png" alt="Creador: Descargar" title="Creador: Descargar">
+      </div>
+    </div>
+    <p>El código de esta aplicación también se encuentra en GitHub con licencia MIT:</p>
+    <ul>
+      <li>Aplicación web (front): <a href="https://github.com/igorosabel/Creador" target="_blank">https://github.com/igorosabel/Creador</a></<li>
+      <li>API de la aplicación (backend): <a href="https://github.com/igorosabel/ApiCreador" target="_blank">https://github.com/igorosabel/ApiCreador</a></li>
+    </ul>
+
     <h3>Instalación</h3>
     <p>Una vez se dispone de todo el código hay que realizar los siguientes pasos:</p>
     <p>Junto con la aplicación se incluye código de ejemplo para una simple aplicación de fotos: un listado de usuarios y el detalle de un usuario. También se incluye un ejemplo de llamada AJAX para la creación de una API.</p>

@@ -145,6 +145,30 @@
       ]
     },
     {
+      "id": "services",
+      "module": "services",
+      "urls": [
+        {
+          "id": "page_es_services",
+          "url": "/es/servicios",
+          "action": "esServices",
+          "comment": "Página de Servicios"
+        },
+        {
+          "id": "page_en_services",
+          "url": "/en/services",
+          "action": "enServices",
+          "comment": "Página de Servicios (inglés)"
+        },
+        {
+          "id": "page_eu_services",
+          "url": "/eu/zerbitzuak",
+          "action": "euServices",
+          "comment": "Página de Servicios (euskara)"
+        }
+      ]
+    },
+    {
       "id": "filters",
       "module": "filters",
       "urls": [

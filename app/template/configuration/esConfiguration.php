@@ -51,13 +51,19 @@
         <div class="data-default">false</div>
         <div class="data-explanation">Habilita el uso de traducciones en la aplicación. Ver <a href="/es/traducciones">Traducciones</a>.</div>
       </div>
-      <div class="data-divider"></div>
       <div class="data-row">
-        <div class="data-param">packages</div>
-        <div class="data-default">[]</div>
-        <div class="data-explanation">Indica los paquetes opcionales a incluir en el framework. Ver <a href="/es/paquetes">Paquetes</a>.</div>
+        <div class="data-param">crypt</div>
+        <div class="data-default">false</div>
+        <div class="data-explanation">Habilita la clase <code>OCrypt</code> con funciones para cifrar y descifrar cadenas de texto.</div>
       </div>
-      <div class="data-divider"></div>
+      <div class="data-row">
+        <div class="data-param">file</div>
+        <div class="data-default">false</div>
+        <div class="data-explanation">Habilita la clase <code>OFile</code> con funciones para manipular archivos.</div>
+      </div>
+    </div>
+
+    <div class="data-table">
       <div class="data-row">
         <div class="data-param">db</div>
         <div class="data-long"><code>db</code> sirve para indicar la configuración de la base de datos a usar.</div>
@@ -83,7 +89,9 @@
         <div class="data-default">(no tiene)</div>
         <div class="data-explanation">Nombr de la base de datos a la que conectarse.</div>
       </div>
-      <div class="data-divider"></div>
+    </div>
+
+    <div class="data-table">
       <div class="data-row">
         <div class="data-param">cookies</div>
         <div class="data-long">En el caso de que se quieran usar cookies personalizadas, <code>cookies</code> sirve para configurarlas.</div>
@@ -99,37 +107,9 @@
         <div class="data-default">(no tiene)</div>
         <div class="data-explanation">Dominio en el que serán validas las cookies. Hay que indicar un punto antes del dominio, por ejemplo <code>.osumi.es</code>.</div>
       </div>
-      <div class="data-divider"></div>
-      <div class="data-row">
-        <div class="data-param">debug</div>
-        <div class="data-default">false</div>
-        <div class="data-explanation">Indica si se quiere habilitar el registro de depuración. En caso de habilitarse se registrarán las consultas realizadas, logs personalizados... que se escribirán en el archivo <code>logs/debug.log</code>.</div>
-      </div>
-      <div class="data-divider"></div>
-      <div class="data-row">
-        <div class="data-param">base_url</div>
-        <div class="data-default">(no tiene)</div>
-        <div class="data-explanation">Indica la dirección completa de la aplicación, por ejemplo <code>https://framework.osumi.es/</code>.</div>
-      </div>
-      <div class="data-divider"></div>
-      <div class="data-row">
-        <div class="data-param">admin_email</div>
-        <div class="data-default">(no tiene)</div>
-        <div class="data-explanation">Indica la dirección email del creador de la aplicación. Se muestra en las páginas de error no personalizadas.</div>
-      </div>
-      <div class="data-divider"></div>
-      <div class="data-row">
-        <div class="data-param">default_title</div>
-        <div class="data-default">(no tiene)</div>
-        <div class="data-explanation">Título por defecto que se incluira en el campo HTML <code>title</code> de cada página. Se puede configurar en cada acción para mostrar uno personalizado.</div>
-      </div>
-      <div class="data-divider"></div>
-      <div class="data-row">
-        <div class="data-param">lang</div>
-        <div class="data-default">es</div>
-        <div class="data-explanation">Código de idioma por defecto en caso de querer usar <a href="/es/traducciones">traducciones</a>. Se usa en caso de que el usuario que accede a la aplicación tenga un idioma no contemplado en las traducciones.</div>
-      </div>
-      <div class="data-divider"></div>
+    </div>
+
+    <div class="data-table">
       <div class="data-row">
         <div class="data-param">smtp</div>
         <div class="data-long">Datos para el envío de emails mediante SMTP (en caso de que el parámetro <code>base_modules/smtp</code> sea <code>true</code>).</div>
@@ -160,7 +140,9 @@
         <div class="data-default">(no tiene)</div>
         <div class="data-explanation">Contraseña del usuario con el que se realizará el envío de emails.</div>
       </div>
-      <div class="data-divider"></div>
+    </div>
+
+    <div class="data-table">
       <div class="data-row">
         <div class="data-param">error_pages</div>
         <div class="data-long">Sirve para configurar páginas personalizadas en el caso de errores de servidor.</div>
@@ -180,6 +162,44 @@
         <div class="data-param">500</div>
         <div class="data-default">(no tiene)</div>
         <div class="data-explanation">URL a la que redirigir en el caso de un error 500 (error interno del servidor)</div>
+      </div>
+    </div>
+
+    <div class="data-table">
+      <div class="data-row">
+        <div class="data-param">packages</div>
+        <div class="data-default">[]</div>
+        <div class="data-explanation">Indica los paquetes opcionales a incluir en el framework. Ver <a href="/es/paquetes">Paquetes</a>.</div>
+      </div>
+      <div class="data-divider"></div>
+      <div class="data-row">
+        <div class="data-param">debug</div>
+        <div class="data-default">false</div>
+        <div class="data-explanation">Indica si se quiere habilitar el registro de depuración. En caso de habilitarse se registrarán las consultas realizadas, logs personalizados... que se escribirán en el archivo <code>logs/debug.log</code>.</div>
+      </div>
+      <div class="data-divider"></div>
+      <div class="data-row">
+        <div class="data-param">base_url</div>
+        <div class="data-default">(no tiene)</div>
+        <div class="data-explanation">Indica la dirección completa de la aplicación, por ejemplo <code>https://framework.osumi.es/</code>.</div>
+      </div>
+      <div class="data-divider"></div>
+      <div class="data-row">
+        <div class="data-param">admin_email</div>
+        <div class="data-default">(no tiene)</div>
+        <div class="data-explanation">Indica la dirección email del creador de la aplicación. Se muestra en las páginas de error no personalizadas.</div>
+      </div>
+      <div class="data-divider"></div>
+      <div class="data-row">
+        <div class="data-param">default_title</div>
+        <div class="data-default">(no tiene)</div>
+        <div class="data-explanation">Título por defecto que se incluira en el campo HTML <code>title</code> de cada página. Se puede configurar en cada acción para mostrar uno personalizado.</div>
+      </div>
+      <div class="data-divider"></div>
+      <div class="data-row">
+        <div class="data-param">lang</div>
+        <div class="data-default">es</div>
+        <div class="data-explanation">Código de idioma por defecto en caso de querer usar <a href="/es/traducciones">traducciones</a>. Se usa en caso de que el usuario que accede a la aplicación tenga un idioma no contemplado en las traducciones.</div>
       </div>
       <div class="data-divider"></div>
       <div class="data-row">

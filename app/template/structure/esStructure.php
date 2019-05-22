@@ -13,9 +13,36 @@
     <p>En Osumi Framework, este es el ciclo de ejecución de cada solicitud:</p>
     <ul>
       <li>Una URL es llamada, por ejemplo <code>/user/igorosabel</code></li>
-      <li>Se busca en el archivo <code>urls.json</code> dicha URL. En caso de no encontrarse, se devuelve un error 404 (se puede configurar donde hay que redirigir al usuario en este caso).</li>
       <li>
-        Para este ejemplo, esta sería la URL en el archivo <code>urls.json</code>, en el módulo <code>user</code>:
+        Se busca en el archivo <code>urls.json</code> dicha URL. En caso de no encontrarse, se devuelve un error 404 (se puede configurar donde hay que redirigir al usuario en este caso).
+        <p>Este sería un ejemplo completo de <code>urls.json</code></p>
+<pre>
+  {
+    "urls": [
+      {
+        "id": "pages",
+        "module": "home",
+        "urls": [
+          {
+            "id": "page_start",
+            "url": "/",
+            "action": "start",
+            "comment": "Start page"
+          },
+          {
+            "id": "page_user",
+            "url": "/user/:id",
+            "action": "user",
+            "comment": "User page"
+          }
+        ]
+      }
+    ]
+  }
+</pre>
+      </li>
+      <li>
+        Para este ejemplo, esta sería la URL en el archivo <code>urls.json</code>, en el módulo <code>home</code>:
         <br>
 <pre>
   {
@@ -26,7 +53,7 @@
   }
 </pre>
       </li>
-      <li>En este caso la URL coincide en <code>/user/</code> e <code>igorosabel</code> sería interpretado como un valor dinámico que se pasaría como <code>id</code></li>
+      <li>En este caso la URL coincide en <code>/user/</code> e <code>igorosabel</code> sería interpretado como un valor dinámico que se pasaría como <code>id</code>. </li>
       <li>Al coincidir esta URL, se ejecutaría el módulo <code>user</code> y la acción <code>userPage</code></li>
       <li>En la carpeta <code>app/controller</code> hay un archivo PHP por cada módulo definido en el archivo <code>urls.json</code></li>
       <li>Cada archivo PHP contiene una clase con el nombre del módulo y dentro hay una función por cada acción del módulo.</li>
@@ -77,7 +104,6 @@
     <ul>
       <li><code>web/css</code>: Carpeta para los archivos CSS definidos en el archivo de configuración.</li>
       <li><code>web/js</code>: Carpeta para los archivos JavaScript definidos en el archivo de configuración.</li>
-      <li><code>web/img</code>: Carpeta para las imagenes. El nombre de esta carpeta es necesario en caso de querer usar las herramientas de procesado de imágenes del framework.</li>
     </ul>
     <div class="previous-next">
       <a href="/es/instalacion" class="previous">Instalación</a>

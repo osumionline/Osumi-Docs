@@ -2,11 +2,11 @@
   {{header}}
   {{menu}}
   <main>
-    <h1>Módulos</h1>
+    <h1>Services</h1>
 
     <div class="previous-next">
-      <a href="/es/urls" class="previous">URLs</a>
-      <a href="/es/servicios" class="next">Servicios</a>
+      <a href="/en/modules" class="previous">Modules</a>
+      <a href="/en/filters" class="next">Filters</a>
     </div>
   </main>
   {{footer}}

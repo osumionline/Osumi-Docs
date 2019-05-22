@@ -6,7 +6,7 @@
 
     <div class="previous-next">
       <a href="/en/urls" class="previous">URLs</a>
-      <a href="/en/filters" class="next">Filters</a>
+      <a href="/en/services" class="next">Services</a>
     </div>
   </main>
   {{footer}}

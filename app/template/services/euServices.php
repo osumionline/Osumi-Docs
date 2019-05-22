@@ -2,11 +2,11 @@
   {{header}}
   {{menu}}
   <main>
-    <h1>Moduloak</h1>
+    <h1>Zerbitzuak</h1>
 
     <div class="previous-next">
-      <a href="/eu/urlak" class="previous">URLak</a>
-      <a href="/eu/zerbitzuak" class="next">Zerbitzuak</a>
+      <a href="/eu/moduloak" class="previous">Moduloak</a>
+      <a href="/eu/filtroak" class="next">Filtroak</a>
     </div>
   </main>
   {{footer}}
