@@ -5,7 +5,7 @@
     <h1>Traducciones</h1>
 
     <div class="previous-next">
-      <a href="/es/filtros" class="previous">Filtros</a>
+      <a href="/es/tareas" class="previous">Tareas</a>
     </div>
   </main>
   {{footer}}

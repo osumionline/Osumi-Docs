@@ -54,11 +54,11 @@
 </pre>
       </li>
       <li>En este caso la URL coincide en <code>/user/</code> e <code>igorosabel</code> sería interpretado como un valor dinámico que se pasaría como <code>id</code>. </li>
-      <li>Al coincidir esta URL, se ejecutaría el módulo <code>user</code> y la acción <code>userPage</code></li>
+      <li>Al coincidir esta URL, se ejecutaría el módulo <code>home</code> y la acción <code>userPage</code></li>
       <li>En la carpeta <code>app/controller</code> hay un archivo PHP por cada módulo definido en el archivo <code>urls.json</code></li>
       <li>Cada archivo PHP contiene una clase con el nombre del módulo y dentro hay una función por cada acción del módulo.</li>
       <li>Antes de ejecutar la acción correspondiente, se pueden definir <code>filtros</code> que hacen una función previa, por ejemplo comprobar si un usuario tiene permiso para acceder a un apartado concreto.</li>
-      <li>En este caso, se ejecutará la función <code>userPage</code> de la clase <code>user</code> del archivo <code>app/controller/user.php</code></li>
+      <li>En este caso, se ejecutará la función <code>userPage</code> de la clase <code>home</code> del archivo <code>app/controller/home.php</code></li>
       <li>Tras ejecutarse el código de la función, se carga la plantilla.</li>
       <li>La plantilla se compone del <code>layout</code> o plantilla principal y la plantilla asociada a cada acción. Las plantillas están en la carpeta <code>app/template</code>.</li>
       <li>En esta carpeta hay una carpeta <code>layout</code> donde va la plantilla principal y una carpeta por cada módulo. En estás carpetas hay un archivo PHP por cada acción.</li>

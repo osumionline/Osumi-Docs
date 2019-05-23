@@ -6,7 +6,7 @@
 
     <div class="previous-next">
       <a href="/eu/zerbitzuak" class="previous">Zerbitzuak</a>
-      <a href="/eu/itzulpenak" class="next">Itzulpenak</a>
+      <a href="/eu/atazak" class="next">Atazak</a>
     </div>
   </main>
   {{footer}}

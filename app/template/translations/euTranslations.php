@@ -5,7 +5,7 @@
     <h1>Itzulpenak</h1>
 
     <div class="previous-next">
-      <a href="/eu/filtroak" class="previous">Filtroak</a>
+      <a href="/eu/atazak" class="previous">Atazak</a>
     </div>
   </main>
   {{footer}}

@@ -5,8 +5,8 @@
     <h1>Filters</h1>
 
     <div class="previous-next">
-      <a href="/en/services" class="previous">Services</a>
-      <a href="/en/tasks" class="next">Tasks</a>
+      <a href="/en/filters" class="previous">Services</a>
+      <a href="/en/translations" class="next">Translations</a>
     </div>
   </main>
   {{footer}}

@@ -223,6 +223,15 @@ pre{
   flex: 5;
   padding: 16px;
 }
+.data-block{
+  flex: 1;
+  padding: 16px;
+  text-align: center;
+}
+.data-block > strong{
+  display: inline-block;
+  margin-right: 16px;
+}
 .data-long{
   flex: 6;
   padding: 16px;

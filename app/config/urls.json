@@ -193,6 +193,30 @@
       ]
     },
     {
+      "id": "tasks",
+      "module": "tasks",
+      "urls": [
+        {
+          "id": "page_es_tasks",
+          "url": "/es/tareas",
+          "action": "esTasks",
+          "comment": "Página de Tareas"
+        },
+        {
+          "id": "page_en_tasks",
+          "url": "/en/tasks",
+          "action": "enTasks",
+          "comment": "Página de Tareas (inglés)"
+        },
+        {
+          "id": "page_eu_tasks",
+          "url": "/eu/atazak",
+          "action": "euTasks",
+          "comment": "Página de Tareas (euskara)"
+        }
+      ]
+    },
+    {
       "id": "translations",
       "module": "translations",
       "urls": [

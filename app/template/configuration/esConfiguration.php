@@ -5,15 +5,16 @@
     <h1>Configuración</h1>
     <p>El archivo de configuración <code>app/config/config.json</code> es un archivo JSON con pares clave/valor con los que configurar la aplicación que se quiere crear. Todos los campos son opcionales, por lo que se podría dejar el archivo sin valores (por ejemplo <code>{}</code>), pero conviene configurarlos para una experiencia más personalizada. Estos son los posibles parámetros:</p>
     <div class="data-table">
+      <div class="data-row">
+        <div class="data-block">
+          <strong>base_modules</strong>
+          Sirve para indicar si se quieren cargar varias herramientas opcionales que ofrece el framework.
+        </div>
+      </div>
       <div class="data-header data-row">
         <div class="data-param">Parámetro</div>
         <div class="data-default">Valor por defecto</div>
         <div class="data-explanation">Explicación del parámetro</div>
-      </div>
-      <div class="data-divider"></div>
-      <div class="data-row">
-        <div class="data-param">base_modules</div>
-        <div class="data-long"><code>base_modules</code> sirve para indicar si se quieren cargar varias herramientas opcionales que ofrece el framework.</div>
       </div>
       <div class="data-divider"></div>
       <div class="data-row">
@@ -65,8 +66,15 @@
 
     <div class="data-table">
       <div class="data-row">
-        <div class="data-param">db</div>
-        <div class="data-long"><code>db</code> sirve para indicar la configuración de la base de datos a usar.</div>
+        <div class="data-block">
+          <strong>db</strong>
+          Sirve para indicar la configuración de la base de datos a usar.
+        </div>
+      </div>
+      <div class="data-header data-row">
+        <div class="data-param">Parámetro</div>
+        <div class="data-default">Valor por defecto</div>
+        <div class="data-explanation">Explicación del parámetro</div>
       </div>
       <div class="data-divider"></div>
       <div class="data-row">
@@ -93,8 +101,15 @@
 
     <div class="data-table">
       <div class="data-row">
-        <div class="data-param">cookies</div>
-        <div class="data-long">En el caso de que se quieran usar cookies personalizadas, <code>cookies</code> sirve para configurarlas.</div>
+        <div class="data-block">
+          <strong>cookies</strong>
+          En el caso de que se quieran usar cookies personalizadas, <code>cookies</code> sirve para configurarlas.
+        </div>
+      </div>
+      <div class="data-header data-row">
+        <div class="data-param">Parámetro</div>
+        <div class="data-default">Valor por defecto</div>
+        <div class="data-explanation">Explicación del parámetro</div>
       </div>
       <div class="data-divider"></div>
       <div class="data-row">
@@ -111,8 +126,15 @@
 
     <div class="data-table">
       <div class="data-row">
-        <div class="data-param">smtp</div>
-        <div class="data-long">Datos para el envío de emails mediante SMTP (en caso de que el parámetro <code>base_modules/smtp</code> sea <code>true</code>).</div>
+        <div class="data-block">
+          <strong>smtp</strong>
+          Datos para el envío de emails mediante SMTP (en caso de que el parámetro <code>base_modules/smtp</code> sea <code>true</code>).
+        </div>
+      </div>
+      <div class="data-header data-row">
+        <div class="data-param">Parámetro</div>
+        <div class="data-default">Valor por defecto</div>
+        <div class="data-explanation">Explicación del parámetro</div>
       </div>
       <div class="data-divider"></div>
       <div class="data-row">
@@ -144,8 +166,15 @@
 
     <div class="data-table">
       <div class="data-row">
-        <div class="data-param">error_pages</div>
-        <div class="data-long">Sirve para configurar páginas personalizadas en el caso de errores de servidor.</div>
+        <div class="data-block">
+          <strong>error_pages</strong>
+          Sirve para configurar páginas personalizadas en el caso de errores de servidor.
+        </div>
+      </div>
+      <div class="data-header data-row">
+        <div class="data-param">Parámetro</div>
+        <div class="data-default">Valor por defecto</div>
+        <div class="data-explanation">Explicación del parámetro</div>
       </div>
       <div class="data-divider"></div>
       <div class="data-row">
@@ -166,6 +195,12 @@
     </div>
 
     <div class="data-table">
+      <div class="data-header data-row">
+        <div class="data-param">Parámetro</div>
+        <div class="data-default">Valor por defecto</div>
+        <div class="data-explanation">Explicación del parámetro</div>
+      </div>
+      <div class="data-divider"></div>
       <div class="data-row">
         <div class="data-param">packages</div>
         <div class="data-default">[]</div>
@@ -249,8 +284,75 @@
         <div class="data-default">(no tiene)</div>
         <div class="data-explanation">La configuración del sitio se realiza en el archivo <code>config.json</code>, pero se pueden crear archivos "secundarios" basados en entornos. Por ejemplo, si se indicase <code>"environment": "dev"</code>, tras la carga del archivo de configuración, se cargaría el archivo <code>config.dev.json</code>. Estos archivos secundarios pueden contener los mismos parámetros y sustituirán a los del archivo principal. De este modo se puede tener la configuración de un sitio de prueba en un archivo y del sitio en producción en otro, y realizar la carga de uno u otro simplemente cambiando el valor de este parámetro.</div>
       </div>
-      <div class="data-divider"></div>
     </div>
+
+    <p>Ejemplo completo de un archivo <code>config.json</code>:</p>
+
+<pre>
+  {
+    "base_modules": {
+      "browser": false,
+      "email": true,
+      "email_smtp": false,
+      "ftp": false,
+      "image": false,
+      "pdf": false,
+      "translate": false,
+      "crypt": false,
+      "file": false
+    },
+    "packages": [],
+    "db": {
+    	"host": "localhost",
+    	"user": "demo_ofw",
+    	"pass": "db_password",
+    	"name": "demo_ofw"
+    },
+    "cookies": {
+    	"prefix": "osm",
+    	"url": ".osumi.es"
+    },
+    "debug": false,
+    "base_url": "https://demo.osumi.es/",
+    "admin_email": "",
+    "default_title": "Osumi Framework",
+    "lang": "es",
+    "smtp": {
+    	"host": "smtp.gmail.com",
+    	"port": 587,
+    	"secure": "tls",
+    	"user": "inigo.gorosabel@gmail.com",
+      "pass": "password"
+    },
+    "error_pages": {
+    	"404": "/not-found"
+    },
+    "css": ["common"],
+    "ext_css": [],
+    "js": ["common"],
+    "ext_js": [],
+    "extra": {
+      "key": "value",
+      "foo": "bar"
+    },
+    "libs": ["another/library"],
+    "dir": {
+      "test": "{{app_controller}}test/"
+    },
+    "environment": "dev"
+  }
+</pre>
+
+    <p>Y ejemplo de un archivo <code>condig.dev.json</code> en el que se sobreescriben y añaden valores al archivo <code>config.json</code>:</p>
+
+<pre>
+  {
+    "base_url": "https://demodev.osumi.es/",
+    "extra": {
+      "key": "boooo"
+    }
+  }
+</pre>
 
     <div class="previous-next">
       <a href="/es/estructura" class="previous">Estructura</a>
