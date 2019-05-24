@@ -112,11 +112,12 @@
   }
 
   // Si hay conexión a BD, compruebo drivers
-  $dbcontainer = new ODBContainer();
+  $dbcontainer = null;
   if ($c->getDB('user')!=='' || $c->getDB('pass')!=='' || $c->getDB('host')!=='' || $c->getDB('name')!==''){
     $pdo_drivers = PDO::getAvailableDrivers();
     if (!in_array($c->getDB('driver'), $pdo_drivers)){
       echo "ERROR: El sistema no dispone del driver ".$c->getDB('driver')." solicitado para realizar la conexión a la base de datos.\n";
       exit();
     }
+    $dbcontainer = new ODBContainer();
   }
