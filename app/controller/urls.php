@@ -6,7 +6,7 @@ class urls extends OController{
   function esUrls($req){
     $this->getTemplate()->addPartial('header', 'common/header', ['page' => 'urls', 'lang' => 'es']);
     $this->getTemplate()->addPartial('menu',   'common/menu',   ['page' => 'urls', 'lang' => 'es']);
-    $this->getTemplate()->addPartial('footer', 'common/footer', []);
+    $this->getTemplate()->addPartial('footer', 'common/footer');
   }
   /*
    * Página de URLs (inglés)
@@ -14,7 +14,7 @@ class urls extends OController{
   function enUrls($req){
     $this->getTemplate()->addPartial('header', 'common/header', ['page' => 'urls', 'lang' => 'en']);
     $this->getTemplate()->addPartial('menu',   'common/menu',   ['page' => 'urls', 'lang' => 'en']);
-    $this->getTemplate()->addPartial('footer', 'common/footer', []);
+    $this->getTemplate()->addPartial('footer', 'common/footer');
   }
   /*
    * Página de URLs (euskara)
@@ -22,6 +22,6 @@ class urls extends OController{
   function euUrls($req){
     $this->getTemplate()->addPartial('header', 'common/header', ['page' => 'urls', 'lang' => 'eu']);
     $this->getTemplate()->addPartial('menu',   'common/menu',   ['page' => 'urls', 'lang' => 'eu']);
-    $this->getTemplate()->addPartial('footer', 'common/footer', []);
+    $this->getTemplate()->addPartial('footer', 'common/footer');
   }
 }

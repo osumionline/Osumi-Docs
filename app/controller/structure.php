@@ -6,7 +6,7 @@ class structure extends OController{
   function esStructure($req){
     $this->getTemplate()->addPartial('header', 'common/header', ['page' => 'structure', 'lang' => 'es']);
     $this->getTemplate()->addPartial('menu',   'common/menu',   ['page' => 'structure', 'lang' => 'es']);
-    $this->getTemplate()->addPartial('footer', 'common/footer', []);
+    $this->getTemplate()->addPartial('footer', 'common/footer');
   }
   /*
    * Página de Estructura (inglés)
@@ -14,7 +14,7 @@ class structure extends OController{
   function enStructure($req){
     $this->getTemplate()->addPartial('header', 'common/header', ['page' => 'structure', 'lang' => 'en']);
     $this->getTemplate()->addPartial('menu',   'common/menu',   ['page' => 'structure', 'lang' => 'en']);
-    $this->getTemplate()->addPartial('footer', 'common/footer', []);
+    $this->getTemplate()->addPartial('footer', 'common/footer');
   }
   /*
    * Página de Estructura (euskara)
@@ -22,6 +22,6 @@ class structure extends OController{
   function euStructure($req){
     $this->getTemplate()->addPartial('header', 'common/header', ['page' => 'structure', 'lang' => 'eu']);
     $this->getTemplate()->addPartial('menu',   'common/menu',   ['page' => 'structure', 'lang' => 'eu']);
-    $this->getTemplate()->addPartial('footer', 'common/footer', []);
+    $this->getTemplate()->addPartial('footer', 'common/footer');
   }
 }

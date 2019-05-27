@@ -6,7 +6,7 @@ class installation extends OController{
   function esInstallation($req){
     $this->getTemplate()->addPartial('header', 'common/header', ['page' => 'installation', 'lang' => 'es']);
     $this->getTemplate()->addPartial('menu',   'common/menu',   ['page' => 'installation', 'lang' => 'es']);
-    $this->getTemplate()->addPartial('footer', 'common/footer', []);
+    $this->getTemplate()->addPartial('footer', 'common/footer');
   }
   /*
    * Página de Instalación (inglés)
@@ -14,7 +14,7 @@ class installation extends OController{
   function enInstallation($req){
     $this->getTemplate()->addPartial('header', 'common/header', ['page' => 'installation', 'lang' => 'en']);
     $this->getTemplate()->addPartial('menu',   'common/menu',   ['page' => 'installation', 'lang' => 'en']);
-    $this->getTemplate()->addPartial('footer', 'common/footer', []);
+    $this->getTemplate()->addPartial('footer', 'common/footer');
   }
   /*
    * Página de Instalación (euskara)
@@ -22,6 +22,6 @@ class installation extends OController{
   function euInstallation($req){
     $this->getTemplate()->addPartial('header', 'common/header', ['page' => 'installation', 'lang' => 'eu']);
     $this->getTemplate()->addPartial('menu',   'common/menu',   ['page' => 'installation', 'lang' => 'eu']);
-    $this->getTemplate()->addPartial('footer', 'common/footer', []);
+    $this->getTemplate()->addPartial('footer', 'common/footer');
   }
 }

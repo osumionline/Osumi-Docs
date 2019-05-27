@@ -6,7 +6,7 @@ class home extends OController{
   function esStart($req){
     $this->getTemplate()->addPartial('header', 'common/header', ['page' => 'start', 'lang' => 'es']);
     $this->getTemplate()->addPartial('menu',   'common/menu',   ['page' => 'start', 'lang' => 'es']);
-    $this->getTemplate()->addPartial('footer', 'common/footer', []);
+    $this->getTemplate()->addPartial('footer', 'common/footer');
   }
   /*
    * Página de inicio (inglés)
@@ -14,7 +14,7 @@ class home extends OController{
   function enStart($req){
     $this->getTemplate()->addPartial('header', 'common/header', ['page' => 'start', 'lang' => 'en']);
     $this->getTemplate()->addPartial('menu',   'common/menu',   ['page' => 'start', 'lang' => 'en']);
-    $this->getTemplate()->addPartial('footer', 'common/footer', []);
+    $this->getTemplate()->addPartial('footer', 'common/footer');
   }
   /*
    * Página de inicio (euskara)
@@ -22,6 +22,6 @@ class home extends OController{
   function euStart($req){
     $this->getTemplate()->addPartial('header', 'common/header', ['page' => 'start', 'lang' => 'eu']);
     $this->getTemplate()->addPartial('menu',   'common/menu',   ['page' => 'start', 'lang' => 'eu']);
-    $this->getTemplate()->addPartial('footer', 'common/footer', []);
+    $this->getTemplate()->addPartial('footer', 'common/footer');
   }
 }

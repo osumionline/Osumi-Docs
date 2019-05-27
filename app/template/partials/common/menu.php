@@ -9,6 +9,7 @@ $urls = [
     'modules'       => OUrl::generateUrl('page_es_modules'),
     'services'      => OUrl::generateUrl('page_es_services'),
     'filters'       => OUrl::generateUrl('page_es_filters'),
+    'internals'     => OUrl::generateUrl('page_es_internals'),
     'tasks'         => OUrl::generateUrl('page_es_tasks'),
     'translations'  => OUrl::generateUrl('page_es_translations')
   ],
@@ -21,6 +22,7 @@ $urls = [
     'modules'       => OUrl::generateUrl('page_en_modules'),
     'services'      => OUrl::generateUrl('page_en_services'),
     'filters'       => OUrl::generateUrl('page_en_filters'),
+    'internals'     => OUrl::generateUrl('page_en_internals'),
     'tasks'         => OUrl::generateUrl('page_en_tasks'),
     'translations'  => OUrl::generateUrl('page_en_translations')
   ],
@@ -33,6 +35,7 @@ $urls = [
     'modules'       => OUrl::generateUrl('page_eu_modules'),
     'services'      => OUrl::generateUrl('page_eu_services'),
     'filters'       => OUrl::generateUrl('page_eu_filters'),
+    'internals'     => OUrl::generateUrl('page_eu_internals'),
     'tasks'         => OUrl::generateUrl('page_eu_tasks'),
     'translations'  => OUrl::generateUrl('page_eu_translations')
   ]
@@ -47,6 +50,7 @@ $names = [
     'modules'       => 'Módulos',
     'services'      => 'Servicios',
     'filters'       => 'Filtros',
+    'internals'     => 'Funciones internas',
     'tasks'         => 'Tareas',
     'translations'  => 'Traducciones'
   ],
@@ -59,6 +63,7 @@ $names = [
     'modules'       => 'Modules',
     'services'      => 'Services',
     'filters'       => 'Filters',
+    'internals'     => 'Internal functions',
     'tasks'         => 'Tasks',
     'translations'  => 'Translations'
   ],
@@ -71,6 +76,7 @@ $names = [
     'modules'       => 'Moduloak',
     'services'      => 'Zerbitzuak',
     'filters'       => 'Filtroak',
+    'internals'     => 'Barruko funtzioak',
     'tasks'         => 'Atazak',
     'translations'  => 'Itzulpenak'
   ]

@@ -193,6 +193,30 @@
       ]
     },
     {
+      "id": "internals",
+      "module": "internals",
+      "urls": [
+        {
+          "id": "page_es_internals",
+          "url": "/es/funciones-internas",
+          "action": "esInternals",
+          "comment": "Página de Funciones Internas"
+        },
+        {
+          "id": "page_en_internals",
+          "url": "/en/internal-functions",
+          "action": "enInternals",
+          "comment": "Página de Funciones Internas (inglés)"
+        },
+        {
+          "id": "page_eu_internals",
+          "url": "/eu/barruko-funtzioak",
+          "action": "euInternals",
+          "comment": "Página de Funciones Internas (euskara)"
+        }
+      ]
+    },
+    {
       "id": "tasks",
       "module": "tasks",
       "urls": [

@@ -6,8 +6,8 @@
 
     <div class="previous-next">
       <a href="/eu/zerbitzuak" class="previous">Zerbitzuak</a>
-      <a href="/eu/atazak" class="next">Atazak</a>
+      <a href="/eu/barruko-funtzioak" class="next">Barruko funtzioak</a>
     </div>
   </main>
   {{footer}}
-  </div>
+</div>

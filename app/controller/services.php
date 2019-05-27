@@ -6,7 +6,7 @@ class services extends OController{
   function esServices($req){
     $this->getTemplate()->addPartial('header', 'common/header', ['page' => 'services', 'lang' => 'es']);
     $this->getTemplate()->addPartial('menu',   'common/menu',   ['page' => 'services', 'lang' => 'es']);
-    $this->getTemplate()->addPartial('footer', 'common/footer', []);
+    $this->getTemplate()->addPartial('footer', 'common/footer');
   }
   /*
    * Página de Servicios (inglés)
@@ -14,7 +14,7 @@ class services extends OController{
   function enServices($req){
     $this->getTemplate()->addPartial('header', 'common/header', ['page' => 'services', 'lang' => 'en']);
     $this->getTemplate()->addPartial('menu',   'common/menu',   ['page' => 'services', 'lang' => 'en']);
-    $this->getTemplate()->addPartial('footer', 'common/footer', []);
+    $this->getTemplate()->addPartial('footer', 'common/footer');
   }
   /*
    * Página de Servicios (euskara)
@@ -22,6 +22,6 @@ class services extends OController{
   function euServices($req){
     $this->getTemplate()->addPartial('header', 'common/header', ['page' => 'services', 'lang' => 'eu']);
     $this->getTemplate()->addPartial('menu',   'common/menu',   ['page' => 'services', 'lang' => 'eu']);
-    $this->getTemplate()->addPartial('footer', 'common/footer', []);
+    $this->getTemplate()->addPartial('footer', 'common/footer');
   }
 }

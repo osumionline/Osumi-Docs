@@ -6,7 +6,7 @@ class modules extends OController{
   function esModules($req){
     $this->getTemplate()->addPartial('header', 'common/header', ['page' => 'modules', 'lang' => 'es']);
     $this->getTemplate()->addPartial('menu',   'common/menu',   ['page' => 'modules', 'lang' => 'es']);
-    $this->getTemplate()->addPartial('footer', 'common/footer', []);
+    $this->getTemplate()->addPartial('footer', 'common/footer');
   }
   /*
    * Página de Módulos (inglés)
@@ -14,7 +14,7 @@ class modules extends OController{
   function enModules($req){
     $this->getTemplate()->addPartial('header', 'common/header', ['page' => 'modules', 'lang' => 'en']);
     $this->getTemplate()->addPartial('menu',   'common/menu',   ['page' => 'modules', 'lang' => 'en']);
-    $this->getTemplate()->addPartial('footer', 'common/footer', []);
+    $this->getTemplate()->addPartial('footer', 'common/footer');
   }
   /*
    * Página de Módulos (euskara)
@@ -22,6 +22,6 @@ class modules extends OController{
   function euModules($req){
     $this->getTemplate()->addPartial('header', 'common/header', ['page' => 'modules', 'lang' => 'eu']);
     $this->getTemplate()->addPartial('menu',   'common/menu',   ['page' => 'modules', 'lang' => 'eu']);
-    $this->getTemplate()->addPartial('footer', 'common/footer', []);
+    $this->getTemplate()->addPartial('footer', 'common/footer');
   }
 }

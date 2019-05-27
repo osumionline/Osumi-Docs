@@ -6,7 +6,7 @@ class translations extends OController{
   function esTranslations($req){
     $this->getTemplate()->addPartial('header', 'common/header', ['page' => 'translations', 'lang' => 'es']);
     $this->getTemplate()->addPartial('menu',   'common/menu',   ['page' => 'translations', 'lang' => 'es']);
-    $this->getTemplate()->addPartial('footer', 'common/footer', []);
+    $this->getTemplate()->addPartial('footer', 'common/footer');
   }
   /*
    * Página de Traducciones (inglés)
@@ -14,7 +14,7 @@ class translations extends OController{
   function enTranslations($req){
     $this->getTemplate()->addPartial('header', 'common/header', ['page' => 'translations', 'lang' => 'en']);
     $this->getTemplate()->addPartial('menu',   'common/menu',   ['page' => 'translations', 'lang' => 'en']);
-    $this->getTemplate()->addPartial('footer', 'common/footer', []);
+    $this->getTemplate()->addPartial('footer', 'common/footer');
   }
   /*
    * Página de Traducciones (euskara)
@@ -22,6 +22,6 @@ class translations extends OController{
   function euTranslations($req){
     $this->getTemplate()->addPartial('header', 'common/header', ['page' => 'translations', 'lang' => 'eu']);
     $this->getTemplate()->addPartial('menu',   'common/menu',   ['page' => 'translations', 'lang' => 'eu']);
-    $this->getTemplate()->addPartial('footer', 'common/footer', []);
+    $this->getTemplate()->addPartial('footer', 'common/footer');
   }
 }

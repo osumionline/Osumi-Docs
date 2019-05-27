@@ -6,8 +6,8 @@
 
     <div class="previous-next">
       <a href="/en/services" class="previous">Services</a>
-      <a href="/en/tasks" class="next">Tasks</a>
+      <a href="/en/internal-functions" class="next">Internal functions</a>
     </div>
   </main>
   {{footer}}
-  </div>
+</div>

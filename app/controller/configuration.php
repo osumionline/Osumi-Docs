@@ -6,7 +6,7 @@ class configuration extends OController{
   function esConfiguration($req){
     $this->getTemplate()->addPartial('header', 'common/header', ['page' => 'configuration', 'lang' => 'es']);
     $this->getTemplate()->addPartial('menu',   'common/menu',   ['page' => 'configuration', 'lang' => 'es']);
-    $this->getTemplate()->addPartial('footer', 'common/footer', []);
+    $this->getTemplate()->addPartial('footer', 'common/footer');
   }
   /*
    * Página de Configuración (inglés)
@@ -14,7 +14,7 @@ class configuration extends OController{
   function enConfiguration($req){
     $this->getTemplate()->addPartial('header', 'common/header', ['page' => 'configuration', 'lang' => 'en']);
     $this->getTemplate()->addPartial('menu',   'common/menu',   ['page' => 'configuration', 'lang' => 'en']);
-    $this->getTemplate()->addPartial('footer', 'common/footer', []);
+    $this->getTemplate()->addPartial('footer', 'common/footer');
   }
   /*
    * Página de Configuración (euskara)
@@ -22,6 +22,6 @@ class configuration extends OController{
   function euConfiguration($req){
     $this->getTemplate()->addPartial('header', 'common/header', ['page' => 'configuration', 'lang' => 'eu']);
     $this->getTemplate()->addPartial('menu',   'common/menu',   ['page' => 'configuration', 'lang' => 'eu']);
-    $this->getTemplate()->addPartial('footer', 'common/footer', []);
+    $this->getTemplate()->addPartial('footer', 'common/footer');
   }
 }

@@ -5,7 +5,7 @@
     <h1>Atazak</h1>
 
     <div class="previous-next">
-      <a href="/eu/filtroak" class="previous">Filtroak</a>
+      <a href="/eu/barruko-funtzioak" class="previous">Barruko funtzioak</a>
       <a href="/eu/itzulpenak" class="next">Itzulpenak</a>
     </div>
   </main>

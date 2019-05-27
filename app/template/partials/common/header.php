@@ -9,6 +9,7 @@ $urls = [
     'modules'       => OUrl::generateUrl('page_es_modules'),
     'services'      => OUrl::generateUrl('page_es_services'),
     'filters'       => OUrl::generateUrl('page_es_filters'),
+    'internals'     => OUrl::generateUrl('page_es_internals'),
     'tasks'         => OUrl::generateUrl('page_es_tasks'),
     'translations'  => OUrl::generateUrl('page_es_translations')
   ],
@@ -21,6 +22,7 @@ $urls = [
     'modules'       => OUrl::generateUrl('page_en_modules'),
     'services'      => OUrl::generateUrl('page_en_services'),
     'filters'       => OUrl::generateUrl('page_en_filters'),
+    'internals'     => OUrl::generateUrl('page_en_internals'),
     'tasks'         => OUrl::generateUrl('page_en_tasks'),
     'translations'  => OUrl::generateUrl('page_en_translations')
   ],
@@ -33,6 +35,7 @@ $urls = [
     'modules'       => OUrl::generateUrl('page_eu_modules'),
     'services'      => OUrl::generateUrl('page_eu_services'),
     'filters'       => OUrl::generateUrl('page_eu_filters'),
+    'internals'     => OUrl::generateUrl('page_eu_internals'),
     'tasks'         => OUrl::generateUrl('page_eu_tasks'),
     'translations'  => OUrl::generateUrl('page_eu_translations')
   ]

@@ -5,7 +5,7 @@
     <h1>Tareas</h1>
 
     <div class="previous-next">
-      <a href="/es/filtros" class="previous">Filtros</a>
+      <a href="/es/funciones-internas" class="previous">Funciones internas</a>
       <a href="/es/traducciones" class="next">Traducciones</a>
     </div>
   </main>
