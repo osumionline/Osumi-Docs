@@ -3,7 +3,7 @@
   {{menu}}
   <main>
     <h1>Instalación</h1>
-    <p>El framework se puede instalar en cualquier servidor con Apache2 y PHP 5.3 (recomiendo usar PHP 7.2, el framework está optimizado para poder usar esta última versión).</p>
+    <p>El framework se puede instalar en cualquier servidor con Apache2 y PHP 7.4 (al utilizar tipado fuerte en todo el Framework PHP 7.4.0 es la versión mínima necesaria para que funcione).</p>
     <p>MySQL no es necesario pero en caso de querer usarlo el requisito es que sea de la versión 5.1 o superior. También se puede usar MariaDB 10.1 o superior.</p>
     <p>Para realizar la instalación hay dos formas:</p>
     <ol>

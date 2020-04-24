@@ -136,7 +136,7 @@ aside a.active{
 main{
   float: left;
   width: 100%;
-  height: calc(100% - 134px);
+  height: calc(100% - 82px);
   padding: 16px;
   overflow: auto;
 }
@@ -171,13 +171,22 @@ main h1{
 }
 footer{
   clear: both;
-  line-height: 50px;
   border-top: 1px solid #ccc;
   padding-left: 16px;
+  height: 30px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+footer span{
+	flex: 1;
 }
 footer a{
   float: right;
   margin-right: 16px;
+  height: 100%;
+  display: flex;
+  align-items: center;
 }
 footer a.footer-version{
   float: left;
@@ -246,6 +255,7 @@ pre{
 .image-container{
   display: inline-block;
   margin-right: 16px;
+  margin-bottom: 16px;
   border: 1px solid #ccc;
 }
 .image-container:hover{
@@ -308,5 +318,9 @@ pre{
   }
   main{
     width: 90%;
+    height: calc(100% - 134px);
+  }
+  footer{
+	  height: 50px;
   }
 }

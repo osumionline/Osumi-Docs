@@ -12,7 +12,8 @@
     <p>Resultó ser un "pet project" que me permitía crear más "pet projects" :)</p>
     <p>La segunda versión fué la que más tiempo utilicé y la primera que publiqué en Github. Pero a medida que iba aprendiendo y metiendo más mejoras veía huecos o fallos.</p>
     <p>La versión 3 fué una primera aproximación, pero quise cambiar tantas cosas de golpe que lo dejé lleno de bugs :P</p>
-    <p>Y así llegamos a la versión 4.0, una nueva versión en la que se ha cambiado la estructura del framework, la configuración, gestión de tareas...</p>
+    <p>En la versión 4 se cambió la estructura del framework, la configuración, gestión de tareas...</p>
+    <p>Finalmente la versión 5, la actual, ha supuesto una refactorización masiva al añadir PHPdoc en todas las clases y funciones del Framework, se ha añadido tipado fuerte y una gran cantidad de correcciones de errores que han aparecido al revisar todo el código.</p>
     <p>Si has llegado a leer hasta aquí, muchas gracias por interesarte :D</p>
     <p>Iñigo Gorosabel <a href="https://twitter.com/igorosabel">@Twitter</a></p>
     <div class="previous-next">
