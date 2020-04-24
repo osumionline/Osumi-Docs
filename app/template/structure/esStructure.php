@@ -94,11 +94,20 @@
     <p>La carpeta <code>logs</code> contiene los logs generados por el sistema interno de logs <code>OLog</code> (en caso de que el <code>modo debug</code> esté activado).</p>
     <p>La carpeta <code>ofw</code> contiene el código interno del framework.</p>
     <ul>
-      <li><code>ofw/base</code>: Carpeta para las utilidades y clases internas del framework.</li>
+      <li><code>ofw/core</code>: Carpeta para las utilidades y clases internas del framework.</li>
+      <li>
+      	<code>ofw/export</code>: Carpeta para los archivos generados por el Framework, como el archivo SQL del modelo o las copias de seguridad (ver <a href="/es/tareas">Tareas</a>).
+      	<br><br>
+      	<ul>
+	      <li>La tarea <code>generateModel</code> crea un archivo SQL con el que generar toda la base de datos.</li>
+		  <li>La tarea <code>composer</code> crea un archivo con una copia de seguridad de toda la aplicación.</li>
+      	</ul>
+      </li>
       <li><code>ofw/lib</code>: Carpeta para las librerías de terceros. Entre ellas hay librerías utilizadas por el propio framework, y en caso de que el usuario decida usar alguna librería de terceros también iría en esta carpeta.</li>
-      <li><code>ofw/sql</code>: Carpeta para el código SQL generado. El framework proporciona una tarea llamada <code>generateModel</code> con la que a partir de las clases del modelo definidas por el usuario, se crea un archivo SQL con el que generar toda la base de datos.</li>
+      <li><code>ofw/locale</code>: Carpeta para las traducciones de los mensajes del CLI.</li>
+      <li><code>ofw/plugins</code>: Carpeta para los plugins que se usarán en la aplicación.</li>
       <li><code>ofw/task</code>: Carpeta para las tareas que proporciona el propio framework. Ver <a href="/es/tareas">Tareas</a>.</li>
-      <li><code>ofw/tmp</code>: Carpeta para datos temporales. Por ejemplo en esta carpeta se generan archivos temporales usados en el procesamiento de imagenes. Al utilizar la tarea <code>Composer</code>, el resultado se genera en esta carpeta (ver <a href="/es/tareas">Tareas</a>).</li>
+      <li><code>ofw/tmp</code>: Carpeta para datos temporales. Por ejemplo en esta carpeta se generan archivos temporales usados en el procesamiento de imágenes.</li>
     </ul>
     <p>La carpeta <code>web</code> es la parte pública, donde van situados los archivos estáticos expuestos a Internet.</p>
     <ul>

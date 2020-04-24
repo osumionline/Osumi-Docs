@@ -4,8 +4,9 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width">
     <title>{{title}}</title>
-    <link type="image/x-icon" href="/favicon.ico" rel="icon">
-    <link type="image/x-icon" href="/favicon.ico" rel="shortcut icon">
+    <link rel="icon" href="/img/icon-32x32.png" sizes="32x32">
+    <link rel="icon" href="/img/icon-48x48.png" sizes="48x48">
+    <link rel="shortcut icon" href="/img/icon-196x196.png" sizes="196x196">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,400italic">
     {{css}}
     {{js}}
