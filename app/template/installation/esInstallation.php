@@ -3,7 +3,7 @@
   {{menu}}
   <main>
     <h1>Instalación</h1>
-    <p>El framework se puede instalar en cualquier servidor con Apache2 y PHP 7.4 (al utilizar tipado fuerte en todo el Framework PHP 7.4.0 es la versión mínima necesaria para que funcione).</p>
+    <p>El framework se puede instalar en cualquier servidor con Apache2 y PHP 7.4 (al utilizar tipado fuerte en todo el Framework, PHP 7.4.0 es la versión mínima necesaria para que funcione).</p>
     <p>MySQL no es necesario pero en caso de querer usarlo el requisito es que sea de la versión 5.1 o superior. También se puede usar MariaDB 10.1 o superior.</p>
     <p>Para realizar la instalación hay dos formas:</p>
     <ol>
@@ -23,14 +23,14 @@
     <p><a href="https://github.com/igorosabel/Osumi-Framework/archive/master.zip">Descargar zip (529 KB)</a></p>
     <p>Al pulsar, se descargará un archivo llamado <code>Osumi-Framework-master.zip</code> con el contenido del repositorio.</p>
 
-    <h3>Composer</h3>
-    <p>El framework dispone de una utilidad llamada <code>Composer</code> que permite exportar todo el contenido de una aplicación a un solo archivo PHP que luego se puede copiar o llevar donde sea necesario.</p>
+    <h3>Extractor</h3>
+    <p>El framework dispone de una herramienta llamada <code>Extractor</code> que permite exportar todo el contenido de una aplicación a un solo archivo PHP que luego se puede copiar o llevar donde sea necesario.</p>
     <p>Por ejemplo para mover una aplicación de un sitio a otro, hacer una copia de seguridad...</p>
     <p>Primero hay que descargar el archivo zip que contiene este archivo PHP desde Github:</p>
     <p><a href="https://github.com/igorosabel/Osumi-Framework/files/1895073/ofw_composer.zip">Descargar zip (500 KB)</a></p>
-    <p>Dentro de este archivo zip hay un archivo llamado <code>ofw_composer.php</code></p>
-    <p>Ejecutando el siguiente comando se extrae todo el contenido de este archivo <code>Composer</code>:</p>
-    <p><code>php ofw_composer.php</code></p>
+    <p>Dentro de este archivo zip hay un archivo llamado <code>ofw_extractor.php</code></p>
+    <p>Ejecutando el siguiente comando se extrae todo el contenido de este archivo <code>Extractor</code>:</p>
+    <p><code>php ofw_extractor.php</code></p>
 
     <h3>Creador</h3>
     <p>He creado una aplicación llamada <strong>Creador</strong> que permite mediante una interfaz web diseñar y configurar una aplicación desde cero.</p>
@@ -72,7 +72,7 @@
       <li><code>app/service</code></li>
       <li><code>app/task</code></li>
       <li>Todas las carpetas en <code>app/template</code> excepto <code>layout</code> y <code>partials</code></li>
-      <li><code>ofw/sql</code></li>
+      <li><code>ofw/export</code></li>
       <li>Todos los archivos en <code>web</code> excepto el archivo <code>.htaccess</code> y el archivo <code>index.php</code></li>
     </ul>
     <p>Una vez borrado todo el código de ejemplo se puede empezar el proceso de creación de una nueva aplicación.</p>

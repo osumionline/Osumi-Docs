@@ -14,7 +14,7 @@
     <ul>
       <li>Una URL es llamada, por ejemplo <code>/user/igorosabel</code></li>
       <li>
-        Se busca en el archivo <code>urls.json</code> dicha URL. En caso de no encontrarse, se devuelve un error 404 (se puede configurar donde hay que redirigir al usuario en este caso).
+        Se busca en el archivo <code>urls.json</code> dicha URL. En caso de no encontrarse, se devuelve un error 404 (se puede configurar dónde hay que redirigir al usuario en este caso).
         <p>Este sería un ejemplo completo de <code>urls.json</code></p>
 <pre>
   {
@@ -60,7 +60,7 @@
       <li>Antes de ejecutar la acción correspondiente, se pueden definir <code>filtros</code> que hacen una función previa, por ejemplo comprobar si un usuario tiene permiso para acceder a un apartado concreto.</li>
       <li>En este caso, se ejecutará la función <code>userPage</code> de la clase <code>home</code> del archivo <code>app/controller/home.php</code></li>
       <li>Tras ejecutarse el código de la función, se carga la plantilla.</li>
-      <li>La plantilla se compone del <code>layout</code> o plantilla principal y la plantilla asociada a cada acción. Las plantillas están en la carpeta <code>app/template</code>.</li>
+      <li>La plantilla se compone del <code>layout</code> o cuerpo principal y la plantilla asociada a cada acción. Las plantillas están en la carpeta <code>app/template</code>.</li>
       <li>En esta carpeta hay una carpeta <code>layout</code> donde va la plantilla principal y una carpeta por cada módulo. En estás carpetas hay un archivo PHP por cada acción.</li>
       <li>En las plantillas se pueden definir "huecos" que se substituirán con valores de la función acción.</li>
       <li>Finalmente, se pueden utilizar archivos CSS, JS o imágenes, situados en la carpeta <code>web</code>.</li>
