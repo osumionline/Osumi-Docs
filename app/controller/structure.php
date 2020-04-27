@@ -1,27 +1,35 @@
-<?php
-class structure extends OController{
-  /*
-   * Página de Estructura
-   */
-  function esStructure($req){
-    $this->getTemplate()->addPartial('header', 'common/header', ['page' => 'structure', 'lang' => 'es']);
-    $this->getTemplate()->addPartial('menu',   'common/menu',   ['page' => 'structure', 'lang' => 'es']);
-    $this->getTemplate()->addPartial('footer', 'common/footer');
-  }
-  /*
-   * Página de Estructura (inglés)
-   */
-  function enStructure($req){
-    $this->getTemplate()->addPartial('header', 'common/header', ['page' => 'structure', 'lang' => 'en']);
-    $this->getTemplate()->addPartial('menu',   'common/menu',   ['page' => 'structure', 'lang' => 'en']);
-    $this->getTemplate()->addPartial('footer', 'common/footer');
-  }
-  /*
-   * Página de Estructura (euskara)
-   */
-  function euStructure($req){
-    $this->getTemplate()->addPartial('header', 'common/header', ['page' => 'structure', 'lang' => 'eu']);
-    $this->getTemplate()->addPartial('menu',   'common/menu',   ['page' => 'structure', 'lang' => 'eu']);
-    $this->getTemplate()->addPartial('footer', 'common/footer');
-  }
+<?php declare(strict_types=1);
+class structure extends OController {
+	/**
+	 * Página de Estructura
+	 *
+	 * @return void
+	 */
+	function esStructure(array $req): void {
+		$this->getTemplate()->addPartial('header', 'common/header', ['page' => 'structure', 'lang' => 'es']);
+		$this->getTemplate()->addPartial('menu',   'common/menu',   ['page' => 'structure', 'lang' => 'es']);
+		$this->getTemplate()->addPartial('footer', 'common/footer');
+	}
+
+	/**
+	 * Página de Estructura (inglés)
+	 *
+	 * @return void
+	 */
+	function enStructure(array $req): void {
+		$this->getTemplate()->addPartial('header', 'common/header', ['page' => 'structure', 'lang' => 'en']);
+		$this->getTemplate()->addPartial('menu',   'common/menu',   ['page' => 'structure', 'lang' => 'en']);
+		$this->getTemplate()->addPartial('footer', 'common/footer');
+	}
+
+	/**
+	 * Página de Estructura (euskara)
+	 *
+	 * @return void
+	 */
+	function euStructure(array $req): void {
+		$this->getTemplate()->addPartial('header', 'common/header', ['page' => 'structure', 'lang' => 'eu']);
+		$this->getTemplate()->addPartial('menu',   'common/menu',   ['page' => 'structure', 'lang' => 'eu']);
+		$this->getTemplate()->addPartial('footer', 'common/footer');
+	}
 }

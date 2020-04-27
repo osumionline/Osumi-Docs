@@ -1,6 +1,6 @@
-<?php
+<?php declare(strict_types=1);
 class internals extends OController {
-	/*
+	/**
 	 * Página de Funciones Internas
 	 *
 	 * @return void
@@ -11,7 +11,7 @@ class internals extends OController {
 		$this->getTemplate()->addPartial('footer', 'common/footer');
 	}
 
-	/*
+	/**
 	 * Página de Funciones Internas (inglés)
 	 *
 	 * @return void
@@ -22,7 +22,7 @@ class internals extends OController {
 		$this->getTemplate()->addPartial('footer', 'common/footer');
 	}
 
-	/*
+	/**
 	 * Página de Funciones Internas (euskara)
 	 *
 	 * @return void

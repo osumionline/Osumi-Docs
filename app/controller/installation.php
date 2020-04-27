@@ -1,6 +1,6 @@
-<?php
+<?php declare(strict_types=1);
 class installation extends OController {
-	/*
+	/**
 	 * Página de Instalación
 	 *
 	 * @return void
@@ -12,7 +12,7 @@ class installation extends OController {
 		$this->getTemplate()->add('version', OTools::getVersion());
 	}
 
-	/*
+	/**
 	 * Página de Instalación (inglés)
 	 *
 	 * @return void
@@ -24,7 +24,7 @@ class installation extends OController {
 		$this->getTemplate()->add('version', OTools::getVersion());
 	}
 
-	/*
+	/**
 	 * Página de Instalación (euskara)
 	 *
 	 * @return void

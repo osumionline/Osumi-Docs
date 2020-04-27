@@ -1,6 +1,6 @@
-<?php
+<?php declare(strict_types=1);
 class filters extends OController {
-	/*
+	/**
 	 * Página de Filtros
 	 *
 	 * @return void
@@ -11,7 +11,7 @@ class filters extends OController {
 		$this->getTemplate()->addPartial('footer', 'common/footer');
 	}
 
-	/*
+	/**
 	 * Página de Filtros (inglés)
 	 *
 	 * @return void
@@ -22,7 +22,7 @@ class filters extends OController {
 		$this->getTemplate()->addPartial('footer', 'common/footer');
 	}
 
-	/*
+	/**
 	 * Página de Filtros (euskara)
 	 *
 	 * @return void

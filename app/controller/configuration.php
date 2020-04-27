@@ -1,6 +1,6 @@
-<?php
+<?php declare(strict_types=1);
 class configuration extends OController{
-	/*
+	/**
 	 * Página de Configuración
 	 *
 	 * @return void
@@ -11,7 +11,7 @@ class configuration extends OController{
 		$this->getTemplate()->addPartial('footer', 'common/footer');
 	}
 
-	/*
+	/**
 	 * Página de Configuración (inglés)
 	 *
 	 * @return void
@@ -22,7 +22,7 @@ class configuration extends OController{
 		$this->getTemplate()->addPartial('footer', 'common/footer');
 	}
 
-	/*
+	/**
 	 * Página de Configuración (euskara)
 	 *
 	 * @return void

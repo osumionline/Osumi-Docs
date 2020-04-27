@@ -1,6 +1,6 @@
-<?php
+<?php declare(strict_types=1);
 class modules extends OController {
-	/*
+	/**
 	 * Página de Módulos
 	 *
 	 * @return void
@@ -11,7 +11,7 @@ class modules extends OController {
 		$this->getTemplate()->addPartial('footer', 'common/footer');
 	}
 
-	/*
+	/**
 	 * Página de Módulos (inglés)
 	 *
 	 * @return void
@@ -22,7 +22,7 @@ class modules extends OController {
 		$this->getTemplate()->addPartial('footer', 'common/footer');
 	}
 
-	/*
+	/**
 	 * Página de Módulos (euskara)
 	 *
 	 * @return void

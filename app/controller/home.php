@@ -1,6 +1,6 @@
-<?php
+<?php declare(strict_types=1);
 class home extends OController {
-	/*
+	/**
 	 * Página de inicio
 	 *
 	 * @return void
@@ -11,7 +11,7 @@ class home extends OController {
 		$this->getTemplate()->addPartial('footer', 'common/footer');
 	}
 
-	/*
+	/**
 	 * Página de inicio (inglés)
 	 *
 	 * @return void
@@ -22,7 +22,7 @@ class home extends OController {
 		$this->getTemplate()->addPartial('footer', 'common/footer');
 	}
 
-	/*
+	/**
 	 * Página de inicio (euskara)
 	 *
 	 * @return void
