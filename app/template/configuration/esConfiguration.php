@@ -4,65 +4,6 @@
   <main>
     <h1>Configuración</h1>
     <p>El archivo de configuración <code>app/config/config.json</code> es un archivo JSON con pares clave/valor con los que configurar la aplicación que se quiere crear. Todos los campos son opcionales, por lo que se podría dejar el archivo sin valores (por ejemplo <code>{}</code>), pero conviene configurarlos para una experiencia más personalizada. Estos son los posibles parámetros:</p>
-    <div class="data-table">
-      <div class="data-row">
-        <div class="data-block">
-          <strong>base_modules</strong>
-          Sirve para indicar si se quieren cargar varias herramientas opcionales que ofrece el framework.
-        </div>
-      </div>
-      <div class="data-header data-row">
-        <div class="data-param">Parámetro</div>
-        <div class="data-default">Valor por defecto</div>
-        <div class="data-explanation">Explicación del parámetro</div>
-      </div>
-      <div class="data-divider"></div>
-      <div class="data-row">
-        <div class="data-param">browser</div>
-        <div class="data-default">false</div>
-        <div class="data-explanation">Habilita la clase <code>OBrowser</code> con funciones para detección de navegador, versiones... Se basa en el <code>user agent</code> del usuario que accede a la aplicación.</div>
-      </div>
-      <div class="data-row">
-        <div class="data-param">email</div>
-        <div class="data-default">false</div>
-        <div class="data-explanation">Habilita la clase <code>OEmail</code> con funciones para realizar envíos de emails (usa la función <code>mail()</code> de PHP).</div>
-      </div>
-      <div class="data-row">
-        <div class="data-param">email_smtp</div>
-        <div class="data-default">false</div>
-        <div class="data-explanation">En caso de que el valor del parámetro sea <code>true</code>, al usar la clase <code>OEmail</code>, los envíos se realizaran por el protocolo SMTP, en vez de usar la función <code>mail()</code> de PHP. Es necesario incluir la librería (no incluida) PHPMailer. Es necesario configurar los datos de la cuenta de correo a usar en el campo <code>smtp</code>.</div>
-      </div>
-      <div class="data-row">
-        <div class="data-param">ftp</div>
-        <div class="data-default">false</div>
-        <div class="data-explanation">Habilita la clase <code>OFTP</code> con funciones para realizar llamadas FTP a servidores remotos.</div>
-      </div>
-      <div class="data-row">
-        <div class="data-param">image</div>
-        <div class="data-default">false</div>
-        <div class="data-explanation">Habilita la clase <code>OImage</code> con funciones para tratamiento de imágenes.</div>
-      </div>
-      <div class="data-row">
-        <div class="data-param">pdf</div>
-        <div class="data-default">false</div>
-        <div class="data-explanation">Habilita la clase <code>OPDF</code> con funciones para generar archivos PDF dinámicamente. Es necesario incluir la librería (no incluida) <code>TCPDF</code>.</div>
-      </div>
-      <div class="data-row">
-        <div class="data-param">translate</div>
-        <div class="data-default">false</div>
-        <div class="data-explanation">Habilita el uso de traducciones en la aplicación. Ver <a href="/es/traducciones">Traducciones</a>.</div>
-      </div>
-      <div class="data-row">
-        <div class="data-param">crypt</div>
-        <div class="data-default">false</div>
-        <div class="data-explanation">Habilita la clase <code>OCrypt</code> con funciones para cifrar y descifrar cadenas de texto.</div>
-      </div>
-      <div class="data-row">
-        <div class="data-param">file</div>
-        <div class="data-default">false</div>
-        <div class="data-explanation">Habilita la clase <code>OFile</code> con funciones para manipular archivos.</div>
-      </div>
-    </div>
 
     <div class="data-table">
       <div class="data-row">

@@ -100,7 +100,7 @@
       	<br><br>
       	<ul>
 	      <li>La tarea <code>generateModel</code> crea un archivo SQL con el que generar toda la base de datos.</li>
-		  <li>La tarea <code>composer</code> crea un archivo con una copia de seguridad de toda la aplicación.</li>
+		  <li>La tarea <code>extractor</code> crea un archivo con una copia de seguridad de toda la aplicación.</li>
       	</ul>
       </li>
       <li><code>ofw/lib</code>: Carpeta para las librerías de terceros. Entre ellas hay librerías utilizadas por el propio framework, y en caso de que el usuario decida usar alguna librería de terceros también iría en esta carpeta.</li>

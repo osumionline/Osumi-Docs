@@ -1,268 +1,268 @@
 {
-  "urls": [
-    {
-      "id": "home",
-      "module": "home",
-      "urls": [
-        {
-          "id": "page_es_start",
-          "url": "/",
-          "action": "esStart",
-          "comment": "Página de inicio"
-        },
-        {
-          "id": "page_en_start",
-          "url": "/en",
-          "action": "enStart",
-          "comment": "Página de inicio (inglés)"
-        },
-        {
-          "id": "page_eu_start",
-          "url": "/eu",
-          "action": "euStart",
-          "comment": "Página de inicio (euskara)"
-        }
-      ]
-    },
-    {
-      "id": "installation",
-      "module": "installation",
-      "urls": [
-        {
-          "id": "page_es_installation",
-          "url": "/es/instalacion",
-          "action": "esInstallation",
-          "comment": "Página de Instalación"
-        },
-        {
-          "id": "page_en_installation",
-          "url": "/en/installation",
-          "action": "enInstallation",
-          "comment": "Página de Instalación (inglés)"
-        },
-        {
-          "id": "page_eu_installation",
-          "url": "/eu/instalazioa",
-          "action": "euInstallation",
-          "comment": "Página de Instalación (euskara)"
-        }
-      ]
-    },
-    {
-      "id": "structure",
-      "module": "structure",
-      "urls": [
-        {
-          "id": "page_es_structure",
-          "url": "/es/estructura",
-          "action": "esStructure",
-          "comment": "Página de Estructura"
-        },
-        {
-          "id": "page_en_structure",
-          "url": "/en/structure",
-          "action": "enStructure",
-          "comment": "Página de Estructura (inglés)"
-        },
-        {
-          "id": "page_eu_structure",
-          "url": "/eu/estruktura",
-          "action": "euStructure",
-          "comment": "Página de Estructura (euskara)"
-        }
-      ]
-    },
-    {
-      "id": "configuration",
-      "module": "configuration",
-      "urls": [
-        {
-          "id": "page_es_configuration",
-          "url": "/es/configuracion",
-          "action": "esConfiguration",
-          "comment": "Página de Configuración"
-        },
-        {
-          "id": "page_en_configuration",
-          "url": "/en/configuration",
-          "action": "enConfiguration",
-          "comment": "Página de Configuración (inglés)"
-        },
-        {
-          "id": "page_eu_configuration",
-          "url": "/eu/konfigurazioa",
-          "action": "euConfiguration",
-          "comment": "Página de Configuración (euskara)"
-        }
-      ]
-    },
-    {
-      "id": "urls",
-      "module": "urls",
-      "urls": [
-        {
-          "id": "page_es_urls",
-          "url": "/es/urls",
-          "action": "esUrls",
-          "comment": "Página de URLs"
-        },
-        {
-          "id": "page_en_urls",
-          "url": "/en/urls",
-          "action": "enUrls",
-          "comment": "Página de URLs (inglés)"
-        },
-        {
-          "id": "page_eu_urls",
-          "url": "/eu/urlak",
-          "action": "euUrls",
-          "comment": "Página de URLs (euskara)"
-        }
-      ]
-    },
-    {
-      "id": "modules",
-      "module": "modules",
-      "urls": [
-        {
-          "id": "page_es_modules",
-          "url": "/es/modulos",
-          "action": "esModules",
-          "comment": "Página de Módulos"
-        },
-        {
-          "id": "page_en_modules",
-          "url": "/en/modules",
-          "action": "enModules",
-          "comment": "Página de Módulos (inglés)"
-        },
-        {
-          "id": "page_eu_modules",
-          "url": "/eu/moduloak",
-          "action": "euModules",
-          "comment": "Página de Módulos (euskara)"
-        }
-      ]
-    },
-    {
-      "id": "services",
-      "module": "services",
-      "urls": [
-        {
-          "id": "page_es_services",
-          "url": "/es/servicios",
-          "action": "esServices",
-          "comment": "Página de Servicios"
-        },
-        {
-          "id": "page_en_services",
-          "url": "/en/services",
-          "action": "enServices",
-          "comment": "Página de Servicios (inglés)"
-        },
-        {
-          "id": "page_eu_services",
-          "url": "/eu/zerbitzuak",
-          "action": "euServices",
-          "comment": "Página de Servicios (euskara)"
-        }
-      ]
-    },
-    {
-      "id": "filters",
-      "module": "filters",
-      "urls": [
-        {
-          "id": "page_es_filters",
-          "url": "/es/filtros",
-          "action": "esFilters",
-          "comment": "Página de Filtros"
-        },
-        {
-          "id": "page_en_filters",
-          "url": "/en/filters",
-          "action": "enFilters",
-          "comment": "Página de Filtros (inglés)"
-        },
-        {
-          "id": "page_eu_filters",
-          "url": "/eu/filtroak",
-          "action": "euFilters",
-          "comment": "Página de Filtros (euskara)"
-        }
-      ]
-    },
-    {
-      "id": "internals",
-      "module": "internals",
-      "urls": [
-        {
-          "id": "page_es_internals",
-          "url": "/es/funciones-internas",
-          "action": "esInternals",
-          "comment": "Página de Funciones Internas"
-        },
-        {
-          "id": "page_en_internals",
-          "url": "/en/internal-functions",
-          "action": "enInternals",
-          "comment": "Página de Funciones Internas (inglés)"
-        },
-        {
-          "id": "page_eu_internals",
-          "url": "/eu/barruko-funtzioak",
-          "action": "euInternals",
-          "comment": "Página de Funciones Internas (euskara)"
-        }
-      ]
-    },
-    {
-      "id": "tasks",
-      "module": "tasks",
-      "urls": [
-        {
-          "id": "page_es_tasks",
-          "url": "/es/tareas",
-          "action": "esTasks",
-          "comment": "Página de Tareas"
-        },
-        {
-          "id": "page_en_tasks",
-          "url": "/en/tasks",
-          "action": "enTasks",
-          "comment": "Página de Tareas (inglés)"
-        },
-        {
-          "id": "page_eu_tasks",
-          "url": "/eu/atazak",
-          "action": "euTasks",
-          "comment": "Página de Tareas (euskara)"
-        }
-      ]
-    },
-    {
-      "id": "translations",
-      "module": "translations",
-      "urls": [
-        {
-          "id": "page_es_translations",
-          "url": "/es/traducciones",
-          "action": "esTranslations",
-          "comment": "Página de Traducciones"
-        },
-        {
-          "id": "page_en_translations",
-          "url": "/en/translations",
-          "action": "enTranslations",
-          "comment": "Página de Traducciones (inglés)"
-        },
-        {
-          "id": "page_eu_translations",
-          "url": "/eu/itzulpenak",
-          "action": "euTranslations",
-          "comment": "Página de Traducciones (euskara)"
-        }
-      ]
-    }
-  ]
+	"urls": [
+		{
+			"id": "home",
+			"module": "home",
+			"urls": [
+				{
+					"id": "page_es_start",
+					"url": "/",
+					"action": "esStart",
+					"comment": "Página de inicio"
+				},
+				{
+					"id": "page_en_start",
+					"url": "/en",
+					"action": "enStart",
+					"comment": "Página de inicio (inglés)"
+				},
+				{
+					"id": "page_eu_start",
+					"url": "/eu",
+					"action": "euStart",
+					"comment": "Página de inicio (euskara)"
+				}
+			]
+		},
+		{
+			"id": "installation",
+			"module": "installation",
+			"urls": [
+				{
+					"id": "page_es_installation",
+					"url": "/es/instalacion",
+					"action": "esInstallation",
+					"comment": "Página de Instalación"
+				},
+				{
+					"id": "page_en_installation",
+					"url": "/en/installation",
+					"action": "enInstallation",
+					"comment": "Página de Instalación (inglés)"
+				},
+				{
+					"id": "page_eu_installation",
+					"url": "/eu/instalazioa",
+					"action": "euInstallation",
+					"comment": "Página de Instalación (euskara)"
+				}
+			]
+		},
+		{
+			"id": "structure",
+			"module": "structure",
+			"urls": [
+				{
+					"id": "page_es_structure",
+					"url": "/es/estructura",
+					"action": "esStructure",
+					"comment": "Página de Estructura"
+				},
+				{
+					"id": "page_en_structure",
+					"url": "/en/structure",
+					"action": "enStructure",
+					"comment": "Página de Estructura (inglés)"
+				},
+				{
+					"id": "page_eu_structure",
+					"url": "/eu/estruktura",
+					"action": "euStructure",
+					"comment": "Página de Estructura (euskara)"
+				}
+			]
+		},
+		{
+			"id": "configuration",
+			"module": "configuration",
+			"urls": [
+				{
+					"id": "page_es_configuration",
+					"url": "/es/configuracion",
+					"action": "esConfiguration",
+					"comment": "Página de Configuración"
+				},
+				{
+					"id": "page_en_configuration",
+					"url": "/en/configuration",
+					"action": "enConfiguration",
+					"comment": "Página de Configuración (inglés)"
+				},
+				{
+					"id": "page_eu_configuration",
+					"url": "/eu/konfigurazioa",
+					"action": "euConfiguration",
+					"comment": "Página de Configuración (euskara)"
+				}
+			]
+		},
+		{
+			"id": "urls",
+			"module": "urls",
+			"urls": [
+				{
+					"id": "page_es_urls",
+					"url": "/es/urls",
+					"action": "esUrls",
+					"comment": "Página de URLs"
+				},
+				{
+					"id": "page_en_urls",
+					"url": "/en/urls",
+					"action": "enUrls",
+					"comment": "Página de URLs (inglés)"
+				},
+				{
+					"id": "page_eu_urls",
+					"url": "/eu/urlak",
+					"action": "euUrls",
+					"comment": "Página de URLs (euskara)"
+				}
+			]
+		},
+		{
+			"id": "modules",
+			"module": "modules",
+			"urls": [
+				{
+					"id": "page_es_modules",
+					"url": "/es/modulos",
+					"action": "esModules",
+					"comment": "Página de Módulos"
+				},
+				{
+					"id": "page_en_modules",
+					"url": "/en/modules",
+					"action": "enModules",
+					"comment": "Página de Módulos (inglés)"
+				},
+				{
+					"id": "page_eu_modules",
+					"url": "/eu/moduloak",
+					"action": "euModules",
+					"comment": "Página de Módulos (euskara)"
+				}
+			]
+		},
+		{
+			"id": "services",
+			"module": "services",
+			"urls": [
+				{
+					"id": "page_es_services",
+					"url": "/es/servicios",
+					"action": "esServices",
+					"comment": "Página de Servicios"
+				},
+				{
+					"id": "page_en_services",
+					"url": "/en/services",
+					"action": "enServices",
+					"comment": "Página de Servicios (inglés)"
+				},
+				{
+					"id": "page_eu_services",
+					"url": "/eu/zerbitzuak",
+					"action": "euServices",
+					"comment": "Página de Servicios (euskara)"
+				}
+			]
+		},
+		{
+			"id": "filters",
+			"module": "filters",
+			"urls": [
+				{
+					"id": "page_es_filters",
+					"url": "/es/filtros",
+					"action": "esFilters",
+					"comment": "Página de Filtros"
+				},
+				{
+					"id": "page_en_filters",
+					"url": "/en/filters",
+					"action": "enFilters",
+					"comment": "Página de Filtros (inglés)"
+				},
+				{
+					"id": "page_eu_filters",
+					"url": "/eu/filtroak",
+					"action": "euFilters",
+					"comment": "Página de Filtros (euskara)"
+				}
+			]
+		},
+		{
+			"id": "internals",
+			"module": "internals",
+			"urls": [
+				{
+					"id": "page_es_internals",
+					"url": "/es/funciones-internas",
+					"action": "esInternals",
+					"comment": "Página de Funciones Internas"
+				},
+				{
+					"id": "page_en_internals",
+					"url": "/en/internal-functions",
+					"action": "enInternals",
+					"comment": "Página de Funciones Internas (inglés)"
+				},
+				{
+					"id": "page_eu_internals",
+					"url": "/eu/barruko-funtzioak",
+					"action": "euInternals",
+					"comment": "Página de Funciones Internas (euskara)"
+				}
+			]
+		},
+		{
+			"id": "tasks",
+			"module": "tasks",
+			"urls": [
+				{
+					"id": "page_es_tasks",
+					"url": "/es/tareas",
+					"action": "esTasks",
+					"comment": "Página de Tareas"
+				},
+				{
+					"id": "page_en_tasks",
+					"url": "/en/tasks",
+					"action": "enTasks",
+					"comment": "Página de Tareas (inglés)"
+				},
+				{
+					"id": "page_eu_tasks",
+					"url": "/eu/atazak",
+					"action": "euTasks",
+					"comment": "Página de Tareas (euskara)"
+				}
+			]
+		},
+		{
+			"id": "translations",
+			"module": "translations",
+			"urls": [
+				{
+					"id": "page_es_translations",
+					"url": "/es/traducciones",
+					"action": "esTranslations",
+					"comment": "Página de Traducciones"
+				},
+				{
+					"id": "page_en_translations",
+					"url": "/en/translations",
+					"action": "enTranslations",
+					"comment": "Página de Traducciones (inglés)"
+				},
+				{
+					"id": "page_eu_translations",
+					"url": "/eu/itzulpenak",
+					"action": "euTranslations",
+					"comment": "Página de Traducciones (euskara)"
+				}
+			]
+		}
+	]
 }

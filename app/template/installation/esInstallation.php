@@ -20,14 +20,14 @@
 
     <h3>Descargar el código en zip</h3>
     <p>Pulsando en el siguiente enlace se puede bajar un archivo zip con todo el contenido del repositorio desde Github:</p>
-    <p><a href="https://github.com/igorosabel/Osumi-Framework/archive/master.zip">Descargar zip (529 KB)</a></p>
+    <p><a href="https://github.com/igorosabel/Osumi-Framework/archive/master.zip">Descargar zip</a></p>
     <p>Al pulsar, se descargará un archivo llamado <code>Osumi-Framework-master.zip</code> con el contenido del repositorio.</p>
 
     <h3>Extractor</h3>
     <p>El framework dispone de una herramienta llamada <code>Extractor</code> que permite exportar todo el contenido de una aplicación a un solo archivo PHP que luego se puede copiar o llevar donde sea necesario.</p>
     <p>Por ejemplo para mover una aplicación de un sitio a otro, hacer una copia de seguridad...</p>
     <p>Primero hay que descargar el archivo zip que contiene este archivo PHP desde Github:</p>
-    <p><a href="https://github.com/igorosabel/Osumi-Framework/files/1895073/ofw_composer.zip">Descargar zip (500 KB)</a></p>
+    <p><a href="https://github.com/igorosabel/Osumi-Framework/releases/download/v{{version}}/ofw_extractor.zip">Descargar zip</a></p>
     <p>Dentro de este archivo zip hay un archivo llamado <code>ofw_extractor.php</code></p>
     <p>Ejecutando el siguiente comando se extrae todo el contenido de este archivo <code>Extractor</code>:</p>
     <p><code>php ofw_extractor.php</code></p>
