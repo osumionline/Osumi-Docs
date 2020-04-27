@@ -7,8 +7,8 @@
     <p>Cada módulo es un archivo PHP que contiene una clase con el nombre del módulo. Por ejemplo, el módulo <code>api</code> será un archivo llamado <code>api.php</code> y su contenido inicial sería este:</p>
 
 <pre>
-  &lt;?php
-  class api extends OController{
+  &lt;?php declare(strict_types=1);
+  class api extends OController {
     // Código del módulo
   }
 </pre>
@@ -19,18 +19,20 @@
     <p>Por ejemplo, la anterior clase <code>api</code> con una acción llamada <code>getUser</code> sería así:</p>
 
 <pre>
-  &lt;?php
-  class api extends OController{
-    /*
+  &lt;?php declare(strict_types=1);
+  class api extends OController {
+    /**
      * Función para obtener los datos de un usuario
+     *
+     * @return void
      */
-    public function getUser($req){
+    public function getUser(array $req): void {
       // Código de la acción
     }
   }
 </pre>
 
-    <p>La variable <code>$req</code> recibida tiene estos campos:</p>
+    <p>La variable <code>$req</code> recibida es un array con estos campos tiene estos campos:</p>
 
     <div class="data-table">
       <div class="data-header data-row">

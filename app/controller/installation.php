@@ -9,6 +9,7 @@ class installation extends OController {
 		$this->getTemplate()->addPartial('header', 'common/header', ['page' => 'installation', 'lang' => 'es']);
 		$this->getTemplate()->addPartial('menu',   'common/menu',   ['page' => 'installation', 'lang' => 'es']);
 		$this->getTemplate()->addPartial('footer', 'common/footer');
+		$this->getTemplate()->setTitle('Osumi Framework - Instalación');
 		$this->getTemplate()->add('version', OTools::getVersion());
 	}
 
@@ -21,6 +22,7 @@ class installation extends OController {
 		$this->getTemplate()->addPartial('header', 'common/header', ['page' => 'installation', 'lang' => 'en']);
 		$this->getTemplate()->addPartial('menu',   'common/menu',   ['page' => 'installation', 'lang' => 'en']);
 		$this->getTemplate()->addPartial('footer', 'common/footer');
+		$this->getTemplate()->setTitle('Osumi Framework - Installation');
 		$this->getTemplate()->add('version', OTools::getVersion());
 	}
 
@@ -33,6 +35,7 @@ class installation extends OController {
 		$this->getTemplate()->addPartial('header', 'common/header', ['page' => 'installation', 'lang' => 'eu']);
 		$this->getTemplate()->addPartial('menu',   'common/menu',   ['page' => 'installation', 'lang' => 'eu']);
 		$this->getTemplate()->addPartial('footer', 'common/footer');
+		$this->getTemplate()->setTitle('Osumi Framework - Instalazioa');
 		$this->getTemplate()->add('version', OTools::getVersion());
 	}
 }

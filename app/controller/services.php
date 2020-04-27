@@ -9,6 +9,7 @@ class services extends OController {
 		$this->getTemplate()->addPartial('header', 'common/header', ['page' => 'services', 'lang' => 'es']);
 		$this->getTemplate()->addPartial('menu',   'common/menu',   ['page' => 'services', 'lang' => 'es']);
 		$this->getTemplate()->addPartial('footer', 'common/footer');
+		$this->getTemplate()->setTitle('Osumi Framework - Servicios');
 	}
 
 	/**
@@ -20,6 +21,7 @@ class services extends OController {
 		$this->getTemplate()->addPartial('header', 'common/header', ['page' => 'services', 'lang' => 'en']);
 		$this->getTemplate()->addPartial('menu',   'common/menu',   ['page' => 'services', 'lang' => 'en']);
 		$this->getTemplate()->addPartial('footer', 'common/footer');
+		$this->getTemplate()->setTitle('Osumi Framework - Services');
 	}
 
 	/**
@@ -31,5 +33,6 @@ class services extends OController {
 		$this->getTemplate()->addPartial('header', 'common/header', ['page' => 'services', 'lang' => 'eu']);
 		$this->getTemplate()->addPartial('menu',   'common/menu',   ['page' => 'services', 'lang' => 'eu']);
 		$this->getTemplate()->addPartial('footer', 'common/footer');
+		$this->getTemplate()->setTitle('Osumi Framework - Zerbitzuak');
 	}
 }

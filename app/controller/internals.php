@@ -9,6 +9,7 @@ class internals extends OController {
 		$this->getTemplate()->addPartial('header', 'common/header', ['page' => 'internals', 'lang' => 'es']);
 		$this->getTemplate()->addPartial('menu',   'common/menu',   ['page' => 'internals', 'lang' => 'es']);
 		$this->getTemplate()->addPartial('footer', 'common/footer');
+		$this->getTemplate()->setTitle('Osumi Framework - Funciones internas');
 	}
 
 	/**
@@ -20,6 +21,7 @@ class internals extends OController {
 		$this->getTemplate()->addPartial('header', 'common/header', ['page' => 'internals', 'lang' => 'en']);
 		$this->getTemplate()->addPartial('menu',   'common/menu',   ['page' => 'internals', 'lang' => 'en']);
 		$this->getTemplate()->addPartial('footer', 'common/footer');
+		$this->getTemplate()->setTitle('Osumi Framework - Internal functions');
 	}
 
 	/**
@@ -31,5 +33,6 @@ class internals extends OController {
 		$this->getTemplate()->addPartial('header', 'common/header', ['page' => 'internals', 'lang' => 'eu']);
 		$this->getTemplate()->addPartial('menu',   'common/menu',   ['page' => 'internals', 'lang' => 'eu']);
 		$this->getTemplate()->addPartial('footer', 'common/footer');
+		$this->getTemplate()->setTitle('Osumi Framework - Barruko funtzioak');
 	}
 }

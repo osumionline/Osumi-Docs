@@ -9,6 +9,7 @@ class configuration extends OController{
 		$this->getTemplate()->addPartial('header', 'common/header', ['page' => 'configuration', 'lang' => 'es']);
 		$this->getTemplate()->addPartial('menu',   'common/menu',   ['page' => 'configuration', 'lang' => 'es']);
 		$this->getTemplate()->addPartial('footer', 'common/footer');
+		$this->getTemplate()->setTitle('Osumi Framework - Configuración');
 	}
 
 	/**
@@ -20,6 +21,7 @@ class configuration extends OController{
 		$this->getTemplate()->addPartial('header', 'common/header', ['page' => 'configuration', 'lang' => 'en']);
 		$this->getTemplate()->addPartial('menu',   'common/menu',   ['page' => 'configuration', 'lang' => 'en']);
 		$this->getTemplate()->addPartial('footer', 'common/footer');
+		$this->getTemplate()->setTitle('Osumi Framework - Configuration');
 	}
 
 	/**
@@ -31,5 +33,6 @@ class configuration extends OController{
 		$this->getTemplate()->addPartial('header', 'common/header', ['page' => 'configuration', 'lang' => 'eu']);
 		$this->getTemplate()->addPartial('menu',   'common/menu',   ['page' => 'configuration', 'lang' => 'eu']);
 		$this->getTemplate()->addPartial('footer', 'common/footer');
+		$this->getTemplate()->setTitle('Osumi Framework - Konfigurazioa');
 	}
 }

@@ -9,6 +9,7 @@ class translations extends OController {
 		$this->getTemplate()->addPartial('header', 'common/header', ['page' => 'translations', 'lang' => 'es']);
 		$this->getTemplate()->addPartial('menu',   'common/menu',   ['page' => 'translations', 'lang' => 'es']);
 		$this->getTemplate()->addPartial('footer', 'common/footer');
+		$this->getTemplate()->setTitle('Osumi Framework - Traducciones');
 	}
 
 	/**
@@ -20,6 +21,7 @@ class translations extends OController {
 		$this->getTemplate()->addPartial('header', 'common/header', ['page' => 'translations', 'lang' => 'en']);
 		$this->getTemplate()->addPartial('menu',   'common/menu',   ['page' => 'translations', 'lang' => 'en']);
 		$this->getTemplate()->addPartial('footer', 'common/footer');
+		$this->getTemplate()->setTitle('Osumi Framework - Translations');
 	}
 
 	/**
@@ -31,5 +33,6 @@ class translations extends OController {
 		$this->getTemplate()->addPartial('header', 'common/header', ['page' => 'translations', 'lang' => 'eu']);
 		$this->getTemplate()->addPartial('menu',   'common/menu',   ['page' => 'translations', 'lang' => 'eu']);
 		$this->getTemplate()->addPartial('footer', 'common/footer');
+		$this->getTemplate()->setTitle('Osumi Framework - Itzulpenak');
 	}
 }

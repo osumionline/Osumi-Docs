@@ -9,6 +9,7 @@ class urls extends OController {
 		$this->getTemplate()->addPartial('header', 'common/header', ['page' => 'urls', 'lang' => 'es']);
 		$this->getTemplate()->addPartial('menu',   'common/menu',   ['page' => 'urls', 'lang' => 'es']);
 		$this->getTemplate()->addPartial('footer', 'common/footer');
+		$this->getTemplate()->setTitle('Osumi Framework - URLs');
 	}
 
 	/**
@@ -20,6 +21,7 @@ class urls extends OController {
 		$this->getTemplate()->addPartial('header', 'common/header', ['page' => 'urls', 'lang' => 'en']);
 		$this->getTemplate()->addPartial('menu',   'common/menu',   ['page' => 'urls', 'lang' => 'en']);
 		$this->getTemplate()->addPartial('footer', 'common/footer');
+		$this->getTemplate()->setTitle('Osumi Framework - URLs');
 	}
 
 	/**
@@ -31,5 +33,6 @@ class urls extends OController {
 		$this->getTemplate()->addPartial('header', 'common/header', ['page' => 'urls', 'lang' => 'eu']);
 		$this->getTemplate()->addPartial('menu',   'common/menu',   ['page' => 'urls', 'lang' => 'eu']);
 		$this->getTemplate()->addPartial('footer', 'common/footer');
+		$this->getTemplate()->setTitle('Osumi Framework - URLak');
 	}
 }

@@ -9,6 +9,7 @@ class filters extends OController {
 		$this->getTemplate()->addPartial('header', 'common/header', ['page' => 'filters', 'lang' => 'es']);
 		$this->getTemplate()->addPartial('menu',   'common/menu',   ['page' => 'filters', 'lang' => 'es']);
 		$this->getTemplate()->addPartial('footer', 'common/footer');
+		$this->getTemplate()->setTitle('Osumi Framework - Filtros');
 	}
 
 	/**
@@ -20,6 +21,7 @@ class filters extends OController {
 		$this->getTemplate()->addPartial('header', 'common/header', ['page' => 'filters', 'lang' => 'en']);
 		$this->getTemplate()->addPartial('menu',   'common/menu',   ['page' => 'filters', 'lang' => 'en']);
 		$this->getTemplate()->addPartial('footer', 'common/footer');
+		$this->getTemplate()->setTitle('Osumi Framework - Filters');
 	}
 
 	/**
@@ -31,5 +33,6 @@ class filters extends OController {
 		$this->getTemplate()->addPartial('header', 'common/header', ['page' => 'filters', 'lang' => 'eu']);
 		$this->getTemplate()->addPartial('menu',   'common/menu',   ['page' => 'filters', 'lang' => 'eu']);
 		$this->getTemplate()->addPartial('footer', 'common/footer');
+		$this->getTemplate()->setTitle('Osumi Framework - Filtroak');
 	}
 }

@@ -76,7 +76,7 @@
       <div class="data-divider"></div>
       <div class="data-row">
         <div class="data-param">type</div>
-        <div class="data-default">(no tiene)</div>
+        <div class="data-default">html</div>
         <div class="data-explanation">
           Tipo de respuesta que se devolverá.
           <ul>
