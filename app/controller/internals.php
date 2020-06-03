@@ -3,9 +3,11 @@ class internals extends OController {
 	/**
 	 * Página de Funciones Internas
 	 *
+	 * @param ORequest $req Request object with method, headers, parameters and filters used
+	 *
 	 * @return void
 	 */
-	function esInternals(array $req): void {
+	function esInternals(ORequest $req): void {
 		$this->getTemplate()->addPartial('header', 'common/header', ['page' => 'internals', 'lang' => 'es']);
 		$this->getTemplate()->addPartial('menu',   'common/menu',   ['page' => 'internals', 'lang' => 'es']);
 		$this->getTemplate()->addPartial('footer', 'common/footer');
@@ -15,9 +17,11 @@ class internals extends OController {
 	/**
 	 * Página de Funciones Internas (inglés)
 	 *
+	 * @param ORequest $req Request object with method, headers, parameters and filters used
+	 *
 	 * @return void
 	 */
-	function enInternals(array $req): void {
+	function enInternals(ORequest $req): void {
 		$this->getTemplate()->addPartial('header', 'common/header', ['page' => 'internals', 'lang' => 'en']);
 		$this->getTemplate()->addPartial('menu',   'common/menu',   ['page' => 'internals', 'lang' => 'en']);
 		$this->getTemplate()->addPartial('footer', 'common/footer');
@@ -27,9 +31,11 @@ class internals extends OController {
 	/**
 	 * Página de Funciones Internas (euskara)
 	 *
+	 * @param ORequest $req Request object with method, headers, parameters and filters used
+	 *
 	 * @return void
 	 */
-	function euInternals(array $req): void {
+	function euInternals(ORequest $req): void {
 		$this->getTemplate()->addPartial('header', 'common/header', ['page' => 'internals', 'lang' => 'eu']);
 		$this->getTemplate()->addPartial('menu',   'common/menu',   ['page' => 'internals', 'lang' => 'eu']);
 		$this->getTemplate()->addPartial('footer', 'common/footer');

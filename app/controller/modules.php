@@ -3,9 +3,11 @@ class modules extends OController {
 	/**
 	 * Página de Módulos
 	 *
+	 * @param ORequest $req Request object with method, headers, parameters and filters used
+	 *
 	 * @return void
 	 */
-	function esModules(array $req): void {
+	function esModules(ORequest $req): void {
 		$this->getTemplate()->addPartial('header', 'common/header', ['page' => 'modules', 'lang' => 'es']);
 		$this->getTemplate()->addPartial('menu',   'common/menu',   ['page' => 'modules', 'lang' => 'es']);
 		$this->getTemplate()->addPartial('footer', 'common/footer');
@@ -15,9 +17,11 @@ class modules extends OController {
 	/**
 	 * Página de Módulos (inglés)
 	 *
+	 * @param ORequest $req Request object with method, headers, parameters and filters used
+	 *
 	 * @return void
 	 */
-	function enModules(array $req): void {
+	function enModules(ORequest $req): void {
 		$this->getTemplate()->addPartial('header', 'common/header', ['page' => 'modules', 'lang' => 'en']);
 		$this->getTemplate()->addPartial('menu',   'common/menu',   ['page' => 'modules', 'lang' => 'en']);
 		$this->getTemplate()->addPartial('footer', 'common/footer');
@@ -27,9 +31,11 @@ class modules extends OController {
 	/**
 	 * Página de Módulos (euskara)
 	 *
+	 * @param ORequest $req Request object with method, headers, parameters and filters used
+	 *
 	 * @return void
 	 */
-	function euModules(array $req): void {
+	function euModules(ORequest $req): void {
 		$this->getTemplate()->addPartial('header', 'common/header', ['page' => 'modules', 'lang' => 'eu']);
 		$this->getTemplate()->addPartial('menu',   'common/menu',   ['page' => 'modules', 'lang' => 'eu']);
 		$this->getTemplate()->addPartial('footer', 'common/footer');

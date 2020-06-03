@@ -3,9 +3,11 @@ class filters extends OController {
 	/**
 	 * Página de Filtros
 	 *
+	 * @param ORequest $req Request object with method, headers, parameters and filters used
+	 *
 	 * @return void
 	 */
-	function esFilters(array $req): void {
+	function esFilters(ORequest $req): void {
 		$this->getTemplate()->addPartial('header', 'common/header', ['page' => 'filters', 'lang' => 'es']);
 		$this->getTemplate()->addPartial('menu',   'common/menu',   ['page' => 'filters', 'lang' => 'es']);
 		$this->getTemplate()->addPartial('footer', 'common/footer');
@@ -15,9 +17,11 @@ class filters extends OController {
 	/**
 	 * Página de Filtros (inglés)
 	 *
+	 * @param ORequest $req Request object with method, headers, parameters and filters used
+	 *
 	 * @return void
 	 */
-	function enFilters(array $req): void {
+	function enFilters(ORequest $req): void {
 		$this->getTemplate()->addPartial('header', 'common/header', ['page' => 'filters', 'lang' => 'en']);
 		$this->getTemplate()->addPartial('menu',   'common/menu',   ['page' => 'filters', 'lang' => 'en']);
 		$this->getTemplate()->addPartial('footer', 'common/footer');
@@ -27,9 +31,11 @@ class filters extends OController {
 	/**
 	 * Página de Filtros (euskara)
 	 *
+	 * @param ORequest $req Request object with method, headers, parameters and filters used
+	 *
 	 * @return void
 	 */
-	function euFilters(array $req): void {
+	function euFilters(ORequest $req): void {
 		$this->getTemplate()->addPartial('header', 'common/header', ['page' => 'filters', 'lang' => 'eu']);
 		$this->getTemplate()->addPartial('menu',   'common/menu',   ['page' => 'filters', 'lang' => 'eu']);
 		$this->getTemplate()->addPartial('footer', 'common/footer');

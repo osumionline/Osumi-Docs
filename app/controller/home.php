@@ -3,9 +3,11 @@ class home extends OController {
 	/**
 	 * Página de inicio
 	 *
+	 * @param ORequest $req Request object with method, headers, parameters and filters used
+	 *
 	 * @return void
 	 */
-	function esStart(array $req): void {
+	function esStart(ORequest $req): void {
 		$this->getTemplate()->addPartial('header', 'common/header', ['page' => 'start', 'lang' => 'es']);
 		$this->getTemplate()->addPartial('menu',   'common/menu',   ['page' => 'start', 'lang' => 'es']);
 		$this->getTemplate()->addPartial('footer', 'common/footer');
@@ -14,9 +16,11 @@ class home extends OController {
 	/**
 	 * Página de inicio (inglés)
 	 *
+	 * @param ORequest $req Request object with method, headers, parameters and filters used
+	 *
 	 * @return void
 	 */
-	function enStart(array $req): void {
+	function enStart(ORequest $req): void {
 		$this->getTemplate()->addPartial('header', 'common/header', ['page' => 'start', 'lang' => 'en']);
 		$this->getTemplate()->addPartial('menu',   'common/menu',   ['page' => 'start', 'lang' => 'en']);
 		$this->getTemplate()->addPartial('footer', 'common/footer');
@@ -25,9 +29,11 @@ class home extends OController {
 	/**
 	 * Página de inicio (euskara)
 	 *
+	 * @param ORequest $req Request object with method, headers, parameters and filters used
+	 *
 	 * @return void
 	 */
-	function euStart(array $req): void {
+	function euStart(ORequest $req): void {
 		$this->getTemplate()->addPartial('header', 'common/header', ['page' => 'start', 'lang' => 'eu']);
 		$this->getTemplate()->addPartial('menu',   'common/menu',   ['page' => 'start', 'lang' => 'eu']);
 		$this->getTemplate()->addPartial('footer', 'common/footer');
