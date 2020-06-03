@@ -56,7 +56,10 @@
 			<div class="data-row">
 				<div class="data-param">filter</div>
 				<div class="data-default">(no tiene)</div>
-				<div class="data-explanation">Si la acción tiene un filtro asociado, en este campo estarán los valores devueltos por él (<a href="/es/filtros">ver más</a>). En caso de no tener filtros, este campo no estará presente.</div>
+				<div class="data-explanation">
+					Si la acción tiene un filtro asociado, en este campo estarán los valores devueltos por él (<a href="/es/filtros">ver más</a>). En caso de no tener filtros, este campo no estará presente.
+					<br>
+					El nombre de la variable será el nombre del filtro, por ejemplos, si la acción tiene asociado un filtro llamado <code>loginFilter</code>, la variable <code>$req</code> tendrá un campo llamado <code>loginFilter</code>.</div>
 			</div>
 			<div class="data-divider"></div>
 			<div class="data-row">
