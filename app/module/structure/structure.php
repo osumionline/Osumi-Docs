@@ -1,5 +1,5 @@
 <?php declare(strict_types=1);
-class structure extends OController {
+class structure extends OModule {
 	/**
 	 * Página de Estructura
 	 *

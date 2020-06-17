@@ -1,5 +1,5 @@
 <?php declare(strict_types=1);
-class services extends OController {
+class services extends OModule {
 	/**
 	 * Página de Servicios
 	 *

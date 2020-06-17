@@ -1,5 +1,5 @@
 <?php declare(strict_types=1);
-class translations extends OController {
+class translations extends OModule {
 	/**
 	 * Página de Traducciones
 	 *

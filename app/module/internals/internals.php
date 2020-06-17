@@ -1,5 +1,5 @@
 <?php declare(strict_types=1);
-class internals extends OController {
+class internals extends OModule {
 	/**
 	 * Página de Funciones Internas
 	 *

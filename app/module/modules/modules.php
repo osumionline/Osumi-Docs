@@ -1,5 +1,5 @@
 <?php declare(strict_types=1);
-class modules extends OController {
+class modules extends OModule {
 	/**
 	 * Página de Módulos
 	 *

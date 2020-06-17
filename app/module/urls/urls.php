@@ -1,5 +1,5 @@
 <?php declare(strict_types=1);
-class urls extends OController {
+class urls extends OModule {
 	/**
 	 * Página de URLs
 	 *

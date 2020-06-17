@@ -1,5 +1,5 @@
 <?php declare(strict_types=1);
-class installation extends OController {
+class installation extends OModule {
 	/**
 	 * Página de Instalación
 	 *

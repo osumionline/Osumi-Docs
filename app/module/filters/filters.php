@@ -1,5 +1,5 @@
 <?php declare(strict_types=1);
-class filters extends OController {
+class filters extends OModule {
 	/**
 	 * Página de Filtros
 	 *
