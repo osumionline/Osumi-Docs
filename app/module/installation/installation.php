@@ -7,7 +7,7 @@ class installation extends OModule {
 	 *
 	 * @return void
 	 */
-	function esInstallation(ORequest $req): void {
+	public function esInstallation(ORequest $req): void {
 		$this->getTemplate()->addPartial('header', 'common/header', ['page' => 'installation', 'lang' => 'es']);
 		$this->getTemplate()->addPartial('menu',   'common/menu',   ['page' => 'installation', 'lang' => 'es']);
 		$this->getTemplate()->addPartial('footer', 'common/footer');
@@ -22,7 +22,7 @@ class installation extends OModule {
 	 *
 	 * @return void
 	 */
-	function enInstallation(ORequest $req): void {
+	public function enInstallation(ORequest $req): void {
 		$this->getTemplate()->addPartial('header', 'common/header', ['page' => 'installation', 'lang' => 'en']);
 		$this->getTemplate()->addPartial('menu',   'common/menu',   ['page' => 'installation', 'lang' => 'en']);
 		$this->getTemplate()->addPartial('footer', 'common/footer');
@@ -37,7 +37,7 @@ class installation extends OModule {
 	 *
 	 * @return void
 	 */
-	function euInstallation(ORequest $req): void {
+	public function euInstallation(ORequest $req): void {
 		$this->getTemplate()->addPartial('header', 'common/header', ['page' => 'installation', 'lang' => 'eu']);
 		$this->getTemplate()->addPartial('menu',   'common/menu',   ['page' => 'installation', 'lang' => 'eu']);
 		$this->getTemplate()->addPartial('footer', 'common/footer');

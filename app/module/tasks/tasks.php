@@ -7,7 +7,7 @@ class tasks extends OModule {
 	 *
 	 * @return void
 	 */
-	function esTasks(ORequest $req): void {
+	public function esTasks(ORequest $req): void {
 		$this->getTemplate()->addPartial('header', 'common/header', ['page' => 'tasks', 'lang' => 'es']);
 		$this->getTemplate()->addPartial('menu',   'common/menu',   ['page' => 'tasks', 'lang' => 'es']);
 		$this->getTemplate()->addPartial('footer', 'common/footer');
@@ -21,7 +21,7 @@ class tasks extends OModule {
 	 *
 	 * @return void
 	 */
-	function enTasks(ORequest $req): void {
+	public function enTasks(ORequest $req): void {
 		$this->getTemplate()->addPartial('header', 'common/header', ['page' => 'tasks', 'lang' => 'en']);
 		$this->getTemplate()->addPartial('menu',   'common/menu',   ['page' => 'tasks', 'lang' => 'en']);
 		$this->getTemplate()->addPartial('footer', 'common/footer');
@@ -35,7 +35,7 @@ class tasks extends OModule {
 	 *
 	 * @return void
 	 */
-	function euTasks(ORequest $req): void {
+	public function euTasks(ORequest $req): void {
 		$this->getTemplate()->addPartial('header', 'common/header', ['page' => 'tasks', 'lang' => 'eu']);
 		$this->getTemplate()->addPartial('menu',   'common/menu',   ['page' => 'tasks', 'lang' => 'eu']);
 		$this->getTemplate()->addPartial('footer', 'common/footer');

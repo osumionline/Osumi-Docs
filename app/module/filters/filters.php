@@ -7,7 +7,7 @@ class filters extends OModule {
 	 *
 	 * @return void
 	 */
-	function esFilters(ORequest $req): void {
+	public function esFilters(ORequest $req): void {
 		$this->getTemplate()->addPartial('header', 'common/header', ['page' => 'filters', 'lang' => 'es']);
 		$this->getTemplate()->addPartial('menu',   'common/menu',   ['page' => 'filters', 'lang' => 'es']);
 		$this->getTemplate()->addPartial('footer', 'common/footer');
@@ -21,7 +21,7 @@ class filters extends OModule {
 	 *
 	 * @return void
 	 */
-	function enFilters(ORequest $req): void {
+	public function enFilters(ORequest $req): void {
 		$this->getTemplate()->addPartial('header', 'common/header', ['page' => 'filters', 'lang' => 'en']);
 		$this->getTemplate()->addPartial('menu',   'common/menu',   ['page' => 'filters', 'lang' => 'en']);
 		$this->getTemplate()->addPartial('footer', 'common/footer');
@@ -35,7 +35,7 @@ class filters extends OModule {
 	 *
 	 * @return void
 	 */
-	function euFilters(ORequest $req): void {
+	public function euFilters(ORequest $req): void {
 		$this->getTemplate()->addPartial('header', 'common/header', ['page' => 'filters', 'lang' => 'eu']);
 		$this->getTemplate()->addPartial('menu',   'common/menu',   ['page' => 'filters', 'lang' => 'eu']);
 		$this->getTemplate()->addPartial('footer', 'common/footer');

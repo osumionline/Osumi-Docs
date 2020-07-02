@@ -7,7 +7,7 @@ class structure extends OModule {
 	 *
 	 * @return void
 	 */
-	function esStructure(ORequest $req): void {
+	public function esStructure(ORequest $req): void {
 		$this->getTemplate()->addPartial('header', 'common/header', ['page' => 'structure', 'lang' => 'es']);
 		$this->getTemplate()->addPartial('menu',   'common/menu',   ['page' => 'structure', 'lang' => 'es']);
 		$this->getTemplate()->addPartial('footer', 'common/footer');
@@ -21,7 +21,7 @@ class structure extends OModule {
 	 *
 	 * @return void
 	 */
-	function enStructure(ORequest $req): void {
+	public function enStructure(ORequest $req): void {
 		$this->getTemplate()->addPartial('header', 'common/header', ['page' => 'structure', 'lang' => 'en']);
 		$this->getTemplate()->addPartial('menu',   'common/menu',   ['page' => 'structure', 'lang' => 'en']);
 		$this->getTemplate()->addPartial('footer', 'common/footer');
@@ -35,7 +35,7 @@ class structure extends OModule {
 	 *
 	 * @return void
 	 */
-	function euStructure(ORequest $req): void {
+	public function euStructure(ORequest $req): void {
 		$this->getTemplate()->addPartial('header', 'common/header', ['page' => 'structure', 'lang' => 'eu']);
 		$this->getTemplate()->addPartial('menu',   'common/menu',   ['page' => 'structure', 'lang' => 'eu']);
 		$this->getTemplate()->addPartial('footer', 'common/footer');

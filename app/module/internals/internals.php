@@ -7,7 +7,7 @@ class internals extends OModule {
 	 *
 	 * @return void
 	 */
-	function esInternals(ORequest $req): void {
+	public function esInternals(ORequest $req): void {
 		$this->getTemplate()->addPartial('header', 'common/header', ['page' => 'internals', 'lang' => 'es']);
 		$this->getTemplate()->addPartial('menu',   'common/menu',   ['page' => 'internals', 'lang' => 'es']);
 		$this->getTemplate()->addPartial('footer', 'common/footer');
@@ -21,7 +21,7 @@ class internals extends OModule {
 	 *
 	 * @return void
 	 */
-	function enInternals(ORequest $req): void {
+	public function enInternals(ORequest $req): void {
 		$this->getTemplate()->addPartial('header', 'common/header', ['page' => 'internals', 'lang' => 'en']);
 		$this->getTemplate()->addPartial('menu',   'common/menu',   ['page' => 'internals', 'lang' => 'en']);
 		$this->getTemplate()->addPartial('footer', 'common/footer');
@@ -35,7 +35,7 @@ class internals extends OModule {
 	 *
 	 * @return void
 	 */
-	function euInternals(ORequest $req): void {
+	public function euInternals(ORequest $req): void {
 		$this->getTemplate()->addPartial('header', 'common/header', ['page' => 'internals', 'lang' => 'eu']);
 		$this->getTemplate()->addPartial('menu',   'common/menu',   ['page' => 'internals', 'lang' => 'eu']);
 		$this->getTemplate()->addPartial('footer', 'common/footer');
