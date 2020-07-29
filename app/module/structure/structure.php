@@ -3,8 +3,8 @@ class structure extends OModule {
 	/**
 	 * Página de Estructura
 	 *
+	 * @url /es/estructura
 	 * @param ORequest $req Request object with method, headers, parameters and filters used
-	 *
 	 * @return void
 	 */
 	public function esStructure(ORequest $req): void {
@@ -17,8 +17,8 @@ class structure extends OModule {
 	/**
 	 * Página de Estructura (inglés)
 	 *
+	 * @url /en/structure
 	 * @param ORequest $req Request object with method, headers, parameters and filters used
-	 *
 	 * @return void
 	 */
 	public function enStructure(ORequest $req): void {
@@ -31,8 +31,8 @@ class structure extends OModule {
 	/**
 	 * Página de Estructura (euskara)
 	 *
+	 * @url /eu/estruktura
 	 * @param ORequest $req Request object with method, headers, parameters and filters used
-	 *
 	 * @return void
 	 */
 	public function euStructure(ORequest $req): void {

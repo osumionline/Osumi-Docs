@@ -3,8 +3,8 @@ class configuration extends OModule {
 	/**
 	 * Página de Configuración
 	 *
+	 * @url /es/configuracion
 	 * @param ORequest $req Request object with method, headers, parameters and filters used
-	 *
 	 * @return void
 	 */
 	public function esConfiguration(ORequest $req): void {
@@ -17,8 +17,8 @@ class configuration extends OModule {
 	/**
 	 * Página de Configuración (inglés)
 	 *
+	 * @url /en/configuration
 	 * @param ORequest $req Request object with method, headers, parameters and filters used
-	 *
 	 * @return void
 	 */
 	public function enConfiguration(ORequest $req): void {
@@ -31,8 +31,8 @@ class configuration extends OModule {
 	/**
 	 * Página de Configuración (euskara)
 	 *
+	 * @url /eu/konfigurazioa
 	 * @param ORequest $req Request object with method, headers, parameters and filters used
-	 *
 	 * @return void
 	 */
 	public function euConfiguration(ORequest $req): void {

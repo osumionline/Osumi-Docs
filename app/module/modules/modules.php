@@ -3,8 +3,8 @@ class modules extends OModule {
 	/**
 	 * Página de Módulos
 	 *
+	 * @url /es/modulos
 	 * @param ORequest $req Request object with method, headers, parameters and filters used
-	 *
 	 * @return void
 	 */
 	public function esModules(ORequest $req): void {
@@ -17,8 +17,8 @@ class modules extends OModule {
 	/**
 	 * Página de Módulos (inglés)
 	 *
+	 * @url /en/modules
 	 * @param ORequest $req Request object with method, headers, parameters and filters used
-	 *
 	 * @return void
 	 */
 	public function enModules(ORequest $req): void {
@@ -31,8 +31,8 @@ class modules extends OModule {
 	/**
 	 * Página de Módulos (euskara)
 	 *
+	 * @url /eu/moduloak
 	 * @param ORequest $req Request object with method, headers, parameters and filters used
-	 *
 	 * @return void
 	 */
 	public function euModules(ORequest $req): void {

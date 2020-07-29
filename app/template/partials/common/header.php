@@ -1,43 +1,43 @@
 <?php
 $urls = [
 	'es' => [
-		'start'         => OUrl::generateUrl('page_es_start'),
-		'installation'  => OUrl::generateUrl('page_es_installation'),
-		'structure'     => OUrl::generateUrl('page_es_structure'),
-		'configuration' => OUrl::generateUrl('page_es_configuration'),
-		'urls'          => OUrl::generateUrl('page_es_urls'),
-		'modules'       => OUrl::generateUrl('page_es_modules'),
-		'services'      => OUrl::generateUrl('page_es_services'),
-		'filters'       => OUrl::generateUrl('page_es_filters'),
-		'internals'     => OUrl::generateUrl('page_es_internals'),
-		'tasks'         => OUrl::generateUrl('page_es_tasks'),
-		'translations'  => OUrl::generateUrl('page_es_translations')
+		'start'         => OUrl::generateUrl('home', 'esStart'),
+		'installation'  => OUrl::generateUrl('installation', 'esInstallation'),
+		'structure'     => OUrl::generateUrl('structure', 'esStructure'),
+		'configuration' => OUrl::generateUrl('configuration', 'esConfiguration'),
+		'urls'          => OUrl::generateUrl('urls', 'esUrls'),
+		'modules'       => OUrl::generateUrl('modules', 'esModules'),
+		'services'      => OUrl::generateUrl('services', 'esServices'),
+		'filters'       => OUrl::generateUrl('filters', 'esFilters'),
+		'internals'     => OUrl::generateUrl('internals', 'esInternals'),
+		'tasks'         => OUrl::generateUrl('tasks', 'esTasks'),
+		'translations'  => OUrl::generateUrl('translations', 'esTranslations')
 	],
 	'en' => [
-		'start'         => OUrl::generateUrl('page_en_start'),
-		'installation'  => OUrl::generateUrl('page_en_installation'),
-		'structure'     => OUrl::generateUrl('page_en_structure'),
-		'configuration' => OUrl::generateUrl('page_en_configuration'),
-		'urls'          => OUrl::generateUrl('page_en_urls'),
-		'modules'       => OUrl::generateUrl('page_en_modules'),
-		'services'      => OUrl::generateUrl('page_en_services'),
-		'filters'       => OUrl::generateUrl('page_en_filters'),
-		'internals'     => OUrl::generateUrl('page_en_internals'),
-		'tasks'         => OUrl::generateUrl('page_en_tasks'),
-		'translations'  => OUrl::generateUrl('page_en_translations')
+		'start'         => OUrl::generateUrl('home', 'enStart'),
+		'installation'  => OUrl::generateUrl('installation', 'enInstallation'),
+		'structure'     => OUrl::generateUrl('structure', 'enStructure'),
+		'configuration' => OUrl::generateUrl('configuration', 'enConfiguration'),
+		'urls'          => OUrl::generateUrl('urls', 'esnUrls'),
+		'modules'       => OUrl::generateUrl('modules', 'enModules'),
+		'services'      => OUrl::generateUrl('services', 'enServices'),
+		'filters'       => OUrl::generateUrl('filters', 'enFilters'),
+		'internals'     => OUrl::generateUrl('internals', 'enInternals'),
+		'tasks'         => OUrl::generateUrl('tasks', 'enTasks'),
+		'translations'  => OUrl::generateUrl('translations', 'enTranslations')
 	],
 	'eu' => [
-		'start'         => OUrl::generateUrl('page_eu_start'),
-		'installation'  => OUrl::generateUrl('page_eu_installation'),
-		'structure'     => OUrl::generateUrl('page_eu_structure'),
-		'configuration' => OUrl::generateUrl('page_eu_configuration'),
-		'urls'          => OUrl::generateUrl('page_eu_urls'),
-		'modules'       => OUrl::generateUrl('page_eu_modules'),
-		'services'      => OUrl::generateUrl('page_eu_services'),
-		'filters'       => OUrl::generateUrl('page_eu_filters'),
-		'internals'     => OUrl::generateUrl('page_eu_internals'),
-		'tasks'         => OUrl::generateUrl('page_eu_tasks'),
-		'translations'  => OUrl::generateUrl('page_eu_translations')
+		'start'         => OUrl::generateUrl('home', 'euStart'),
+		'installation'  => OUrl::generateUrl('installation', 'euInstallation'),
+		'structure'     => OUrl::generateUrl('structure', 'euStructure'),
+		'configuration' => OUrl::generateUrl('configuration', 'euConfiguration'),
+		'urls'          => OUrl::generateUrl('urls', 'euUrls'),
+		'modules'       => OUrl::generateUrl('modules', 'euModules'),
+		'services'      => OUrl::generateUrl('services', 'euServices'),
+		'filters'       => OUrl::generateUrl('filters', 'euFilters'),
+		'internals'     => OUrl::generateUrl('internals', 'euInternals'),
+		'tasks'         => OUrl::generateUrl('tasks', 'euTasks'),
+		'translations'  => OUrl::generateUrl('translations', 'euTranslations')
 	]
 ];
 ?>

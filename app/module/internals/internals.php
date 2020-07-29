@@ -3,8 +3,8 @@ class internals extends OModule {
 	/**
 	 * Página de Funciones Internas
 	 *
+	 * @url /es/funciones-internas
 	 * @param ORequest $req Request object with method, headers, parameters and filters used
-	 *
 	 * @return void
 	 */
 	public function esInternals(ORequest $req): void {
@@ -17,8 +17,8 @@ class internals extends OModule {
 	/**
 	 * Página de Funciones Internas (inglés)
 	 *
+	 * @url /en/internal-functions
 	 * @param ORequest $req Request object with method, headers, parameters and filters used
-	 *
 	 * @return void
 	 */
 	public function enInternals(ORequest $req): void {
@@ -31,8 +31,8 @@ class internals extends OModule {
 	/**
 	 * Página de Funciones Internas (euskara)
 	 *
+	 * @url /eu/barruko-funtzioak
 	 * @param ORequest $req Request object with method, headers, parameters and filters used
-	 *
 	 * @return void
 	 */
 	public function euInternals(ORequest $req): void {

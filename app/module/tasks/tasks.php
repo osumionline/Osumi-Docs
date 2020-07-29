@@ -3,8 +3,8 @@ class tasks extends OModule {
 	/**
 	 * Página de Tareas
 	 *
+	 * @url /es/tareas
 	 * @param ORequest $req Request object with method, headers, parameters and filters used
-	 *
 	 * @return void
 	 */
 	public function esTasks(ORequest $req): void {
@@ -17,8 +17,8 @@ class tasks extends OModule {
 	/**
 	 * Página de Tareas (inglés)
 	 *
+	 * @url /en/tasks
 	 * @param ORequest $req Request object with method, headers, parameters and filters used
-	 *
 	 * @return void
 	 */
 	public function enTasks(ORequest $req): void {
@@ -31,8 +31,8 @@ class tasks extends OModule {
 	/**
 	 * Página de Tareas (euskara)
 	 *
+	 * @url /eu/atazak
 	 * @param ORequest $req Request object with method, headers, parameters and filters used
-	 *
 	 * @return void
 	 */
 	public function euTasks(ORequest $req): void {

@@ -3,8 +3,8 @@ class installation extends OModule {
 	/**
 	 * Página de Instalación
 	 *
+	 * @url /es/instalacion
 	 * @param ORequest $req Request object with method, headers, parameters and filters used
-	 *
 	 * @return void
 	 */
 	public function esInstallation(ORequest $req): void {
@@ -18,8 +18,8 @@ class installation extends OModule {
 	/**
 	 * Página de Instalación (inglés)
 	 *
+	 * @url /en/installation
 	 * @param ORequest $req Request object with method, headers, parameters and filters used
-	 *
 	 * @return void
 	 */
 	public function enInstallation(ORequest $req): void {
@@ -33,8 +33,8 @@ class installation extends OModule {
 	/**
 	 * Página de Instalación (euskara)
 	 *
+	 * @url /eu/instalazioa
 	 * @param ORequest $req Request object with method, headers, parameters and filters used
-	 *
 	 * @return void
 	 */
 	public function euInstallation(ORequest $req): void {

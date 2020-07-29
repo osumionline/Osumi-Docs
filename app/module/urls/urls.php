@@ -3,8 +3,8 @@ class urls extends OModule {
 	/**
 	 * Página de URLs
 	 *
+	 * @url /es/urls
 	 * @param ORequest $req Request object with method, headers, parameters and filters used
-	 *
 	 * @return void
 	 */
 	public function esUrls(ORequest $req): void {
@@ -17,8 +17,8 @@ class urls extends OModule {
 	/**
 	 * Página de URLs (inglés)
 	 *
+	 * @url /en/urls
 	 * @param ORequest $req Request object with method, headers, parameters and filters used
-	 *
 	 * @return void
 	 */
 	public function enUrls(ORequest $req): void {
@@ -31,8 +31,8 @@ class urls extends OModule {
 	/**
 	 * Página de URLs (euskara)
 	 *
+	 * @url /eu/urlak
 	 * @param ORequest $req Request object with method, headers, parameters and filters used
-	 *
 	 * @return void
 	 */
 	public function euUrls(ORequest $req): void {

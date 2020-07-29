@@ -3,8 +3,8 @@ class translations extends OModule {
 	/**
 	 * Página de Traducciones
 	 *
+	 * @url /es/traducciones
 	 * @param ORequest $req Request object with method, headers, parameters and filters used
-	 *
 	 * @return void
 	 */
 	public function esTranslations(ORequest $req): void {
@@ -17,8 +17,8 @@ class translations extends OModule {
 	/**
 	 * Página de Traducciones (inglés)
 	 *
+	 * @url /en/translations
 	 * @param ORequest $req Request object with method, headers, parameters and filters used
-	 *
 	 * @return void
 	 */
 	public function enTranslations(ORequest $req): void {
@@ -31,8 +31,8 @@ class translations extends OModule {
 	/**
 	 * Página de Traducciones (euskara)
 	 *
+	 * @url /eu/itzulpenak
 	 * @param ORequest $req Request object with method, headers, parameters and filters used
-	 *
 	 * @return void
 	 */
 	public function euTranslations(ORequest $req): void {

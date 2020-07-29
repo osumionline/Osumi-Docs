@@ -3,8 +3,8 @@ class filters extends OModule {
 	/**
 	 * Página de Filtros
 	 *
+	 * @url /es/filtros
 	 * @param ORequest $req Request object with method, headers, parameters and filters used
-	 *
 	 * @return void
 	 */
 	public function esFilters(ORequest $req): void {
@@ -17,8 +17,8 @@ class filters extends OModule {
 	/**
 	 * Página de Filtros (inglés)
 	 *
+	 * @url /en/filters
 	 * @param ORequest $req Request object with method, headers, parameters and filters used
-	 *
 	 * @return void
 	 */
 	public function enFilters(ORequest $req): void {
@@ -31,8 +31,8 @@ class filters extends OModule {
 	/**
 	 * Página de Filtros (euskara)
 	 *
+	 * @url /eu/filtroak
 	 * @param ORequest $req Request object with method, headers, parameters and filters used
-	 *
 	 * @return void
 	 */
 	public function euFilters(ORequest $req): void {

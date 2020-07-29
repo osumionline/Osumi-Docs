@@ -3,8 +3,8 @@ class services extends OModule {
 	/**
 	 * Página de Servicios
 	 *
+	 * @url /es/servicios
 	 * @param ORequest $req Request object with method, headers, parameters and filters used
-	 *
 	 * @return void
 	 */
 	public function esServices(ORequest $req): void {
@@ -17,8 +17,8 @@ class services extends OModule {
 	/**
 	 * Página de Servicios (inglés)
 	 *
+	 * @url /en/services
 	 * @param ORequest $req Request object with method, headers, parameters and filters used
-	 *
 	 * @return void
 	 */
 	public function enServices(ORequest $req): void {
@@ -31,8 +31,8 @@ class services extends OModule {
 	/**
 	 * Página de Servicios (euskara)
 	 *
+	 * @url /eu/zerbitzuak
 	 * @param ORequest $req Request object with method, headers, parameters and filters used
-	 *
 	 * @return void
 	 */
 	public function euServices(ORequest $req): void {
