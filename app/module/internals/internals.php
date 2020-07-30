@@ -8,9 +8,9 @@ class internals extends OModule {
 	 * @return void
 	 */
 	public function esInternals(ORequest $req): void {
-		$this->getTemplate()->addPartial('header', 'common/header', ['page' => 'internals', 'lang' => 'es']);
-		$this->getTemplate()->addPartial('menu',   'common/menu',   ['page' => 'internals', 'lang' => 'es']);
-		$this->getTemplate()->addPartial('footer', 'common/footer');
+		$this->getTemplate()->addComponent('header', 'common/header', ['page' => 'internals', 'lang' => 'es']);
+		$this->getTemplate()->addComponent('menu',   'common/menu',   ['page' => 'internals', 'lang' => 'es']);
+		$this->getTemplate()->addComponent('footer', 'common/footer');
 		$this->getTemplate()->setTitle('Osumi Framework - Funciones internas');
 	}
 
@@ -22,9 +22,9 @@ class internals extends OModule {
 	 * @return void
 	 */
 	public function enInternals(ORequest $req): void {
-		$this->getTemplate()->addPartial('header', 'common/header', ['page' => 'internals', 'lang' => 'en']);
-		$this->getTemplate()->addPartial('menu',   'common/menu',   ['page' => 'internals', 'lang' => 'en']);
-		$this->getTemplate()->addPartial('footer', 'common/footer');
+		$this->getTemplate()->addComponent('header', 'common/header', ['page' => 'internals', 'lang' => 'en']);
+		$this->getTemplate()->addComponent('menu',   'common/menu',   ['page' => 'internals', 'lang' => 'en']);
+		$this->getTemplate()->addComponent('footer', 'common/footer');
 		$this->getTemplate()->setTitle('Osumi Framework - Internal functions');
 	}
 
@@ -36,9 +36,9 @@ class internals extends OModule {
 	 * @return void
 	 */
 	public function euInternals(ORequest $req): void {
-		$this->getTemplate()->addPartial('header', 'common/header', ['page' => 'internals', 'lang' => 'eu']);
-		$this->getTemplate()->addPartial('menu',   'common/menu',   ['page' => 'internals', 'lang' => 'eu']);
-		$this->getTemplate()->addPartial('footer', 'common/footer');
+		$this->getTemplate()->addComponent('header', 'common/header', ['page' => 'internals', 'lang' => 'eu']);
+		$this->getTemplate()->addComponent('menu',   'common/menu',   ['page' => 'internals', 'lang' => 'eu']);
+		$this->getTemplate()->addComponent('footer', 'common/footer');
 		$this->getTemplate()->setTitle('Osumi Framework - Barruko funtzioak');
 	}
 }

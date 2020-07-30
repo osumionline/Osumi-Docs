@@ -8,9 +8,9 @@ class translations extends OModule {
 	 * @return void
 	 */
 	public function esTranslations(ORequest $req): void {
-		$this->getTemplate()->addPartial('header', 'common/header', ['page' => 'translations', 'lang' => 'es']);
-		$this->getTemplate()->addPartial('menu',   'common/menu',   ['page' => 'translations', 'lang' => 'es']);
-		$this->getTemplate()->addPartial('footer', 'common/footer');
+		$this->getTemplate()->addComponent('header', 'common/header', ['page' => 'translations', 'lang' => 'es']);
+		$this->getTemplate()->addComponent('menu',   'common/menu',   ['page' => 'translations', 'lang' => 'es']);
+		$this->getTemplate()->addComponent('footer', 'common/footer');
 		$this->getTemplate()->setTitle('Osumi Framework - Traducciones');
 	}
 
@@ -22,9 +22,9 @@ class translations extends OModule {
 	 * @return void
 	 */
 	public function enTranslations(ORequest $req): void {
-		$this->getTemplate()->addPartial('header', 'common/header', ['page' => 'translations', 'lang' => 'en']);
-		$this->getTemplate()->addPartial('menu',   'common/menu',   ['page' => 'translations', 'lang' => 'en']);
-		$this->getTemplate()->addPartial('footer', 'common/footer');
+		$this->getTemplate()->addComponent('header', 'common/header', ['page' => 'translations', 'lang' => 'en']);
+		$this->getTemplate()->addComponent('menu',   'common/menu',   ['page' => 'translations', 'lang' => 'en']);
+		$this->getTemplate()->addComponent('footer', 'common/footer');
 		$this->getTemplate()->setTitle('Osumi Framework - Translations');
 	}
 
@@ -36,9 +36,9 @@ class translations extends OModule {
 	 * @return void
 	 */
 	public function euTranslations(ORequest $req): void {
-		$this->getTemplate()->addPartial('header', 'common/header', ['page' => 'translations', 'lang' => 'eu']);
-		$this->getTemplate()->addPartial('menu',   'common/menu',   ['page' => 'translations', 'lang' => 'eu']);
-		$this->getTemplate()->addPartial('footer', 'common/footer');
+		$this->getTemplate()->addComponent('header', 'common/header', ['page' => 'translations', 'lang' => 'eu']);
+		$this->getTemplate()->addComponent('menu',   'common/menu',   ['page' => 'translations', 'lang' => 'eu']);
+		$this->getTemplate()->addComponent('footer', 'common/footer');
 		$this->getTemplate()->setTitle('Osumi Framework - Itzulpenak');
 	}
 }

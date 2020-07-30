@@ -8,9 +8,9 @@ class filters extends OModule {
 	 * @return void
 	 */
 	public function esFilters(ORequest $req): void {
-		$this->getTemplate()->addPartial('header', 'common/header', ['page' => 'filters', 'lang' => 'es']);
-		$this->getTemplate()->addPartial('menu',   'common/menu',   ['page' => 'filters', 'lang' => 'es']);
-		$this->getTemplate()->addPartial('footer', 'common/footer');
+		$this->getTemplate()->addComponent('header', 'common/header', ['page' => 'filters', 'lang' => 'es']);
+		$this->getTemplate()->addComponent('menu',   'common/menu',   ['page' => 'filters', 'lang' => 'es']);
+		$this->getTemplate()->addComponent('footer', 'common/footer');
 		$this->getTemplate()->setTitle('Osumi Framework - Filtros');
 	}
 
@@ -22,9 +22,9 @@ class filters extends OModule {
 	 * @return void
 	 */
 	public function enFilters(ORequest $req): void {
-		$this->getTemplate()->addPartial('header', 'common/header', ['page' => 'filters', 'lang' => 'en']);
-		$this->getTemplate()->addPartial('menu',   'common/menu',   ['page' => 'filters', 'lang' => 'en']);
-		$this->getTemplate()->addPartial('footer', 'common/footer');
+		$this->getTemplate()->addComponent('header', 'common/header', ['page' => 'filters', 'lang' => 'en']);
+		$this->getTemplate()->addComponent('menu',   'common/menu',   ['page' => 'filters', 'lang' => 'en']);
+		$this->getTemplate()->addComponent('footer', 'common/footer');
 		$this->getTemplate()->setTitle('Osumi Framework - Filters');
 	}
 
@@ -36,9 +36,9 @@ class filters extends OModule {
 	 * @return void
 	 */
 	public function euFilters(ORequest $req): void {
-		$this->getTemplate()->addPartial('header', 'common/header', ['page' => 'filters', 'lang' => 'eu']);
-		$this->getTemplate()->addPartial('menu',   'common/menu',   ['page' => 'filters', 'lang' => 'eu']);
-		$this->getTemplate()->addPartial('footer', 'common/footer');
+		$this->getTemplate()->addComponent('header', 'common/header', ['page' => 'filters', 'lang' => 'eu']);
+		$this->getTemplate()->addComponent('menu',   'common/menu',   ['page' => 'filters', 'lang' => 'eu']);
+		$this->getTemplate()->addComponent('footer', 'common/footer');
 		$this->getTemplate()->setTitle('Osumi Framework - Filtroak');
 	}
 }

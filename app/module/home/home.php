@@ -8,9 +8,9 @@ class home extends OModule {
 	 * @return void
 	 */
 	public function esStart(ORequest $req): void {
-		$this->getTemplate()->addPartial('header', 'common/header', ['page' => 'start', 'lang' => 'es']);
-		$this->getTemplate()->addPartial('menu',   'common/menu',   ['page' => 'start', 'lang' => 'es']);
-		$this->getTemplate()->addPartial('footer', 'common/footer');
+		$this->getTemplate()->addComponent('header', 'common/header', ['page' => 'start', 'lang' => 'es']);
+		$this->getTemplate()->addComponent('menu',   'common/menu',   ['page' => 'start', 'lang' => 'es']);
+		$this->getTemplate()->addComponent('footer', 'common/footer');
 	}
 
 	/**
@@ -21,9 +21,9 @@ class home extends OModule {
 	 * @return void
 	 */
 	public function enStart(ORequest $req): void {
-		$this->getTemplate()->addPartial('header', 'common/header', ['page' => 'start', 'lang' => 'en']);
-		$this->getTemplate()->addPartial('menu',   'common/menu',   ['page' => 'start', 'lang' => 'en']);
-		$this->getTemplate()->addPartial('footer', 'common/footer');
+		$this->getTemplate()->addComponent('header', 'common/header', ['page' => 'start', 'lang' => 'en']);
+		$this->getTemplate()->addComponent('menu',   'common/menu',   ['page' => 'start', 'lang' => 'en']);
+		$this->getTemplate()->addComponent('footer', 'common/footer');
 	}
 
 	/**
@@ -34,8 +34,8 @@ class home extends OModule {
 	 * @return void
 	 */
 	public function euStart(ORequest $req): void {
-		$this->getTemplate()->addPartial('header', 'common/header', ['page' => 'start', 'lang' => 'eu']);
-		$this->getTemplate()->addPartial('menu',   'common/menu',   ['page' => 'start', 'lang' => 'eu']);
-		$this->getTemplate()->addPartial('footer', 'common/footer');
+		$this->getTemplate()->addComponent('header', 'common/header', ['page' => 'start', 'lang' => 'eu']);
+		$this->getTemplate()->addComponent('menu',   'common/menu',   ['page' => 'start', 'lang' => 'eu']);
+		$this->getTemplate()->addComponent('footer', 'common/footer');
 	}
 }

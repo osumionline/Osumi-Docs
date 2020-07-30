@@ -8,9 +8,9 @@ class services extends OModule {
 	 * @return void
 	 */
 	public function esServices(ORequest $req): void {
-		$this->getTemplate()->addPartial('header', 'common/header', ['page' => 'services', 'lang' => 'es']);
-		$this->getTemplate()->addPartial('menu',   'common/menu',   ['page' => 'services', 'lang' => 'es']);
-		$this->getTemplate()->addPartial('footer', 'common/footer');
+		$this->getTemplate()->addComponent('header', 'common/header', ['page' => 'services', 'lang' => 'es']);
+		$this->getTemplate()->addComponent('menu',   'common/menu',   ['page' => 'services', 'lang' => 'es']);
+		$this->getTemplate()->addComponent('footer', 'common/footer');
 		$this->getTemplate()->setTitle('Osumi Framework - Servicios');
 	}
 
@@ -22,9 +22,9 @@ class services extends OModule {
 	 * @return void
 	 */
 	public function enServices(ORequest $req): void {
-		$this->getTemplate()->addPartial('header', 'common/header', ['page' => 'services', 'lang' => 'en']);
-		$this->getTemplate()->addPartial('menu',   'common/menu',   ['page' => 'services', 'lang' => 'en']);
-		$this->getTemplate()->addPartial('footer', 'common/footer');
+		$this->getTemplate()->addComponent('header', 'common/header', ['page' => 'services', 'lang' => 'en']);
+		$this->getTemplate()->addComponent('menu',   'common/menu',   ['page' => 'services', 'lang' => 'en']);
+		$this->getTemplate()->addComponent('footer', 'common/footer');
 		$this->getTemplate()->setTitle('Osumi Framework - Services');
 	}
 
@@ -36,9 +36,9 @@ class services extends OModule {
 	 * @return void
 	 */
 	public function euServices(ORequest $req): void {
-		$this->getTemplate()->addPartial('header', 'common/header', ['page' => 'services', 'lang' => 'eu']);
-		$this->getTemplate()->addPartial('menu',   'common/menu',   ['page' => 'services', 'lang' => 'eu']);
-		$this->getTemplate()->addPartial('footer', 'common/footer');
+		$this->getTemplate()->addComponent('header', 'common/header', ['page' => 'services', 'lang' => 'eu']);
+		$this->getTemplate()->addComponent('menu',   'common/menu',   ['page' => 'services', 'lang' => 'eu']);
+		$this->getTemplate()->addComponent('footer', 'common/footer');
 		$this->getTemplate()->setTitle('Osumi Framework - Zerbitzuak');
 	}
 }
