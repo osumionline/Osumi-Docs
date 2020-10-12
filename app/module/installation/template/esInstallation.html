@@ -4,19 +4,19 @@
 	<main>
 		<h1>Instalación</h1>
 		<p>El framework se puede instalar en cualquier servidor con Apache2 y PHP 7.4 (al utilizar tipado fuerte en todo el Framework, PHP 7.4.0 es la versión mínima necesaria para que funcione).</p>
-		<p>MySQL no es necesario pero en caso de querer usarlo el requisito es que sea de la versión 5.1 o superior. También se puede usar MariaDB 10.1 o superior.</p>
+		<p>MySQL no es necesario pero en caso de querer usarlo el requisito es que sea de la versión 5.1 o superior. También se puede usar MariaDB 10.1 o superior, Postresql, SQLite... Al utilizar PDO para la conexión solo depende de que los drivers apropiados estén instalados.</p>
 		<p>Para realizar la instalación hay dos formas:</p>
 		<ol>
 			<li>Instalación mediante git</li>
 			<li>Descargar el código en zip</li>
-			<li>Composer</li>
+			<li>Extractor</li>
 			<li>Creador</li>
 		</ol>
 
 		<h3>Instalación mediante git</h3>
 		<p>Ejecutando el siguiente comando se puede obtener una copia completa:</p>
 		<p><code>git clone https://github.com/igorosabel/Osumi-Framework.git</code></p>
-		<p>Esto creará una carpeta llamada <code>Osumi-Framework</code> en el directorio en el que se haya ejecutado el comando</p>
+		<p>Esto creará una carpeta llamada <code>Osumi-Framework</code> en el directorio en el que se haya ejecutado el comando.</p>
 
 		<h3>Descargar el código en zip</h3>
 		<p>Pulsando en el siguiente enlace se puede bajar un archivo zip con todo el contenido del repositorio desde Github:</p>
@@ -36,7 +36,7 @@
 		<p>He creado una aplicación llamada <strong>Creador</strong> que permite mediante una interfaz web diseñar y configurar una aplicación desde cero.</p>
 		<p><a href="https://creador.osumi.es" target="_blank">https://creador.osumi.es</a></p>
 		<p>En esta aplicación se puede diseñar toda la configuración del sitio, los modelos de base de datos, librerías que se pueden añadir a la parte frontal (Angular, jQuery, Bootstrap...) y finalmente se puede generar un archivo ZIP que se puede descargar.</p>
-		<p>El Creador deja los apartados de URLs y controladores vacíos para empezar a programar.</p>
+		<p>El Creador deja los apartados del código vacíos para empezar a programar.</p>
 		<div class="image-gallery">
 			<div class="image-container">
 				<img class="image-item" src="/img/cr1.png" alt="Creador: Proyecto" title="Creador: Proyecto">
@@ -62,22 +62,22 @@
 
 		<h3>Instalación</h3>
 		<p>Una vez se dispone de todo el código hay que realizar los siguientes pasos:</p>
-		<p>Junto con la aplicación se incluye código de ejemplo para una simple aplicación de fotos: un listado de usuarios y el detalle de un usuario. También se incluye un ejemplo de llamada AJAX para la creación de una API.</p>
+		<p>Junto con el Framework se incluye código de ejemplo para una simple aplicación de fotos: un listado de usuarios y el detalle de un usuario. También se incluye un ejemplo de llamada AJAX para la creación de una API.</p>
 		<p>Borrar todo el código de ejemplo es sencillo, hay que borrar todo el contenido de las siguientes carpetas (el contenido, <strong>no las carpetas</strong>):</p>
 		<ul>
-			<li><code>app/cache</code></li>
-			<li><code>app/controller</code></li>
+			<li><code>app/component</code></li>
 			<li><code>app/filter</code></li>
 			<li><code>app/model</code></li>
+			<li><code>app/module</code></li>
 			<li><code>app/service</code></li>
 			<li><code>app/task</code></li>
-			<li>Todas las carpetas en <code>app/template</code> excepto <code>layout</code> y <code>partials</code></li>
 			<li><code>ofw/export</code></li>
 			<li>Todos los archivos en <code>web</code> excepto el archivo <code>.htaccess</code> y el archivo <code>index.php</code></li>
 		</ul>
+
 		<p>Una vez borrado todo el código de ejemplo se puede empezar el proceso de creación de una nueva aplicación.</p>
 		<p>El archivo <code>app/config/config.json</code> contiene la configuración del sitio, se explica más detalladamente en <a href="/configuration">Configuración</a>.</p>
-		<p>Hay que editar el archivo <code>web/.htaccess</code> para configurar la redirección a <code>https</code> en caso de querer usar. Las líneas 14 y 15 son las que hacen la redirección forzada a <code>https</code>:</p>
+		<p>En caso de querer usar <code>https</code>, hay que editar el archivo <code>web/.htaccess</code> para configurar la redirección. Las líneas 14 y 15 son las que hacen la redirección forzada a <code>https</code>:</p>
 		<p>
 			<code>
 				RewriteCond %{SERVER_PORT} 80
@@ -85,7 +85,7 @@
 				RewriteRule ^(.*)$ https://ofw.osumi.es/$1 [R,L]
 			</code>
 		</p>
-		<p>En caso de no querer usar <code>https</code> basta con comentar estas dos líneas. Recomiendo <strong>encarecidamente</strong> usar <code>https</code> con <a href="https://letsencrypt.org/" target="_blank">Let's Encrypt</a></p>
+		<p>En caso de no querer usar <code>https</code>, basta con comentar estas dos líneas. Recomiendo <strong>encarecidamente</strong> usar <code>https</code> con <a href="https://letsencrypt.org/" target="_blank">Let's Encrypt</a></p>
 		<p>Con esto la aplicación estaría lista para empezar a ser programada.</p>
 		<p>A continuación se explica la estructura de las carpetas que componen el framework: <a href="/structure">Estructura</a></p>
 
