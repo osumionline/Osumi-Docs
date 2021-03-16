@@ -1,12 +1,19 @@
 <?php declare(strict_types=1);
+
+namespace OsumiFramework\App\Module;
+
+use OsumiFramework\OFW\Core\OModule;
+use OsumiFramework\OFW\Web\ORequest;
+use OsumiFramework\OFW\Routing\ORoute;
+
 class modules extends OModule {
 	/**
 	 * Página de Módulos
 	 *
-	 * @url /es/modulos
 	 * @param ORequest $req Request object with method, headers, parameters and filters used
 	 * @return void
 	 */
+	#[ORoute('/es/modulos')]
 	public function esModules(ORequest $req): void {
 		$this->getTemplate()->addComponent('header', 'common/header', ['page' => 'modules', 'lang' => 'es']);
 		$this->getTemplate()->addComponent('menu',   'common/menu',   ['page' => 'modules', 'lang' => 'es']);
@@ -17,10 +24,10 @@ class modules extends OModule {
 	/**
 	 * Página de Módulos (inglés)
 	 *
-	 * @url /en/modules
 	 * @param ORequest $req Request object with method, headers, parameters and filters used
 	 * @return void
 	 */
+	#[ORoute('/en/modules')]
 	public function enModules(ORequest $req): void {
 		$this->getTemplate()->addComponent('header', 'common/header', ['page' => 'modules', 'lang' => 'en']);
 		$this->getTemplate()->addComponent('menu',   'common/menu',   ['page' => 'modules', 'lang' => 'en']);
@@ -31,10 +38,10 @@ class modules extends OModule {
 	/**
 	 * Página de Módulos (euskara)
 	 *
-	 * @url /eu/moduloak
 	 * @param ORequest $req Request object with method, headers, parameters and filters used
 	 * @return void
 	 */
+	#[ORoute('/eu/moduloak')]
 	public function euModules(ORequest $req): void {
 		$this->getTemplate()->addComponent('header', 'common/header', ['page' => 'modules', 'lang' => 'eu']);
 		$this->getTemplate()->addComponent('menu',   'common/menu',   ['page' => 'modules', 'lang' => 'eu']);

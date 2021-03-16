@@ -1,12 +1,20 @@
 <?php declare(strict_types=1);
+
+namespace OsumiFramework\App\Module;
+
+use OsumiFramework\OFW\Core\OModule;
+use OsumiFramework\OFW\Web\ORequest;
+use OsumiFramework\OFW\Routing\ORoute;
+use OsumiFramework\OFW\Tools\OTools;
+
 class installation extends OModule {
 	/**
 	 * Página de Instalación
 	 *
-	 * @url /es/instalacion
 	 * @param ORequest $req Request object with method, headers, parameters and filters used
 	 * @return void
 	 */
+	#[ORoute('/es/instalacion')]
 	public function esInstallation(ORequest $req): void {
 		$this->getTemplate()->addComponent('header', 'common/header', ['page' => 'installation', 'lang' => 'es']);
 		$this->getTemplate()->addComponent('menu',   'common/menu',   ['page' => 'installation', 'lang' => 'es']);
@@ -18,10 +26,10 @@ class installation extends OModule {
 	/**
 	 * Página de Instalación (inglés)
 	 *
-	 * @url /en/installation
 	 * @param ORequest $req Request object with method, headers, parameters and filters used
 	 * @return void
 	 */
+	#[ORoute('/en/installation')]
 	public function enInstallation(ORequest $req): void {
 		$this->getTemplate()->addComponent('header', 'common/header', ['page' => 'installation', 'lang' => 'en']);
 		$this->getTemplate()->addComponent('menu',   'common/menu',   ['page' => 'installation', 'lang' => 'en']);
@@ -33,10 +41,10 @@ class installation extends OModule {
 	/**
 	 * Página de Instalación (euskara)
 	 *
-	 * @url /eu/instalazioa
 	 * @param ORequest $req Request object with method, headers, parameters and filters used
 	 * @return void
 	 */
+	#[ORoute('/eu/instalazioa')]
 	public function euInstallation(ORequest $req): void {
 		$this->getTemplate()->addComponent('header', 'common/header', ['page' => 'installation', 'lang' => 'eu']);
 		$this->getTemplate()->addComponent('menu',   'common/menu',   ['page' => 'installation', 'lang' => 'eu']);

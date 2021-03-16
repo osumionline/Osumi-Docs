@@ -1,4 +1,12 @@
 <?php declare(strict_types=1);
+
+namespace OsumiFramework\OFW\Core;
+
+use OsumiFramework\OFW\DB\ODB;
+use OsumiFramework\OFW\Log\OLog;
+use OsumiFramework\OFW\Web\OSession;
+use OsumiFramework\OFW\Web\OCookie;
+
 /**
  * OModule - Base class for the module classes providing access to the framework configuration, database, template, logs, session or cookies
  */
@@ -22,7 +30,7 @@ class OModule {
 
 		$this->config   = $core->config;
 		$this->session  = $core->session;
-		$this->db       = new ODB();
+		//$this->db       = new ODB();
 		$this->template = new OTemplate();
 		$this->log      = new OLog(get_class($this));
 		$this->cookie   = new OCookie();

@@ -1,4 +1,6 @@
 <?php
+use OsumiFramework\OFW\Routing\OUrl;
+
 $urls = [
 	'es' => [
 		'start'         => OUrl::generateUrl('home', 'esStart'),
