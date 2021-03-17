@@ -5,8 +5,15 @@ namespace OsumiFramework\App\Module;
 use OsumiFramework\OFW\Core\OModule;
 use OsumiFramework\OFW\Web\ORequest;
 use OsumiFramework\OFW\Routing\ORoute;
+use OsumiFramework\App\Service\utilsService;
 
 class home extends OModule {
+	private ?utilsService $utils_service;
+
+	function __construct() {
+		$this->utils_service  = new utilsService();
+	}
+
 	/**
 	 * Página de inicio
 	 *
@@ -18,6 +25,7 @@ class home extends OModule {
 		$this->getTemplate()->addComponent('header', 'common/header', ['page' => 'start', 'lang' => 'es']);
 		$this->getTemplate()->addComponent('menu',   'common/menu',   ['page' => 'start', 'lang' => 'es']);
 		$this->getTemplate()->addComponent('footer', 'common/footer');
+		$this->getTemplate()->add('next', $this->utils_service->getIcon('next'));
 	}
 
 	/**
