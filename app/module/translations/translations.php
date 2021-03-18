@@ -5,8 +5,15 @@ namespace OsumiFramework\App\Module;
 use OsumiFramework\OFW\Core\OModule;
 use OsumiFramework\OFW\Web\ORequest;
 use OsumiFramework\OFW\Routing\ORoute;
+use OsumiFramework\App\Service\utilsService;
 
 class translations extends OModule {
+	private ?utilsService $utils_service;
+
+	function __construct() {
+		$this->utils_service  = new utilsService();
+	}
+
 	/**
 	 * Página de Traducciones
 	 *
@@ -19,6 +26,7 @@ class translations extends OModule {
 		$this->getTemplate()->addComponent('menu',   'common/menu',   ['page' => 'translations', 'lang' => 'es']);
 		$this->getTemplate()->addComponent('footer', 'common/footer');
 		$this->getTemplate()->setTitle('Osumi Framework - Traducciones');
+		$this->getTemplate()->add('previous', $this->utils_service->getIcon('previous'));
 	}
 
 	/**
@@ -33,6 +41,7 @@ class translations extends OModule {
 		$this->getTemplate()->addComponent('menu',   'common/menu',   ['page' => 'translations', 'lang' => 'en']);
 		$this->getTemplate()->addComponent('footer', 'common/footer');
 		$this->getTemplate()->setTitle('Osumi Framework - Translations');
+		$this->getTemplate()->add('previous', $this->utils_service->getIcon('previous'));
 	}
 
 	/**
@@ -47,5 +56,6 @@ class translations extends OModule {
 		$this->getTemplate()->addComponent('menu',   'common/menu',   ['page' => 'translations', 'lang' => 'eu']);
 		$this->getTemplate()->addComponent('footer', 'common/footer');
 		$this->getTemplate()->setTitle('Osumi Framework - Itzulpenak');
+		$this->getTemplate()->add('previous', $this->utils_service->getIcon('previous'));
 	}
 }

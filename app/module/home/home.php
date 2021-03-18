@@ -39,6 +39,7 @@ class home extends OModule {
 		$this->getTemplate()->addComponent('header', 'common/header', ['page' => 'start', 'lang' => 'en']);
 		$this->getTemplate()->addComponent('menu',   'common/menu',   ['page' => 'start', 'lang' => 'en']);
 		$this->getTemplate()->addComponent('footer', 'common/footer');
+		$this->getTemplate()->add('next', $this->utils_service->getIcon('next'));
 	}
 
 	/**
@@ -52,5 +53,6 @@ class home extends OModule {
 		$this->getTemplate()->addComponent('header', 'common/header', ['page' => 'start', 'lang' => 'eu']);
 		$this->getTemplate()->addComponent('menu',   'common/menu',   ['page' => 'start', 'lang' => 'eu']);
 		$this->getTemplate()->addComponent('footer', 'common/footer');
+		$this->getTemplate()->add('next', $this->utils_service->getIcon('next'));
 	}
 }

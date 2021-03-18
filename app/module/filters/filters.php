@@ -5,8 +5,15 @@ namespace OsumiFramework\App\Module;
 use OsumiFramework\OFW\Core\OModule;
 use OsumiFramework\OFW\Web\ORequest;
 use OsumiFramework\OFW\Routing\ORoute;
+use OsumiFramework\App\Service\utilsService;
 
 class filters extends OModule {
+	private ?utilsService $utils_service;
+
+	function __construct() {
+		$this->utils_service  = new utilsService();
+	}
+
 	/**
 	 * Página de Filtros
 	 *
@@ -19,6 +26,8 @@ class filters extends OModule {
 		$this->getTemplate()->addComponent('menu',   'common/menu',   ['page' => 'filters', 'lang' => 'es']);
 		$this->getTemplate()->addComponent('footer', 'common/footer');
 		$this->getTemplate()->setTitle('Osumi Framework - Filtros');
+		$this->getTemplate()->add('previous', $this->utils_service->getIcon('previous'));
+		$this->getTemplate()->add('next',     $this->utils_service->getIcon('next'));
 	}
 
 	/**
@@ -33,6 +42,8 @@ class filters extends OModule {
 		$this->getTemplate()->addComponent('menu',   'common/menu',   ['page' => 'filters', 'lang' => 'en']);
 		$this->getTemplate()->addComponent('footer', 'common/footer');
 		$this->getTemplate()->setTitle('Osumi Framework - Filters');
+		$this->getTemplate()->add('previous', $this->utils_service->getIcon('previous'));
+		$this->getTemplate()->add('next',     $this->utils_service->getIcon('next'));
 	}
 
 	/**
@@ -47,5 +58,7 @@ class filters extends OModule {
 		$this->getTemplate()->addComponent('menu',   'common/menu',   ['page' => 'filters', 'lang' => 'eu']);
 		$this->getTemplate()->addComponent('footer', 'common/footer');
 		$this->getTemplate()->setTitle('Osumi Framework - Filtroak');
+		$this->getTemplate()->add('previous', $this->utils_service->getIcon('previous'));
+		$this->getTemplate()->add('next',     $this->utils_service->getIcon('next'));
 	}
 }

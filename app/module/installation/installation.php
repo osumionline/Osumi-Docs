@@ -6,8 +6,15 @@ use OsumiFramework\OFW\Core\OModule;
 use OsumiFramework\OFW\Web\ORequest;
 use OsumiFramework\OFW\Routing\ORoute;
 use OsumiFramework\OFW\Tools\OTools;
+use OsumiFramework\App\Service\utilsService;
 
 class installation extends OModule {
+	private ?utilsService $utils_service;
+
+	function __construct() {
+		$this->utils_service  = new utilsService();
+	}
+
 	/**
 	 * Página de Instalación
 	 *
@@ -21,6 +28,8 @@ class installation extends OModule {
 		$this->getTemplate()->addComponent('footer', 'common/footer');
 		$this->getTemplate()->setTitle('Osumi Framework - Instalación');
 		$this->getTemplate()->add('version', OTools::getVersion());
+		$this->getTemplate()->add('previous', $this->utils_service->getIcon('previous'));
+		$this->getTemplate()->add('next',     $this->utils_service->getIcon('next'));
 	}
 
 	/**
@@ -36,6 +45,8 @@ class installation extends OModule {
 		$this->getTemplate()->addComponent('footer', 'common/footer');
 		$this->getTemplate()->setTitle('Osumi Framework - Installation');
 		$this->getTemplate()->add('version', OTools::getVersion());
+		$this->getTemplate()->add('previous', $this->utils_service->getIcon('previous'));
+		$this->getTemplate()->add('next',     $this->utils_service->getIcon('next'));
 	}
 
 	/**
@@ -51,5 +62,7 @@ class installation extends OModule {
 		$this->getTemplate()->addComponent('footer', 'common/footer');
 		$this->getTemplate()->setTitle('Osumi Framework - Instalazioa');
 		$this->getTemplate()->add('version', OTools::getVersion());
+		$this->getTemplate()->add('previous', $this->utils_service->getIcon('previous'));
+		$this->getTemplate()->add('next',     $this->utils_service->getIcon('next'));
 	}
 }

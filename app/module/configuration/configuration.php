@@ -5,8 +5,15 @@ namespace OsumiFramework\App\Module;
 use OsumiFramework\OFW\Core\OModule;
 use OsumiFramework\OFW\Web\ORequest;
 use OsumiFramework\OFW\Routing\ORoute;
+use OsumiFramework\App\Service\utilsService;
 
 class configuration extends OModule {
+	private ?utilsService $utils_service;
+
+	function __construct() {
+		$this->utils_service  = new utilsService();
+	}
+
 	/**
 	 * Página de Configuración
 	 *
@@ -19,6 +26,8 @@ class configuration extends OModule {
 		$this->getTemplate()->addComponent('menu',   'common/menu',   ['page' => 'configuration', 'lang' => 'es']);
 		$this->getTemplate()->addComponent('footer', 'common/footer');
 		$this->getTemplate()->setTitle('Osumi Framework - Configuración');
+		$this->getTemplate()->add('previous', $this->utils_service->getIcon('previous'));
+		$this->getTemplate()->add('next',     $this->utils_service->getIcon('next'));
 	}
 
 	/**
@@ -33,6 +42,8 @@ class configuration extends OModule {
 		$this->getTemplate()->addComponent('menu',   'common/menu',   ['page' => 'configuration', 'lang' => 'en']);
 		$this->getTemplate()->addComponent('footer', 'common/footer');
 		$this->getTemplate()->setTitle('Osumi Framework - Configuration');
+		$this->getTemplate()->add('previous', $this->utils_service->getIcon('previous'));
+		$this->getTemplate()->add('next',     $this->utils_service->getIcon('next'));
 	}
 
 	/**
@@ -47,5 +58,7 @@ class configuration extends OModule {
 		$this->getTemplate()->addComponent('menu',   'common/menu',   ['page' => 'configuration', 'lang' => 'eu']);
 		$this->getTemplate()->addComponent('footer', 'common/footer');
 		$this->getTemplate()->setTitle('Osumi Framework - Konfigurazioa');
+		$this->getTemplate()->add('previous', $this->utils_service->getIcon('previous'));
+		$this->getTemplate()->add('next',     $this->utils_service->getIcon('next'));
 	}
 }
