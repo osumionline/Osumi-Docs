@@ -7,7 +7,10 @@
 	--menu-active-bg-color: #ccc;
 	--menu-active-text-color: #000;
 	--button-hover-text-color: #000;
+	--button-hover-bg-color: #eee;
 	--icon-color: #000;
+	--pre-bg-color: #f6f8fa;
+	--table-header-bg-color: #eee;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -20,7 +23,10 @@
 		--menu-active-bg-color: #57a6ff;
 		--menu-active-text-color: #0d1117;
 		--button-hover-text-color: #6e7681;
+		--button-hover-bg-color: #161b22;
 		--icon-color: #8b949e;
+		--pre-bg-color: #161b22;
+		--table-header-bg-color: #161b22;
 	}
 }
 
@@ -219,6 +225,7 @@ main h1 {
 
 .previous-next a:hover {
 	border: 1px solid var(--button-hover-text-color);
+	background-color: var(--button-hover-bg-color);
 }
 
 .previous-next a.previous {
@@ -282,7 +289,7 @@ code {
 }
 
 pre {
-	background-color: #f6f8fa;
+	background-color: var(--pre-bg-color);
 	border-radius: 3px;
 	font-size: 85%;
 	line-height: 1.45;
@@ -296,8 +303,17 @@ pre {
 	border-radius: 4px;
 }
 
+.data-table > div:first-child {
+	border-top-left-radius: 4px;
+}
+
+.data-table > div:first-child {
+	border-top-right-radius: 4px;
+}
+
 .data-header {
-	background-color: #eee;
+	background-color: var(--table-header-bg-color);
+	font-size: 1.2em;
 }
 
 .data-row {
