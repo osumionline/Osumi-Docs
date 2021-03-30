@@ -3,6 +3,103 @@
 	{{menu}}
 	<main>
 		<h1>Modelos</h1>
+		<p>Los objetos de modelo son la representación de un registro de una base de datos como un objeto PHP.</p>
+		<p>El Framework ofrece una clase llamada <code>OModel</code> que permite mapear el diseño de una tabla de una base de datos a un objeto, de modo que permite obtener un único registro como una variable.</p>
+		<p>Los archivos de modelo son archivos PHP ubicados en la carpeta <code>app/model</code> en el que cada archivo tiene el nombre de la tabla a la que representa y su contenido es este, por ejemplo:</p>
+
+<pre>
+&lt;?php declare(strict_types=1);
+
+namespace OsumiFramework\App\Model;
+
+use OsumiFramework\OFW\DB\OModel;
+
+class Tag extends OModel {
+	/**
+	 * Configures current model object based on data-base table structure
+	 */
+	function __construct() {
+		$table_name  = 'tag';
+		$model = [
+			'id' => [
+				'type'    => OModel::PK,
+				'comment' => 'Unique Id for each tag'
+			],
+			'name' => [
+				'type'     => OModel::TEXT,
+				'size'     => 20,
+				'nullable' => false,
+				'comment'  => 'Tag name'
+			],
+			'id_user' => [
+				'type'     => OModel::NUM,
+				'nullable' => true,
+				'default'  => null,
+				'comment'  => 'User Id',
+				'ref'      => 'user.id'
+			],
+			'created_at' => [
+				'type'    => OModel::CREATED,
+				'comment' => 'Register creation date'
+			],
+			'updated_at' => [
+				'type'    => OModel::UPDATED,
+				'comment' => 'Last date register was modified'
+			]
+		];
+
+		parent::load($table_name, $model);
+	}
+
+	/**
+	 * Get tag's name
+	 */
+	public function __toString() {
+		return $this->get('name');
+	}
+}
+</pre>
+
+		<p>El archivo contiene una clase con el nombre de la tabla que representa y hereda de la clase <code>OModel</code>.</p>
+		<p>En su interior, la función <code>__construct</code> tiene dos variables:</p>
+		<ul>
+			<li><code>$table_name</code>: El nombre de la tabla a la que representa.</li>
+			<li><code>$model</code>: El diseño de la tabla.</li>
+		</ul>
+		<p>Con estas dos variables se llama a la función <code>load</code> ofrecida por <code>OModel</code> que se encarga de inicializar el objeto.</p>
+		<p>Esta clase puede tener tantas funciones auxiliares como se necesiten, en el ejemplo se ha incluido <code>__toString</code>, de modo que si se intenta usar una variable creada con esta clase, se devolverá el nombre de la etiqueta a la que representa.</p>
+
+		<h3>Definición del modelo</h3>
+		<p>La variable <code>$model</code> es un array donde cada elemento corresponde a una columna de la tabla. Es un array relacional donde el nombre del elemento representa el nombre de la columna y el valor es un array con propiedades que definen sus características.</p>
+		<p>Para definir una columna se usan las siguientes opciones:</p>
+
+		<div class="data-table">
+			<div class="data-header data-row">
+				<div class="data-param">Campo</div>
+				<div class="data-default">Valor por defecto</div>
+				<div class="data-explanation">Explicación del campo</div>
+			</div>
+			<div class="data-divider"></div>
+			<div class="data-row">
+				<div class="data-param">type</div>
+				<div class="data-default">(no tiene)</div>
+				<div class="data-explanation">
+					Este es el único campo obligatorio. Las opciones son las siguientes:
+					<ul>
+						<li><code>OModel::PK</code>: Clave primaria de tipo numérico.</li>
+						<li><code>OModel::PK_STR</code>: Clave primaria de tipo texto.</li>
+						<li><code>OModel::CREATED</code>: Campo de tipo DATETIME que se rellena automaticamente con la fecha de creación del registro.</li>
+						<li><code>OModel::UPDATED</code>: Campo de tipo DATETIME que se rellena automaticamente con la fecha de la última modificación del registro.</li>
+						<li><code>OModel::NUM</code>: Campo de tipo INT, un número entero.</li>
+						<li><code>OModel::FLOAT</code>: Campo de tipo FLOAT, un número que admite decimales.</li>
+						<li><code>OModel::TEXT</code>: Campo de tipo VARCHAR, un texto. Admite un tamaño máximo de 255 caracteres, se define con el campo <code>size</code></li>
+						<li><code>OModel::LONGTEXT</code>: Campo de tipo TEXT, un texto largo. Admite un tamaño máximo de 65.535 caracteres.</li>
+						<li><code>OModel::DATE</code>: Campo de tipo DATETIME, para almacenar fechas y horas.</li>
+						<li><code>OModel::BOOL</code>: Campo de tipo booleano para valores verdadero/falso. En la base de datos se representa como un TINYINT de valores 0/1.</li>
+					</ul>
+				</div>
+			</div>
+		</div>
 
 		<div class="previous-next">
 			<a href="/es/modulos" class="previous">
