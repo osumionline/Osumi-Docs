@@ -1,7 +1,9 @@
 {
+	"name": "Osumi Framework Docs",
 	"base_url": "https://framework.osumi.es/",
 	"default_title": "Osumi Framework",
 	"lang": "es",
 	"css": ["common"],
-	"js": ["common"]
+	"js": ["common"],
+	"log_level": "ERROR"
 }
