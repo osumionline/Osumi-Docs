@@ -48,7 +48,7 @@ $urls = [
 ?>
 <header>
 	<button id="menu-btn" class="button-left"><img src="/img/menu.svg"></button>
-	Osumi Framework
+	<a href="/" class="title">Osumi Framework</a>
 	<button id="language-btn" class="button-right"><img src="/img/language.svg"></button>
 	<ul class="language-selector">
 		<li><a href="<?php echo $urls['es'][$values['page']] ?>"<?php if ($values['lang']=='es'): ?> class="active"<?php endif ?>>CAS</a></li>

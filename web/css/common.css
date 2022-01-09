@@ -85,6 +85,10 @@ header {
 	text-align: center;
 }
 
+header .title {
+	color: var(--body-texxt-color);
+}
+
 header button {
 	margin: 8px 0;
 	outline: 0;
@@ -146,7 +150,6 @@ header button.pressed {
 	border: 1px solid #ccc;
 	border-top: 0;
 	border-right: 0;
-	border-bottom-left-radius: 6px;
 	z-index: 10;
 	background-color: var(--body-bg-color);
 }
@@ -182,6 +185,7 @@ aside {
 	height: calc(100% - 102px);
 	width: 50%;
 	background-color: var(--body-bg-color);
+	overflow: auto;
 }
 
 aside.open {
@@ -316,8 +320,14 @@ pre {
 	background-color: var(--pre-bg-color);
 	border-radius: 3px;
 	line-height: 1.45;
-	overflow: auto;
+	overflow-x: auto;
 	padding: 16px;
+	width: 100%;
+}
+
+.data-table-container {
+	width: 100%;
+	overflow-x: auto;
 }
 
 .data-table {
@@ -339,8 +349,20 @@ pre {
 	font-size: 1.2em;
 }
 
+.data-th-header {
+	border-bottom: 2px solid #ccc;
+}
+
 .data-row {
 	display: flex;
+}
+
+.data-td-param {
+	width: 15%;
+	padding: 16px;
+	font-weight: bold;
+	border-right: 1px solid #ccc;
+	vertical-align: top;
 }
 
 .data-param {
@@ -350,10 +372,23 @@ pre {
 	border-right: 1px solid #ccc;
 }
 
+.data-td-default {
+	width: 15%;
+	padding: 16px;
+	border-right: 1px solid #ccc;
+	vertical-align: top;
+}
+
 .data-default {
 	flex: 1;
 	padding: 16px;
 	border-right: 1px solid #ccc;
+}
+
+.data-td-explanation {
+	width: 70%;
+	padding: 16px;
+	vertical-align: top;
 }
 
 .data-explanation {
