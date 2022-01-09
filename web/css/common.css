@@ -148,7 +148,7 @@ header button.pressed {
 	border-right: 0;
 	border-bottom-left-radius: 6px;
 	z-index: 10;
-	background-color: #fff;
+	background-color: var(--body-bg-color);
 }
 
 .language-selector-sm.open {
@@ -157,6 +157,7 @@ header button.pressed {
 
 .language-selector-sm li {
 	border-bottom: 1px solid #ccc;
+	margin-bottom: 0;
 }
 
 .language-selector-sm li:last-child {
@@ -165,9 +166,14 @@ header button.pressed {
 
 .language-selector-sm li a {
 	display: block;
-	padding: 16px;
 	text-align: center;
 	width: 150px;
+	line-height: 40px;
+}
+
+.language-selector-sm li a.active {
+	background-color: var(--menu-active-bg-color);
+	color: var(--menu-active-text-color);
 }
 
 aside {
@@ -196,6 +202,21 @@ aside a {
 aside a.active {
 	background-color: var(--menu-active-bg-color);
 	color: var(--menu-active-text-color);
+}
+
+#overlay {
+	display: none;
+	position: absolute;
+	top: 50px;
+	left: 0;
+	width: 100%;
+	height: calc(100% - 50px);
+	background-color: rgba(0, 0, 0, 0.6);
+	z-index: 5;
+}
+
+#overlay.open {
+	display: block;
 }
 
 main {

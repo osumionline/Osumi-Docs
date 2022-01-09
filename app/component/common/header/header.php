@@ -61,3 +61,4 @@ $urls = [
 	<li><a href="<?php echo $urls['en'][$values['page']] ?>"<?php if ($values['lang']=='en'): ?> class="active"<?php endif ?>>ENG</a></li>
 	<li><a href="<?php echo $urls['eu'][$values['page']] ?>"<?php if ($values['lang']=='eu'): ?> class="active"<?php endif ?>>EUS</a></li>
 </ul>
+<div id="overlay"></div>
