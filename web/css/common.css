@@ -11,6 +11,7 @@
 	--icon-color: #000;
 	--pre-bg-color: #f6f8fa;
 	--table-header-bg-color: #eee;
+	--code-bg-color: rgba(27,31,35,.05);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -27,6 +28,7 @@
 		--icon-color: #8b949e;
 		--pre-bg-color: #161b22;
 		--table-header-bg-color: #161b22;
+		--code-bg-color: #444;
 	}
 }
 
@@ -281,17 +283,17 @@ footer a.footer-version {
 }
 
 code {
-	background-color: rgba(27,31,35,.05);
+	background-color: var(--code-bg-color);
 	border-radius: 3px;
-	font-size: 85%;
 	margin: 0;
-	padding: .2em .4em;
+	padding: 4px 6px;
+	display: inline-block;
+	margin-bottom: 2px;
 }
 
 pre {
 	background-color: var(--pre-bg-color);
 	border-radius: 3px;
-	font-size: 85%;
 	line-height: 1.45;
 	overflow: auto;
 	padding: 16px;

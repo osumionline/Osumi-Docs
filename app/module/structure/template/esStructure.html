@@ -20,6 +20,7 @@
 					<li><code>translations.json</code>: Archivo con las traducciones para un sitio multi-idioma. Ver <a href="/es/traducciones">Traducciones</a>.</li>
 				</ol>
 			</li>
+			<li><code>app/dto</code>:  Carpeta para  los archivos DTO (Data Transfer Object), clases para mapear los datos recibidos en una solicitud. Cada DTO va en  un archivo separado, aunque se pueden reutilizar en diferentes. Ver <a href="/es/dto">DTOs</a></li>
 			<li><code>app/filter</code>: Carpeta para los filtros que se ejecutan ANTES de las acciones de los módulos. Cada filtro va en un archivo separado. Ver <a href="/es/filtros">Filtros</a>.</li>
 			<li><code>app/layout</code>: Carpeta para las plantillas globales, puede haber tantas como se quiera, pero si no se configuran plantillas globales personalizadas es obligatorio que haya una llamada <code>default.php</code>.</li>
 			<li><code>app/model</code>: Carpeta para las clases que componen el modelo. Tiene que haber un archivo por cada clase y cada clase representa una tabla de la base de datos. También puede haber clases personalizadas. Ver <a href="/es/modelo">Modelo</a>.</li>
@@ -43,6 +44,7 @@
 			<li><code>ofw/locale</code>: Carpeta para las traducciones de los mensajes del CLI.</li>
 			<li><code>ofw/plugins</code>: Carpeta para los plugins que se usarán en la aplicación.</li>
 			<li><code>ofw/task</code>: Carpeta para las tareas que proporciona el propio framework. Ver <a href="/es/tareas">Tareas</a>.</li>
+			<li><code>ofw/template</code>: Carpeta para las plantillas usadas por las tareas internas del framework.</li>
 			<li><code>ofw/tmp</code>: Carpeta para datos temporales. Por ejemplo en esta carpeta se generan archivos temporales usados en el procesamiento de imágenes.</li>
 			<li><code>ofw/vendor</code>: Carpeta para las utilidades y clases internas del framework.</li>
 		</ul>
@@ -55,7 +57,7 @@
 		<p>En Osumi Framework, este es el ciclo de ejecución de cada solicitud:</p>
 		<ul>
 			<li>Una URL es llamada, por ejemplo <code>/user/igorosabel</code></li>
-			<li>Se busca en las URLs de cada módulo dicha URL. En caso de no encontrarse, se devuelve un error 404 (se puede configurar dónde hay que redirigir al usuario en este caso).</li>
+			<li>Se busca en las URLs de cada módulo dicha URL. En caso de no encontrarse, se devuelve un error 404 (se puede configurar donde hay que redirigir al usuario en este caso).</li>
 			<li>
 				Para este ejemplo, esta sería la URL en el módulo <code>home</code>:
 				<br>

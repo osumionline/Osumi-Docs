@@ -72,7 +72,7 @@
 			<div class="data-row">
 				<div class="data-param">type</div>
 				<div class="data-default">html</div>
-				<div class="data-explanation">Tipo de retorno de datos. El valor por defecto es <code>html</code> y esto hará que la petición devuelva la cabecera <code>Content-type: text/html</code>. Otras opciones son <code>json</code> (que devuelve la cabecera <code>Content-type: application/json</code>) y <code>xml</code> (que devuelve la cabecera <code>Content-type: text/xml</code>).</div>
+				<div class="data-explanation">Tipo de retorno de datos. El valor por defecto es <code>html</code> y esto hará que la petición devuelva la cabecera <code>Content-type: text/html</code>. Otras opciones son <code>json</code> (devuelve la cabecera <code>Content-type: application/json</code>) y <code>xml</code> (devuelve la cabecera <code>Content-type: text/xml</code>).</div>
 			</div>
 			<div class="data-divider"></div>
 			<div class="data-row">
@@ -96,7 +96,7 @@
 
 		<p>En el ejemplo anterior, al tener a nivel de módulo la llamada a <code>ORoute</code>, esto hará que todas las acciones hereden los valores aquí configurados. De modo que todas las acciones del módulo <code>api</code> serán de tipo <code>json</code> y sus URLs empezarán por <code>/api</code>.</p>
 
-		<p>La variable <code>$req</code> recibida en cada acción es un objeto con estos métodos:</p>
+		<p>La variable <code>$req</code> recibida en cada acción es un objeto de tipo <code>ORequest</code> con estos métodos:</p>
 
 		<div class="data-table">
 			<div class="data-header data-row">
@@ -197,6 +197,22 @@
 	}
 </pre>
 
+		<h3>DTOs</h3>
+		<p>En lugar de pasar un parametro <code>ORequest</code> a una acción, también se puede pasar un objeto DTO que contendrá las funciones necesarias para obtener justo los parámetros necesarios, además de tener una función <code>isValid</code> que comprobará que los datos obtenidos sean correctos (por ejemplo al recibir los datos de un formulario).</p>
+		<p>El funcionamiento de los DTO se profundiza en el apartado <a href="/es/dto">DTO</a>.</p>
+		
+<pre>
+	#[ORoute('/login')]
+	public function login(LoginDataDTO $data): void {
+		$user = $data->getUser();
+		$pass = $data->getPass();
+
+		if (!$data->isValid()) {
+			// Código a ejecutar en caso de que falte alguno de los dos parámetros esperados
+		}
+	}
+</pre>
+
 		<h3>Pasando valores a los templates</h3>
 		<p>Una acción recibe datos, los manipula y luego devuelve la respuesta en forma de <code>template</code>. Cada acción tiene una <code>template</code> asociada.</p>
 		<p>Por ejemplo, el módulo <code>api</code> y la acción <code>login</code> tendrá un archivo llamado <code>app/module/<strong>api</strong>/template/<strong>login.json</strong></code>.</p>
@@ -279,6 +295,7 @@
 				<br>
 				El partial recibe una variable llamada <code>$values</code> que contiene lo pasado en el tercer parámetro. En este caso <code>$values['list']</code> sería la lista de usuarios que se le pasa.
 			</li>
+			<li>Por defecto, el resultado obtenido por la llamada a esta función se devolverá <code>urlencode-ado</code>, listo para ser usado en plantillas. En caso de querer omitir esta funcionalidad, se deberá pasar un valor llamado "extra" con el valor "nourlencode": <code>['list' => $list, 'extra' => 'nourlencode']</code></li>
 		</ul>
 
 		<p>Un componente puede contener todo tipo de código PHP ejecutable. Por ejemplo:</p>
