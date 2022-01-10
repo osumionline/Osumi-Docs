@@ -3,6 +3,8 @@ use OsumiFramework\OFW\Routing\OUrl;
 
 $urls = [
 	'es' => [
+		'menu_button'   => 'Menú',
+		'lang_button'   => 'Idioma',
 		'start'         => OUrl::generateUrl('home', 'esStart'),
 		'installation'  => OUrl::generateUrl('installation', 'esInstallation'),
 		'structure'     => OUrl::generateUrl('structure', 'esStructure'),
@@ -17,6 +19,8 @@ $urls = [
 		'translations'  => OUrl::generateUrl('translations', 'esTranslations')
 	],
 	'en' => [
+		'menu_button'   => 'Menu',
+		'lang_button'   => 'Language',
 		'start'         => OUrl::generateUrl('home', 'enStart'),
 		'installation'  => OUrl::generateUrl('installation', 'enInstallation'),
 		'structure'     => OUrl::generateUrl('structure', 'enStructure'),
@@ -31,6 +35,8 @@ $urls = [
 		'translations'  => OUrl::generateUrl('translations', 'enTranslations')
 	],
 	'eu' => [
+		'menu_button'   => 'Menua',
+		'lang_button'   => 'Hizkuntza',
 		'start'         => OUrl::generateUrl('home', 'euStart'),
 		'installation'  => OUrl::generateUrl('installation', 'euInstallation'),
 		'structure'     => OUrl::generateUrl('structure', 'euStructure'),
@@ -47,9 +53,13 @@ $urls = [
 ];
 ?>
 <header>
-	<button id="menu-btn" class="button-left"><img src="/img/menu.svg"></button>
+	<button id="menu-btn" class="button-left" aria-label="<?php echo $urls[$values['lang']]['menu_button'] ?>">
+		<img src="/img/menu.svg" width="24" height="24" alt="<?php echo $urls[$values['lang']]['menu_button'] ?>">
+	</button>
 	<a href="/" class="title">Osumi Framework</a>
-	<button id="language-btn" class="button-right"><img src="/img/language.svg"></button>
+	<button id="language-btn" class="button-right" aria-label="<?php echo $urls[$values['lang']]['lang_button'] ?>">
+		<img src="/img/language.svg" width="24" height="24" alt="<?php echo $urls[$values['lang']]['lang_button'] ?>">
+	</button>
 	<ul class="language-selector">
 		<li><a href="<?php echo $urls['es'][$values['page']] ?>"<?php if ($values['lang']=='es'): ?> class="active"<?php endif ?>>CAS</a></li>
 		<li><a href="<?php echo $urls['en'][$values['page']] ?>"<?php if ($values['lang']=='en'): ?> class="active"<?php endif ?>>ENG</a></li>

@@ -34,7 +34,7 @@
 
 body, html {
 	height: 100%;
-	font-family: Roboto,Helvetica Neue,sans-serif;
+	font-family: Helvetica Neue,sans-serif;
 	background-color: var(--body-bg-color);
 	color: var(--body-text-color);
 }
@@ -334,6 +334,7 @@ pre {
 	margin: 16px;
 	border: 1px solid #ccc;
 	border-radius: 4px;
+	width: calc(100% - 32px);
 }
 
 .data-table > div:first-child {
@@ -403,6 +404,16 @@ pre {
 }
 
 .data-block > strong {
+	display: inline-block;
+	margin-right: 16px;
+}
+
+.data-td-block {
+	padding: 16px;
+	text-align: center;
+}
+
+.data-td-block > strong {
 	display: inline-block;
 	margin-right: 16px;
 }
