@@ -75,30 +75,34 @@ class Tag extends OModel {
 
 		<div class="data-table-container">
 			<table class="data-table">
-				<tr  class="data-header">
-					<th class="data-th-header data-td-param">Campo</th>
-					<th class="data-th-header data-td-default">Valor por defecto</th>
-					<th class="data-th-header data-td-explanation">Explicación del campo</th>
-				</tr>
-				<tr>
-					<td class="data-td-param">type</td>
-					<td class="data-td-default">(no tiene)</td>
-					<td class="data-td-explanation">
-						Este es el único campo obligatorio. Las opciones son las siguientes:
-						<ul>
-							<li><code>OModel::PK</code>: Clave primaria de tipo numérico.</li>
-							<li><code>OModel::PK_STR</code>: Clave primaria de tipo texto.</li>
-							<li><code>OModel::CREATED</code>: Campo de tipo DATETIME que se rellena automáticamente con la fecha de creación del registro.</li>
-							<li><code>OModel::UPDATED</code>: Campo de tipo DATETIME que se rellena automáticamente con la fecha de la última modificación del registro.</li>
-							<li><code>OModel::NUM</code>: Campo de tipo INT, un número entero.</li>
-							<li><code>OModel::FLOAT</code>: Campo de tipo FLOAT, un número que admite decimales.</li>
-							<li><code>OModel::TEXT</code>: Campo de tipo VARCHAR, un texto. Admite un tamaño máximo de 255 caracteres, se define con el campo <code>size</code></li>
-							<li><code>OModel::LONGTEXT</code>: Campo de tipo TEXT, un texto largo. Admite un tamaño máximo de 65.535 caracteres.</li>
-							<li><code>OModel::DATE</code>: Campo de tipo DATETIME, para almacenar fechas y horas.</li>
-							<li><code>OModel::BOOL</code>: Campo de tipo booleano para valores verdadero/falso. En la base de datos se representa como un TINYINT de valores 0/1.</li>
-						</ul>
-					</td>
-				</tr>
+				<thead>
+					<tr class="data-header">
+						<th class="data-th-header data-td-param">Campo</th>
+						<th class="data-th-header data-td-default">Valor por defecto</th>
+						<th class="data-th-header data-td-explanation">Explicación del campo</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td class="data-td-param">type</td>
+						<td class="data-td-default">(no tiene)</td>
+						<td class="data-td-explanation">
+							Este es el único campo obligatorio. Las opciones son las siguientes:
+							<ul>
+								<li><code>OModel::PK</code>: Clave primaria de tipo numérico.</li>
+								<li><code>OModel::PK_STR</code>: Clave primaria de tipo texto.</li>
+								<li><code>OModel::CREATED</code>: Campo de tipo DATETIME que se rellena automáticamente con la fecha de creación del registro.</li>
+								<li><code>OModel::UPDATED</code>: Campo de tipo DATETIME que se rellena automáticamente con la fecha de la última modificación del registro.</li>
+								<li><code>OModel::NUM</code>: Campo de tipo INT, un número entero.</li>
+								<li><code>OModel::FLOAT</code>: Campo de tipo FLOAT, un número que admite decimales.</li>
+								<li><code>OModel::TEXT</code>: Campo de tipo VARCHAR, un texto. Admite un tamaño máximo de 255 caracteres, se define con el campo <code>size</code></li>
+								<li><code>OModel::LONGTEXT</code>: Campo de tipo TEXT, un texto largo. Admite un tamaño máximo de 65.535 caracteres.</li>
+								<li><code>OModel::DATE</code>: Campo de tipo DATETIME, para almacenar fechas y horas.</li>
+								<li><code>OModel::BOOL</code>: Campo de tipo booleano para valores verdadero/falso. En la base de datos se representa como un TINYINT de valores 0/1.</li>
+							</ul>
+						</td>
+					</tr>
+				</tbody>
 			</table>
 		</div>
 
