@@ -330,102 +330,57 @@ pre {
 	overflow-x: auto;
 }
 
-.data-table {
+.data-table-container table {
 	margin: 16px;
 	border: 1px solid #ccc;
 	border-radius: 4px;
 	width: calc(100% - 32px);
+	border-collapse: collapse;
 }
 
-.data-table > div:first-child {
-	border-top-left-radius: 4px;
+.data-table-container table caption {
+	background-color: var(--table-header-bg-color);
+	padding: 16px;
+	text-align: center;
+	border-left: 1px solid #ccc;
+	border-top: 1px solid #ccc;
+	border-right: 1px solid #ccc;
 }
 
-.data-table > div:first-child {
-	border-top-right-radius: 4px;
+.data-table-container table caption strong {
+	display: inline-block;
+	margin-right: 16px;
 }
 
-.data-header {
+.data-table-container table thead {
 	background-color: var(--table-header-bg-color);
 	font-size: 1.2em;
 }
 
-.data-th-header {
+.data-table-container td, th {
+	padding: 16px;
+	border: 1px solid #ccc;
+	vertical-align: top;
+}
+
+.data-table-container th {
 	border-bottom: 2px solid #ccc;
 }
 
-.data-row {
-	display: flex;
-}
-
-.data-td-param {
-	width: 15%;
-	padding: 16px;
+.data-table-container table tbody tr td:first-child {
 	font-weight: bold;
-	border-right: 1px solid #ccc;
-	vertical-align: top;
 }
 
-.data-param {
-	flex: 1;
-	padding: 16px;
-	font-weight: bold;
-	border-right: 1px solid #ccc;
-}
-
-.data-td-default {
+.data-table-15 {
 	width: 15%;
-	padding: 16px;
-	border-right: 1px solid #ccc;
-	vertical-align: top;
 }
 
-.data-default {
-	flex: 1;
-	padding: 16px;
-	border-right: 1px solid #ccc;
-}
-
-.data-td-explanation {
+.data-table-70 {
 	width: 70%;
-	padding: 16px;
-	vertical-align: top;
 }
 
-.data-explanation {
-	flex: 5;
-	padding: 16px;
-}
-
-.data-block {
-	flex: 1;
-	padding: 16px;
-	text-align: center;
-}
-
-.data-block > strong {
-	display: inline-block;
-	margin-right: 16px;
-}
-
-.data-td-block {
-	padding: 16px;
-	text-align: center;
-}
-
-.data-td-block > strong {
-	display: inline-block;
-	margin-right: 16px;
-}
-
-.data-long {
-	flex: 6;
-	padding: 16px;
-}
-
-.data-divider {
-	height: 2px;
-	background-color: #eee;
+.data-table-85 {
+	width: 85%;
 }
 
 .image-gallery {

@@ -6,78 +6,78 @@
 		<p>El archivo de configuración <code>app/config/config.json</code> es un archivo JSON con pares clave/valor con los que configurar la aplicación que se quiere crear. Todos los campos son opcionales, por lo que se podría dejar el archivo sin valores (por ejemplo <code>{}</code>), pero conviene configurarlos para una experiencia más personalizada. Estos son los posibles parámetros:</p>
 
 		<div class="data-table-container">
-			<table class="data-table">
-				<caption class="data-td-block">
+			<table>
+				<caption>
 					<strong>db</strong>
 					Sirve para indicar la configuración de la base de datos a usar.
 				</caption>
 				<thead>
-					<tr class="data-header">
-						<th class="data-th-header data-td-param">Parámetro</th>
-						<th class="data-th-header data-td-default">Valor por defecto</th>
-						<th class="data-th-header data-td-explanation">Explicación del parámetro</th>
+					<tr>
+						<th class="data-table-15">Parámetro</th>
+						<th class="data-table-15">Valor por defecto</th>
+						<th class="data-table-70">Explicación del parámetro</th>
 					</tr>
 				</thead>
 				<tbody>
 					<tr>
-						<td class="data-param">host</td>
-						<td class="data-default">(no tiene)</td>
-						<td class="data-explanation">Nombre de host o URL de la base de datos a usar. Por ejemplo <code>localhost</code> o una dirección IP.</td>
+						<td>host</td>
+						<td>(no tiene)</td>
+						<td>Nombre de host o URL de la base de datos a usar. Por ejemplo <code>localhost</code> o una dirección IP.</td>
 					</tr>
 					<tr>
-						<td class="data-param">user</td>
-						<td class="data-default">(no tiene)</td>
-						<td class="data-explanation">Nombre de usuario con el que acceder a la base de datos.</td>
+						<td>user</td>
+						<td>(no tiene)</td>
+						<td>Nombre de usuario con el que acceder a la base de datos.</td>
 					</tr>
 					<tr>
-						<td class="data-param">pass</td>
-						<td class="data-default">(no tiene)</td>
-						<td class="data-explanation">Contraseña del usuario con el que acceder a la base de datos.</td>
+						<td>pass</td>
+						<td>(no tiene)</td>
+						<td>Contraseña del usuario con el que acceder a la base de datos.</td>
 					</tr>
 					<tr>
-						<td class="data-param">name</td>
-						<td class="data-default">(no tiene)</td>
-						<td class="data-explanation">Nombre de la base de datos a la que conectarse.</td>
+						<td>name</td>
+						<td>(no tiene)</td>
+						<td>Nombre de la base de datos a la que conectarse.</td>
 					</tr>
 					<tr>
-						<td class="data-param">charset</td>
-						<td class="data-default">utf8mb4</td>
-						<td class="data-explanation">Juego de caracteres con los que comunicarse con la base de datos.</td>
+						<td>charset</td>
+						<td>utf8mb4</td>
+						<td>Juego de caracteres con los que comunicarse con la base de datos.</td>
 					</tr>
 					<tr>
-						<td class="data-param">collate</td>
-						<td class="data-default">utf8mb4_unicode_ci</td>
-						<td class="data-explanation">Juego de caracteres para los campos de tipo texto en la base de datos.</td>
+						<td>collate</td>
+						<td>utf8mb4_unicode_ci</td>
+						<td>Juego de caracteres para los campos de tipo texto en la base de datos.</td>
 					</tr>
 				</tbody>
 			</table>
 		</div>
 
 		<div class="data-table-container">
-			<table class="data-table">
-				<caption class="data-td-block">
+			<table>
+				<caption>
 					<strong>cookies</strong>
 					En el caso de que se quieran usar cookies personalizadas, <code>cookies</code> sirve para configurarlas.
 				</caption>
 				<thead>
-					<tr class="data-header">
-						<th class="data-th-header data-td-param">Parámetro</th>
-						<th class="data-th-header data-td-default">Valor por defecto</th>
-						<th class="data-th-header data-td-explanation">Explicación del parámetro</th>
+					<tr>
+						<th class="data-table-15">Parámetro</th>
+						<th class="data-table-15">Valor por defecto</th>
+						<th class="data-table-70">Explicación del parámetro</th>
 					</tr>
 				</thead>
 				<tbody>
 					<tr>
-						<td class="data-td-param">prefix</td>
-						<td class="data-td-default">(no tiene)</td>
-						<td class="data-td-explanation">
+						<td>prefix</td>
+						<td>(no tiene)</td>
+						<td>
 							En el caso de que varias aplicaciones compartan un mismo dominio, mediante un prefijo se puede hacer que las cookies de la aplicación no colisionen con otras de otra aplicación.
 						</td>
 					</tr>
 					<tr>
-						<td class="data-td-param">url</td>
-						<td class="data-td-default">(no tiene)</td>
-						<td class="data-td-explanation">
+						<td>url</td>
+						<td>(no tiene)</td>
+						<td>
 							Dominio en el que serán validas las cookies. Hay que indicar un punto antes del dominio, por ejemplo <code>.osumi.es</code>.
 						</td>
 					</tr>
@@ -86,175 +86,175 @@
 		</div>
 
 		<div class="data-table-container">
-			<table class="data-table">
-				<caption class="data-td-block">
+			<table>
+				<caption>
 					<strong>smtp</strong>
 					Datos para el envío de emails mediante SMTP (en caso de que el parámetro <code>base_modules/smtp</code> sea <code>true</code>).
 				</caption>
 				<thead>
-					<tr class="data-header">
-						<th class="data-th-header data-td-param">Parámetro</th>
-						<th class="data-th-header data-td-default">Valor por defecto</th>
-						<th class="data-th-header data-td-explanation">Explicación del parámetro</th>
+					<tr>
+						<th class="data-table-15">Parámetro</th>
+						<th class="data-table-15">Valor por defecto</th>
+						<th class="data-table-70">Explicación del parámetro</th>
 					</tr>
 				</thead>
 				<tbody>
 					<tr>
-						<td class="data-td-param">host</td>
-						<td class="data-td-default">(no tiene)</td>
-						<td class="data-td-explanation">Nombre de dominio o dirección IP del servidor de correo. Por ejemplo <code>smtp.gmail.com</code>.</td>
+						<td>host</td>
+						<td>(no tiene)</td>
+						<td>Nombre de dominio o dirección IP del servidor de correo. Por ejemplo <code>smtp.gmail.com</code>.</td>
 					</tr>
 					<tr>
-						<td class="data-td-param">port</td>
-						<td class="data-td-default">(no tiene)</td>
-						<td class="data-td-explanation">Puerto al que conectarse al realizar el envío. Por ejemplo en el caso de Google sería el <code>587</code>.</td>
+						<td>port</td>
+						<td>(no tiene)</td>
+						<td>Puerto al que conectarse al realizar el envío. Por ejemplo en el caso de Google sería el <code>587</code>.</td>
 					</tr>
 					<tr>
-						<td class="data-td-param">secure</td>
-						<td class="data-td-default">tls</td>
-						<td class="data-td-explanation">Tipo de cifrado usado al realizar el envío de datos al servidor de correo.</td>
+						<td>secure</td>
+						<td>tls</td>
+						<td>Tipo de cifrado usado al realizar el envío de datos al servidor de correo.</td>
 					</tr>
 					<tr>
-						<td class="data-td-param">user</td>
-						<td class="data-td-default">(no tiene)</td>
-						<td class="data-td-explanation">Usuario con el que se realizará el envío de emails.</td>
+						<td>user</td>
+						<td>(no tiene)</td>
+						<td>Usuario con el que se realizará el envío de emails.</td>
 					</tr>
 					<tr>
-						<td class="data-td-param">pass</td>
-						<td class="data-td-default">(no tiene)</td>
-						<td class="data-td-explanation">Contraseña del usuario con el que se realizará el envío de emails.</td>
+						<td>pass</td>
+						<td>(no tiene)</td>
+						<td>Contraseña del usuario con el que se realizará el envío de emails.</td>
 					</tr>
 				</tbody>
 			</table>
 		</div>
 
 		<div class="data-table-container">
-			<table class="data-table">
-				<caption class="data-td-block">
+			<table>
+				<caption>
 					<strong>error_pages</strong>
 					Sirve para configurar páginas personalizadas en el caso de errores de servidor.
 				</caption>
 				<thead>
-					<tr class="data-header">
-						<th class="data-th-header data-td-param">Parámetro</th>
-						<th class="data-th-header data-td-default">Valor por defecto</th>
-						<th class="data-th-header data-td-explanation">Explicación del parámetro</th>
+					<tr>
+						<th class="data-table-15">Parámetro</th>
+						<th class="data-table-15">Valor por defecto</th>
+						<th class="data-table-70">Explicación del parámetro</th>
 					</tr>
 				</thead>
 				<tbody>
 					<tr>
-						<td class="data-td-param">403</td>
-						<td class="data-td-default">(no tiene)</td>
-						<td class="data-td-explanation">URL a la que redirigir en el caso de un error 403 (error de autenticación)</td>
+						<td>403</td>
+						<td>(no tiene)</td>
+						<td>URL a la que redirigir en el caso de un error 403 (error de autenticación)</td>
 					</tr>
 					<tr>
-						<td class="data-td-param">404</td>
-						<td class="data-td-default">(no tiene)</td>
-						<td class="data-td-explanation">URL a la que redirigir en el caso de un error 404 (página no encontrada)</td>
+						<td>404</td>
+						<td>(no tiene)</td>
+						<td>URL a la que redirigir en el caso de un error 404 (página no encontrada)</td>
 					</tr>
 					<tr>
-						<td class="data-td-param">500</td>
-						<td class="data-td-default">(no tiene)</td>
-						<td class="data-td-explanation">URL a la que redirigir en el caso de un error 500 (error interno del servidor)</td>
+						<td>500</td>
+						<td>(no tiene)</td>
+						<td>URL a la que redirigir en el caso de un error 500 (error interno del servidor)</td>
 					</tr>
 				</tbody>
 			</table>
 		</div>
 
 		<div class="data-table-container">
-			<table class="data-table">
+			<table>
 				<thead>
-					<tr class="data-header">
-						<th class="data-th-header data-td-param">Parámetro</th>
-						<th class="data-th-header data-td-default">Valor por defecto</th>
-						<th class="data-th-header data-td-explanation">Explicación del parámetro</th>
+					<tr>
+						<th class="data-table-15">Parámetro</th>
+						<th class="data-table-15">Valor por defecto</th>
+						<th class="data-table-70">Explicación del parámetro</th>
 					</tr>
 				</thead>
 				<tbody>
 					<tr>
-						<td class="data-td-param">log_level</td>
-						<td class="data-td-default">DEBUG</td>
-						<td class="data-td-explanation">
+						<td>log_level</td>
+						<td>DEBUG</td>
+						<td>
 							Indica el nivel de depuración que se quiere establecer. Hay 4 niveles: <strong>ALL</strong> (todos los mensajes enviados a objetos <code>OLog</code>, incluso los internos del Framework), <strong>DEBUG</strong> (todos los mensajes de la aplicación, no los del Framework), <strong>INFO</strong> (mensajes de tipo INFO o tipo ERROR) y <strong>ERROR</strong> (solo los mensajes de tipo ERROR).
 						</td>
 					</tr>
 					<tr>
-						<td class="data-td-param">base_url</td>
-						<td class="data-td-default">(no tiene)</td>
-						<td class="data-td-explanation">Indica la dirección completa de la aplicación, por ejemplo <code>https://framework.osumi.es/</code>.</td>
+						<td>base_url</td>
+						<td>(no tiene)</td>
+						<td>Indica la dirección completa de la aplicación, por ejemplo <code>https://framework.osumi.es/</code>.</td>
 					</tr>
 					<tr>
-						<td class="data-td-param">admin_email</td>
-						<td class="data-td-default">(no tiene)</td>
-						<td class="data-td-explanation">Indica la dirección email del creador de la aplicación. Se muestra en las páginas de error no personalizadas.</td>
+						<td>admin_email</td>
+						<td>(no tiene)</td>
+						<td>Indica la dirección email del creador de la aplicación. Se muestra en las páginas de error no personalizadas.</td>
 					</tr>
 					<tr>
-						<td class="data-td-param">default_title</td>
-						<td class="data-td-default">(no tiene)</td>
-						<td class="data-td-explanation">
+						<td>default_title</td>
+						<td>(no tiene)</td>
+						<td>
 							Título por defecto que se incluira en el campo HTML <code>title</code> de cada página. Se puede configurar en cada acción para mostrar uno personalizado.
 						</td>
 					</tr>
 					<tr>
-						<td class="data-td-param">lang</td>
-						<td class="data-td-default">es</td>
-						<td class="data-td-explanation">
+						<td>lang</td>
+						<td>es</td>
+						<td>
 							Código de idioma por defecto en caso de querer usar <a href="/es/traducciones">traducciones</a>. Se usa en caso de que el usuario que accede a la aplicación tenga un idioma no contemplado en las traducciones.
 						</td>
 					</tr>
 					<tr>
-						<td class="data-td-param">css</td>
-						<td class="data-td-default">[]</td>
-						<td class="data-td-explanation">
+						<td>css</td>
+						<td>[]</td>
+						<td>
 							Lista con los archivos CSS que se incluirán. Solo hay que poner el nombre del archivo y el framework lo rellenará. Por ejemplo poniendo <code>"common"</code>, el framework incluirá el archivo <code>common.css</code> de la carpeta <code>web/css</code>.
 						</td>
 					</tr>
 					<tr>
-						<td class="data-td-param">ext_css</td>
-						<td class="data-td-default">[]</td>
-						<td class="data-td-explanation">
+						<td>ext_css</td>
+						<td>[]</td>
+						<td>
 							Lista con los archivos CSS EXTERNOS que se incluirán. En este caso hay que indicar la URL completa del archivo que se quiere incluir, por ejemplo una URL de Google Fonts.
 						</td>
 					</tr>
 					<tr>
-						<td class="data-td-param">js</td>
-						<td class="data-td-default">[]</td>
-						<td class="data-td-explanation">
+						<td>js</td>
+						<td>[]</td>
+						<td>
 							Lista con los archivos JS que se incluirán. Solo hay que poner el nombre del archivo y el framework lo rellenará. Por ejemplo poniendo <code>"jquery"</code>, el framework incluirá el archivo <code>jquery.js</code> de la carpeta <code>web/js</code>.
 						</td>
 					</tr>
 					<tr>
-						<td class="data-td-param">ext_css</td>
-						<td class="data-td-default">[]</td>
-						<td class="data-td-explanation">
+						<td>ext_css</td>
+						<td>[]</td>
+						<td>
 							Lista con los archivos JS EXTERNOS que se incluirán. En este caso hay que indicar la URL completa del archivo que se quiere incluir, por ejemplo la URL de jQuery del CDN.
 						</td>
 					</tr>
 					<tr>
-						<td class="data-td-param">extra</td>
-						<td class="data-td-default">{}</td>
-						<td class="data-td-explanation">
+						<td>extra</td>
+						<td>{}</td>
+						<td>
 							Este campo permite guardar valores personalizados mediante pares clave/valor. Por ejemplo <code>"numero_articulos_por_pagina": 10</code>.
 						</td>
 					</tr>
 					<tr>
-						<td class="data-td-param">libs</td>
-						<td class="data-td-default">[]</td>
-						<td class="data-td-explanation">
+						<td>libs</td>
+						<td>[]</td>
+						<td>
 							Lista con las librerías de terceros que se incluirán en el framework. Por ejemplo <code>"another/library"</code> incluiría el archivo <code>library.php</code> de la carpeta <code>ofw/library/another</code>. En caso de que estas librerías no se encuentren la carga se detiene y se muestra un error indicando que el archivo no se ha encontrado.
 						</td>
 					</tr>
 					<tr>
-						<td class="data-td-param">dir</td>
-						<td class="data-td-default">{}</td>
-						<td class="data-td-explanation">
+						<td>dir</td>
+						<td>{}</td>
+						<td>
 							Lista de directorios personalizados. El framework tiene una lista de directorios a los que se puede acceder para consulta, pero el usuario puede definir los suyos propios. Por ejemplo <code>"thumb_dir": "web/img/thumb"</code>. En este campo se puede añadir las claves de directorios previamente definidos indicándolos entre dos llaves. Por ejemplo, el caso anterior mejor definido sería <code>"thumb_dir": "{{web}}img/thumb"</code> donde <code>{{web}}</code> se sustituiría con la ruta al directorio <code>web</code> del framework.
 						</td>
 					</tr>
 					<tr>
-						<td class="data-td-param">environment</td>
-						<td class="data-td-default">(no tiene)</td>
-						<td class="data-td-explanation">
+						<td>environment</td>
+						<td>(no tiene)</td>
+						<td>
 							La configuración del sitio se realiza en el archivo <code>config.json</code>, pero se pueden crear archivos "secundarios" basados en entornos. Por ejemplo, si se indicase <code>"environment": "dev"</code>, tras la carga del archivo de configuración, se cargaría el archivo <code>config.dev.json</code>. Estos archivos secundarios pueden contener los mismos parámetros y sustituirán a los del archivo principal. De este modo se puede tener la configuración de un sitio de prueba en un archivo y del sitio en producción en otro, y realizar la carga de uno u otro simplemente cambiando el valor de este parámetro.
 						</td>
 					</tr>

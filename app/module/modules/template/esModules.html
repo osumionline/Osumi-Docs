@@ -57,45 +57,45 @@
 		<p>Esta función puede recibir estos campos (todos son opcionales):</p>
 
 		<div class="data-table-container">
-			<table class="data-table">
+			<table>
 				<thead>
-					<tr class="data-header">
-						<th class="data-th-header data-td-param">Parámetro</th>
-						<th class="data-th-header data-td-default">Valor por defecto</th>
-						<th class="data-th-header data-td-explanation">Explicación del parámetro</th>
+					<tr>
+						<th class="data-table-15">Parámetro</th>
+						<th class="data-table-15">Valor por defecto</th>
+						<th class="data-table-70">Explicación del parámetro</th>
 					</tr>
 				</thead>
 				<tbody>
 					<tr>
-						<td class="data-td-param">url</td>
-						<td class="data-td-default">(no tiene)</td>
-						<td class="data-td-explanation">URL que ejecuta la acción.</td>
+						<td>url</td>
+						<td>(no tiene)</td>
+						<td>URL que ejecuta la acción.</td>
 					</tr>
 					<tr>
-						<td class="data-td-param">type</td>
-						<td class="data-td-default">html</td>
-						<td class="data-td-explanation">
+						<td>type</td>
+						<td>html</td>
+						<td>
 							Tipo de retorno de datos. El valor por defecto es <code>html</code> y esto hará que la petición devuelva la cabecera <code>Content-type: text/html</code>. Otras opciones son <code>json</code> (devuelve la cabecera <code>Content-type: application/json</code>) y <code>xml</code> (devuelve la cabecera <code>Content-type: text/xml</code>).
 						</td>
 					</tr>
 					<tr>
-						<td class="data-td-param">prefix</td>
-						<td class="data-td-default">(no tiene)</td>
-						<td class="data-td-explanation">
+						<td>prefix</td>
+						<td>(no tiene)</td>
+						<td>
 							Parte de URL que se antepone al campo URL. Por ejemplo en <code>prefix</code> al poner <code>/api</code>, si en el campo <code>url</code> se pone <code>/user</code>, la URL resultante sería <code>/api/user</code>. Este campo resulta util al utilizar la función <code>ORoute</code> a nivel de módulo, en lugar de acción, ya que así se aplica a todas las acciones de un módulo. Por ejemplo, al poner <code>/api</code> todas las acciones del módulo empezarían así, resultando en URLs como <code>/api/get-user</code>, <code>/api/update-user</code>...
 						</td>
 					</tr>
 					<tr>
-						<td class="data-td-param">filter</td>
-						<td class="data-td-default">(no tiene)</td>
-						<td class="data-td-explanation">
+						<td>filter</td>
+						<td>(no tiene)</td>
+						<td>
 							Función que se ejecuta ANTES de ejecutar el código de la acción. Esto sirve, por ejemplo, para validar un usuario antes de llegar a ejecutar la propia acción.
 						</td>
 					</tr>
 					<tr>
-						<td class="data-td-param">layout</td>
-						<td class="data-td-default">default</td>
-						<td class="data-td-explanation">
+						<td>layout</td>
+						<td>default</td>
+						<td>
 							Nombre de la plantilla en la que se mostrará el resultado de la acción. Solo sirve en caso de que <code>type</code> sea <code>html</code>. Por defecto se carga la plantilla <code>app/layout/default.php</code>.
 						</td>
 					</tr>
@@ -108,31 +108,31 @@
 		<p>La variable <code>$req</code> recibida en cada acción es un objeto de tipo <code>ORequest</code> con estos métodos:</p>
 
 		<div class="data-table-container">
-			<table class="data-table">
+			<table>
 				<thead>
-					<tr class="data-header">
-						<th class="data-th-header data-td-param">Método</th>
-						<th class="data-th-header data-td-default">Valor por defecto</th>
-						<th class="data-th-header data-td-explanation">Explicación del método</th>
+					<tr>
+						<th class="data-table-15">Método</th>
+						<th class="data-table-15">Valor por defecto</th>
+						<th class="data-table-70">Explicación del método</th>
 					</tr>
 				</thead>
 				<tbody>
 					<tr>
-						<td class="data-td-param">getMethod</td>
-						<td class="data-td-default">(no tiene)</td>
-						<td class="data-td-explanation">Método HTTP de la llamada a la acción, en minúsculas. Por ejemplo <code>get</code> o <code>post</code>.</td>
+						<td>getMethod</td>
+						<td>(no tiene)</td>
+						<td>Método HTTP de la llamada a la acción, en minúsculas. Por ejemplo <code>get</code> o <code>post</code>.</td>
 					</tr>
 					<tr>
-						<td class="data-td-param">getHeaders</td>
-						<td class="data-td-default">(no tiene)</td>
-						<td class="data-td-explanation">
+						<td>getHeaders</td>
+						<td>(no tiene)</td>
+						<td>
 							Array con las cabeceras de la solicitud HTTP. Incluye campos como <code>Referer</code>, <code>User-Agent</code>... Dependen del tipo de servidor utilizado para servir la aplicación. Se le puede pasar un parámetro con el nombre de la cabecera que se quiere obtener y directamente devuelve su valor.
 						</td>
 					</tr>
 					<tr>
-						<td class="data-td-param">getFilter</td>
-						<td class="data-td-default">(no tiene)</td>
-						<td class="data-td-explanation">
+						<td>getFilter</td>
+						<td>(no tiene)</td>
+						<td>
 							Pásandole como parámetro el nombre del filtro se obtiene los valores devueltos por él (<a href="/es/filtros">ver más</a>). En caso de no tener filtros, este método devolverá <code>null</code>.
 							<br>
 							Por ejemplo, si la acción tiene asociado un filtro llamado <code>loginFilter</code>, se puede llamar al método con <code>$req->getFilter('loginFilter')</code>.
@@ -143,53 +143,53 @@
 		</div>
 
 		<div class="data-table-container">
-			<table class="data-table">
-				<caption class="data-td-block">
+			<table>
+				<caption>
 					<strong>Parámetros</strong>
 					Cómo obtener parámetros pasados a cada acción
 				</caption>
 				<thead>
-					<tr class="data-header">
-						<th class="data-th-header data-td-param">Método</th>
-						<th class="data-th-header data-td-default">Valor por defecto</th>
-						<th class="data-th-header data-td-explanation">Explicación del método</th>
+					<tr>
+						<th class="data-table-15">Método</th>
+						<th class="data-table-15">Valor por defecto</th>
+						<th class="data-table-70">Explicación del método</th>
 					</tr>
 				</thead>
 				<tbody>
 					<tr>
-						<td class="data-td-param">getParam</td>
-						<td class="data-td-default">(no tiene)</td>
-						<td class="data-td-explanation">
+						<td>getParam</td>
+						<td>(no tiene)</td>
+						<td>
 							Este método sirve para obtener los parámetros que se pasan a cada acción. Pasándole el nombre del parámetro que se quiere obtener devuelve su valor o <code>null</code> en caso de no obtenerse.
 							<br>
 							Por ejemplo, <code>$req->getParam('nombre')</code> devolvería el valor del parámetro <code>nombre</code> que se le ha pasado a la acción, tanto por GET, por POST como cuerpo de una llamada JSON.
 						</td>
 					</tr>
 					<tr>
-						<td class="data-td-param">getParamString</td>
-						<td class="data-td-default">(no tiene)</td>
-						<td class="data-td-explanation">
+						<td>getParamString</td>
+						<td>(no tiene)</td>
+						<td>
 							Este método obtiene el parámetro que se le indica, pero devuelve su contenido como una cadena de texto, aunque se trate de números, valores booleanos... En caso de no existir el parámetro solicitado devuelve <code>null</code>.
 						</td>
 					</tr>
 					<tr>
-						<td class="data-td-param">getParamInt</td>
-						<td class="data-td-default">(no tiene)</td>
-						<td class="data-td-explanation">
+						<td>getParamInt</td>
+						<td>(no tiene)</td>
+						<td>
 							Este método obtiene el parámetro que se le indica, pero devuelve su contenido como un número entero. En caso de no existir el parámetro solicitado, o de no ser un número válido, devuelve <code>null</code>.
 						</td>
 					</tr>
 					<tr>
-						<td class="data-td-param">getParamFloat</td>
-						<td class="data-td-default">(no tiene)</td>
-						<td class="data-td-explanation">
+						<td>getParamFloat</td>
+						<td>(no tiene)</td>
+						<td>
 							Este método obtiene el parámetro que se le indica, pero devuelve su contenido como un número float. En caso de no existir el parámetro solicitado, o de no ser un número válido, devuelve <code>null</code>.
 						</td>
 					</tr>
 					<tr>
-						<td class="data-td-param">getParamBool</td>
-						<td class="data-td-default">(no tiene)</td>
-						<td class="data-td-explanation">
+						<td>getParamBool</td>
+						<td>(no tiene)</td>
+						<td>
 							Este método obtiene el parámetro que se le indica, pero devuelve su contenido como un valor booleano. En caso de no existir el parámetro solicitado devuelve <code>null</code>. El valor del parámetro se interpretará como un booleano, de modo que una cadena de texto vacía, un número 0... devolverán valores falsos.
 						</td>
 					</tr>
@@ -369,47 +369,47 @@
 		<p>Las clases de los módulos heredan de la clase <code>OModule</code> y esta ofrece varios métodos que pueden usarse en las acciones. Por ejemplo ya se ha explicado el método <code>getTemplate</code>. Estos son los métodos disponibles:</p>
 
 		<div class="data-table-container">
-			<table class="data-table">
+			<table>
 				<thead>
-					<tr class="data-header">
-						<th class="data-th-header data-td-param">Función</th>
-						<th class="data-th-header data-td-explanation">Explicación de la función</th>
+					<tr">
+						<th class="data-table-15">Función</th>
+						<th class="data-table-85">Explicación de la función</th>
 					</tr>
 				</thead>
 				<tbody>
 					<tr>
-						<td class="data-td-param">getConfig</td>
-						<td class="data-td-explanation">
+						<td>getConfig</td>
+						<td>
 							Función que devuelve un objeto <code>OConfig</code> con la configuración del sitio. Este objeto contiene todas los valores de configuración del archivo <code>config.json</code>.
 						</td>
 					</tr>
 					<tr>
-						<td class="data-td-param">getDB</td>
-						<td class="data-td-explanation">
+						<td>getDB</td>
+						<td>
 							Función que devuelve un objeto <code>ODB</code> con el que hacer consultas a la base de datos (en caso de que se haya configurado una base de datos, en caso contrario devuelve <code>null</code>).
 						</td>
 					</tr>
 					<tr>
-						<td class="data-td-param">getTemplate</td>
-						<td class="data-td-explanation">
+						<td>getTemplate</td>
+						<td>
 							Función que devuelve un objeto <code>OTemplate</code> con el que manipular el template devuelto por cada acción.
 						</td>
 					</tr>
 					<tr>
-						<td class="data-td-param">getLog</td>
-						<td class="data-td-explanation">
+						<td>getLog</td>
+						<td>
 							Función que devuelve un objeto <code>OLog</code> con el que guardar datos en un log de texto.
 						</td>
 					</tr>
 					<tr>
-						<td class="data-td-param">getSession</td>
-						<td class="data-td-explanation">
+						<td>getSession</td>
+						<td>
 							Función que devuelve un objeto <code>OSession</code> con el que acceder a la sesión del usuario. Se pueden así guardar u obtener valores persistentes.
 						</td>
 					</tr>
 					<tr>
-						<td class="data-td-param">getCookie</td>
-						<td class="data-td-explanation">
+						<td>getCookie</td>
+						<td>
 							Función que devuelve un objeto <code>OCookie</code> con el que acceder a las cookies del usuario.
 						</td>
 					</tr>
