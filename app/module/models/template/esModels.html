@@ -100,7 +100,214 @@ class Tag extends OModel {
 								<li><code>OModel::DATE</code>: Campo de tipo DATETIME, para almacenar fechas y horas.</li>
 								<li><code>OModel::BOOL</code>: Campo de tipo booleano para valores verdadero/falso. En la base de datos se representa como un TINYINT de valores 0/1.</li>
 							</ul>
+							Es obligatorio tener un campo de tipo <code>CREATED</code> y un campo de tipo <code>UPDATED</code>. Se pueden indicar tantas claves primarias como se necesite.
 						</td>
+					</tr>
+					<tr>
+						<td>comment</td>
+						<td>(no tiene)</td>
+						<td>
+							Este campo no es obligatorio. Sirve como ayuda para explicar en que consiste el campo. Al usar la tarea <code>generateModel</code>, el contenido de este campo se asignará como comentario a la columna de la base de datos.
+						</td>
+					</tr>
+					<tr>
+						<td>nullable</td>
+						<td>false</td>
+						<td>Indica si el valor del campo puede ser <code>NULL</code>. En caso de querer guardar un valor <code>NULL</code> y este campo esté a <code>true</code>, producirá un error.</td>
+					</tr>
+					<tr>
+						<td>default</td>
+						<td>(no tiene)</td>
+						<td>
+							Valor por defecto para el campo en caso de que no se use. En el ejemplo, si se crea una nueva <code>Tag</code>, pero no se indica su <code>id_user</code>, por defecto se guardará el valor <code>NULL</code> indicado aquí.
+						</td>
+					</tr>
+					<tr>
+						<td>size</td>
+						<td>(no tiene)</td>
+						<td>
+							Tamaño máximo de caracteres para campos de tipo texto. En caso de querer guardar una cadena de texto con un tamaño superior al aquí indicado, se cortará tras el número de caracteres marcado.
+						</td>
+					</tr>
+					<tr>
+						<td>ref</td>
+						<td>(no tiene)</td>
+						<td>
+							Referencia a otro campo de otro modelo/tabla. La sintaxis es "tabla.campo", por ejemplo "user.id" para referirnos a la tabla "user" y dentro de esta, al campo "id". Sirve para crear claves de tipo FOREIGN KEY al crear la base de datos.
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+
+		<h3>Métodos de los modelos</h3>
+		<p>Las clases de modelo al heredar de la clase <code>OModel</code> tienen una serie de métodos que permiten crear, modificar o borrar estos registros.</p>
+		<p>Estos son los métodos disponibles:</p>
+
+		<div class="data-table-container">
+			<table>
+				<thead>
+					<tr>
+						<th class="data-table-15">Método</th>
+						<th class="data-table-15">Parámetros</th>
+						<th class="data-table-70">Explicación del método</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>load</td>
+						<td>
+							<ol>
+								<li><code>$table_name (string)</code> Nombre de la tabla a la que hace referencia el modelo.</li>
+								<li><code>$model (array)</code> Definición de la tabla usando los campos antes descritos.</li>
+							</ol>
+						</td>
+						<td>
+							Este método solo se utiliza en la inicialización de una clase de modelo. Sirve para definir la tabla a la que hace referencia y los campos que tiene cada registro. Ambos parámetros son obligatorios.
+						</td>
+					</tr>
+					<tr>
+						<td>getModel</td>
+						<td><code>$key (string)</code> Nombre del campo.</td>
+						<td>
+							Este método obtiene la definición que se ha hecho de un campo concreto, los datos definidos para un campo al llamar a la función <code>load</code>. Por ejemplo: <code>$name_definition = $tag->getModel('name');</code>
+						</td>
+					</tr>
+					<tr>
+						<td>set</td>
+						<td>
+							<ol>
+								<li><code>$key (string)</code> Nombre del campo.</li>
+								<li><code>$value (mixto)</code> Valor del campo.</li>
+							</ol>
+						</td>
+						<td>
+							Función para asignar un valor a una columna de un registro. Por ejemplo: <code>$tag->set('name', 'Nombre de la tag');</code>
+						</td>
+					</tr>
+					<tr>
+						<td>get</td>
+						<td>
+							<ol>
+								<li><code>$key (string)</code> Nombre del campo.</li>
+								<li><code>$extra (string | int)</code> Opcional, modifica el valor devuelto.</li>
+							</ol>
+						</td>
+						<td>
+							Obtiene el valor de un campo concreto. Por ejemplo: <code>$tag_name = $tag->get('name');</code>
+							<br>
+							El segundo parámetro <code>$extra</code> modifica el resultado de obtener el valor, sirve para campos de tipo texto o para fechas. En el caso de un texto, si se pasa como segundo parámetro un número, el resultado se cortará tras ese número de caracteres. Por ejemplo:
+<pre>
+	$name = $tag->get('name'); // Devuelve 'Nombre de la tag'
+	$name = $tag->get('name', 4); // Devuelve 'Nomb'
+</pre>
+							<br>
+							En el caso de los campos de tipo fecha, si se omite el segundo parámetro se obtiene la fecha con el formato nativo de la base de datos usada. Si se indica un patrón (como el pasado a la <a href="https://www.php.net/manual/es/function.date.php" target="_blank">función date de PHP</a>), el resultado se formatea:
+<pre>
+	$date = $tag->get('created_at'); // Devuelve '2022-01-14 23:12:59'
+	$date = $tag->get('created_at', 'd/m/Y'); // Devuelve '14/01/2022'
+</pre>
+						</td>
+					</tr>
+					<tr>
+						<td>getPks</td>
+						<td>(no tiene)</td>
+						<td>
+							Obtiene un array con los nombre de los campos que componen la clave primaria. Por ejemplo:
+<pre>
+	$pks = $tag->getPks(); // Devuelve ['id']
+</pre>
+						</td>
+					</tr>
+					<tr>
+						<td>save</td>
+						<td>(no tiene)</td>
+						<td>
+							Guarda el objeto de modelo en la base de datos. En el caso de ser un objeto nuevo, se ejecuta el comando <code>INSERT</code> correspondiente mediante una <code>prepared statement</code>. En el caso de ser una modificación, se ejecutará el comando <code>UPDATE</code> que actualizará solo los campos que se hayan modificado.
+							<br>
+							Al guardar un registro, si se trata de un nuevo campo, automáticamente se guardará la fecha actual en el campo <code>created_at</code>. Si se trata de una actualización, la fecha actual se guardará en el campo <code>updated_at</code>. De este modo es posible saber exactamente cuando se creó un registro y cuando fue modificado por última vez.
+						</td>
+					</tr>
+					<tr>
+						<td>find</td>
+						<td><code>$opt (array)</code> Registro a buscar.</td>
+						<td>
+							Sirve para buscar un registro concreto por uno o más campos. Hay que pasar por parámetro un array de pares clave/valor que compondrán la consulta a realizar. Devuelve <code>true</code> o <code>false</code> con el resultado de la busqueda. En caso de ser exitosa la búsqueda, el objeto usado para realizar la busqueda se actualizará con los valores del resultado. Por ejemplo:
+<pre>
+	$tag = new Tag(); // Nuevo objeto en blanco
+	if ($tag->find(['id' => 1])) { // Buscamos tag cuyo campo 'id' sea 1
+		$name = $tag->get('name'); // Devuelve 'Nombre de la tag', ya que al ser una búsqueda exitosa el objeto se ha actualizado con los valores del resultado
+	}
+</pre>
+						</td>
+					</tr>
+					<tr>
+						<td>update</td>
+						<td><code>$res (array)</code> Array con pares clave/valor</td>
+						<td>
+							Esta función permite actualizar un objeto de modelo a partir de un array de pares clave/valor. Pasándole un array cuyas claves sean los nombre de los campos, se actualizará el objeto. Por ejemplo:
+<pre>
+	$data = [
+		'id' => 1,
+		'name' => 'Nombre de la tag',
+		'id_user' => 123,
+		'created_at' => '2022-01-14 23:12:59',
+		'updated_at' => '2022-01-15 12:08:36'
+	];
+	$tag = new Tag(); // Nuevo objeto en blanco
+	$tag->update($data); // Actualizo el objeto con los datos del array
+
+	$name = $tag->get('name'); // Devuelve 'Nombre de la tag'
+</pre>
+						</td>
+					</tr>
+					<tr>
+						<td>delete</td>
+						<td>(no tiene)</td>
+						<td>Borra el registro de la base de datos asociado al objeto de modelo.</td>
+					</tr>
+					<tr>
+						<td>generate</td>
+						<td>
+							<ol>
+								<li><code>$type (string)</code> Tipo: sql, json, array.</li>
+								<li><code>$exclude (array)</code> Campos a excluir del resultado.</li>
+								<li><code>$empty (array)</code> Campos a devolver vacíos.</li>
+							</ol>
+						</td>
+						<td>
+							Este método devuelve una representación del modelo. Tiene tres opciones:
+							<br><br>
+							<code>sql</code>: Devuelve el código SQL necesario para generar la tabla a partir de los campos definidos.
+							<br>
+							<code>json</code>: Devuelve el objeto de modelo cargado actualmente como un objeto JSON, pares clave/valor.
+							<br>
+							<code>array</code>: Devuelve el objeto de modelo cargado actualmente como un array nativo de PHP, pares clave/valor.
+							<br><br>
+							Los parametros <code>$exclude</code> y <code>$empty</code> sirven para los tipos <code>json</code> y <code>array</code>. En el caso de incluir nombres de campos en el array <code>$exclude</code>, estos no aparecerán en el resultado obtenido. Por el contrario, en el caso de incluir nombres de campos en el array <code>$empty</code>, estos campos si que se devolverán en el resultado, pero su valor estará vacío.
+						</td>
+					</tr>
+					<tr>
+						<td>generateRefs</td>
+						<td>(no tiene)</td>
+						<td>Devuelve el código SQL necesario para generar las claves <code>FOREIGN KEY</code> del modelo.</td>
+					</tr>
+					<tr>
+						<td>cleanValue</td>
+						<td><code>$value (string | int)</code> Valor a limpiar.</td>
+						<td>
+							Devuelve el valor que se le pase sanitizado:
+							<ul>
+								<li><code>Valor NULL</code>: Devuelve "null" como cadena de texto.</li>
+								<li><code>Número</code>: Devuelve el valor directamente ya que es un valor "seguro".</li>
+								<li><code>Texto</code>: Devuelve los saltos de línea como un carácter "\n", las comillas como comillas escapadas (" -&gt; \") y el resultado entre comillas dobles.</li>
+							</ul>
+						</td>
+					</tr>
+					<tr>
+						<td>__toString</td>
+						<td>(no tiene)</td>
+						<td>Si se intenta mostrar un objeto de modelo como un string, se devuelve su representación como <code>JSON</code>, con los valores sanitizados. En el caso de que se defina una función <code>__toString</code> personalizada en la clase, tendrá prioridad sobre el método por defecto.</td>
 					</tr>
 				</tbody>
 			</table>
