@@ -4,7 +4,7 @@
 	<main>
 		<h1>Instalación</h1>
 		<p>El framework se puede instalar en cualquier servidor con Apache2 y PHP 8.0 (al utilizar anotaciones como sistema de enrutado, PHP 8.0.0 es la versión mínima necesaria para que funcione).</p>
-		<p>MySQL no es necesario pero en caso de querer usarlo el requisito es que sea de la versión 5.1 o superior. También se puede usar MariaDB 10.1 o superior, Postgresql, SQLite... Al utilizar PDO para la conexión solo depende de que los drivers apropiados estén instalados.</p>
+		<p>MySQL no es necesario, pero en caso de querer usarlo el requisito es que sea de la versión 5.1 o superior. También se puede usar MariaDB 10.1 o superior, Postgresql, SQLite... Al utilizar PDO para la conexión solo depende de que los drivers apropiados estén instalados.</p>
 		<p>Para realizar la instalación hay dos formas:</p>
 		<ol>
 			<li><a href="#cli">Osumi Framework CLI</a></li>
@@ -13,6 +13,12 @@
 			<li><a href="#extractor">Extractor</a></li>
 			<li><a href="#creador">Creador</a></li>
 		</ol>
+
+		<h2 id="cli">Osumi Framework CLI</h2>
+		<p>A partir de la versión 7.8.0 hay una nueva herramienta llamada <a href="https://github.com/igorosabel/Osumi-Framework-CLI" target="_blank">Osumi Framework CLI</a>.</p>
+		<p>Primero hay que descargar el ejecutable del CLI y ejecutar el siguiente comando:</p>
+		<p><code>ofw new &lt;nombre&gt;</code></p>
+		<p>Esto descargará el repositorio en una carpeta llamada <code>&lt;nombre&gt;</code>, y a continuación limpiará todo el código de ejemplo.</p>
 
 		<h2 id="git">Instalación mediante git</h2>
 		<p>Ejecutando el siguiente comando se puede obtener una copia completa:</p>
@@ -34,9 +40,9 @@
 		<p><code>php ofw_extractor.php</code></p>
 
 		<h2 id="creador">Creador</h2>
-		<p>He creado una aplicación llamada <strong>Creador</strong> que permite mediante una interfaz web diseñar y configurar una aplicación desde cero.</p>
+		<p><strong>Creador</strong> es una aplicación que permite mediante una interfaz web diseñar y configurar una aplicación desde cero.</p>
 		<p><a href="https://creador.osumi.es" target="_blank">https://creador.osumi.es</a></p>
-		<p>En esta aplicación se puede diseñar toda la configuración del sitio, los modelos de base de datos, librerías que se pueden añadir a la parte frontal (Angular, jQuery, Bootstrap...) y finalmente se puede generar un archivo ZIP que se puede descargar.</p>
+		<p>En esta aplicación se puede diseñar toda la configuración del sitio, los modelos de base de datos, librerías que se pueden añadir a la parte frontal (AngularJS, jQuery, Bootstrap...) y finalmente se puede generar un archivo ZIP que se puede descargar.</p>
 		<p>El Creador deja los apartados del código vacíos para empezar a programar.</p>
 		<div class="image-gallery">
 			<div class="image-container">
@@ -87,12 +93,6 @@
 		<p>En caso de no querer usar <code>https</code>, basta con comentar estas dos líneas. Recomiendo <strong>encarecidamente</strong> usar <code>https</code> con <a href="https://letsencrypt.org/" target="_blank">Let's Encrypt</a></p>
 		<p>Con esto la aplicación estaría lista para empezar a ser programada.</p>
 		<p>A continuación se explica la estructura de las carpetas que componen el framework: <a href="/es/estructura">Estructura</a></p>
-
-		<h2 id="cli">Osumi Framework CLI</h2>
-		<p>A partir de la versión 7.8.0 hay una nueva herramienta llamada <a href="https://github.com/igorosabel/Osumi-Framework-CLI" target="_blank">Osumi Framework CLI</a>.</p>
-		<p>Primero hay que descargar el ejecutable del CLI y ejecutar el siguiente comando:</p>
-		<p><code>ofw new &lt;nombre&gt;</code></p>
-		<p>Esto descargará el repositorio en una carpeta llamada <code>&lt;nombre&gt;</code>, y a continuación limpiará todo  el código de ejemplo.</p>
 
 		<div class="previous-next">
 			<a href="/" class="previous">

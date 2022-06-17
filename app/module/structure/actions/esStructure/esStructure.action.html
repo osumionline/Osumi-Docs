@@ -12,7 +12,7 @@
 		<h2>Carpetas que componen el framework</h2>
 		<p>La carpeta <code>app</code> contiene el código de cada aplicación creada por el usuario.</p>
 		<ul>
-			<li><code>app/component</code>: Carpeta para los componentes. Los componentes son pequeñas piezas que se pueden repetir, por ejemplo elementos de un listado. Aceptan código PHP.</li>
+			<li><code>app/component</code>: Carpeta para los componentes. Los componentes son pequeñas piezas de código reutilizable, por ejemplo elementos de un listado. Aceptan código PHP.</li>
 			<li>
 				<code>app/config</code>: Carpeta con los archivos de configuración. En esta carpeta hay 2 archivos:
 				<ol>
@@ -20,18 +20,18 @@
 					<li><code>translations.json</code>: Archivo con las traducciones para un sitio multi-idioma. Ver <a href="/es/traducciones">Traducciones</a>.</li>
 				</ol>
 			</li>
-			<li><code>app/dto</code>:  Carpeta para  los archivos DTO (Data Transfer Object), clases para mapear los datos recibidos en una solicitud. Cada DTO va en  un archivo separado, aunque se pueden reutilizar en diferentes. Ver <a href="/es/dto">DTOs</a></li>
+			<li><code>app/dto</code>:  Carpeta para  los archivos DTO (Data Transfer Object), clases para mapear los datos recibidos en una solicitud. Cada DTO va en  un archivo separado, aunque se pueden reutilizar en diferentes acciones. Ver <a href="/es/dto">DTOs</a></li>
 			<li><code>app/filter</code>: Carpeta para los filtros que se ejecutan ANTES de las acciones de los módulos. Cada filtro va en un archivo separado. Ver <a href="/es/filtros">Filtros</a>.</li>
 			<li><code>app/layout</code>: Carpeta para las plantillas globales, puede haber tantas como se quiera, pero si no se configuran plantillas globales personalizadas es obligatorio que haya una llamada <code>default.php</code>.</li>
 			<li><code>app/model</code>: Carpeta para las clases que componen el modelo. Tiene que haber un archivo por cada clase y cada clase representa una tabla de la base de datos. También puede haber clases personalizadas. Ver <a href="/es/modelos">Modelo</a>.</li>
 			<li><code>app/module</code>: Carpeta para los módulos que contienen la lógica de la aplicación. Ver <a href="/es/modulos">Módulos</a>.</li>
 			<li><code>app/service</code>: Carpeta para los servicios, clases auxiliares con funciones que se pueden reutilizar a lo largo de toda la aplicación. Ver <a href="/es/servicios">Servicios</a>.</li>
-			<li><code>app/task</code>: Carpeta para las tareas que se pueden ejecutar desde línea de comandos mediante el archivo <code>ofw.php</code>. Ver <a href="/es/tareas">Tareas</a>.</li>
+			<li><code>app/task</code>: Carpeta para las tareas que se pueden ejecutar desde línea de comandos mediante el ejecutable <code>ofw</code>. Ver <a href="/es/tareas">Tareas</a>.</li>
 		</ul>
 		<p>La carpeta <code>logs</code> contiene los logs generados por el sistema interno de logs <code>OLog</code>.</p>
 		<p>La carpeta <code>ofw</code> contiene el código interno del framework.</p>
 		<ul>
-			<li><code>ofw/cache</code>: Carpeta con objetos cacheados. Osumi Framework proporciona un sistema de cache con el que almacenar objetos JSON complejos. Por ejemplo, el propio Framework crea un archivo llamado <code>urls.cache.json</code> en el que se guarda un listado resumiedo de las URLs que componen la aplicación para un acceso más rápido.</li>
+			<li><code>ofw/cache</code>: Carpeta con objetos cacheados. Osumi Framework proporciona un sistema de cache con el que almacenar objetos JSON complejos. Por ejemplo, el propio Framework crea un archivo llamado <code>urls.cache.json</code> en el que se guarda un listado resumiendo de las URLs que componen la aplicación para un acceso más rápido.</li>
 			<li>
 				<code>ofw/export</code>: Carpeta para los archivos generados por el Framework, como el archivo SQL del modelo o las copias de seguridad (ver <a href="/es/tareas">Tareas</a>).
 				<br><br>
@@ -59,27 +59,25 @@
 			<li>Una URL es llamada, por ejemplo <code>/user/igorosabel</code></li>
 			<li>Se busca en las URLs de cada módulo dicha URL. En caso de no encontrarse, se devuelve un error 404 (se puede configurar donde hay que redirigir al usuario en este caso).</li>
 			<li>
-				Para este ejemplo, esta sería la URL en el módulo <code>home</code>:
+				Para este ejemplo, en el módulo <code>home</code> hay una <code>acción</code> llamada <code>user</code>:
 				<br>
 <pre>
-	/**
-	 * Página de un usuario
-	 *
-	 * @param ORequest $req Request object with method, headers, parameters and filters used
-	 * @return void
-	 */
-	#[ORoute('/user/:id')]
-	public function user(ORequest $req): void {
-		...
-	}
+#[OModuleAction(
+  url: '/user/:id',
+  services: ['user', 'photo'],
+  components: ['home/photo_list']
+)]
+class userAction extends OAction {
+  ...
+}
 </pre>
 			</li>
 			<li>En este caso la URL coincide en <code>/user/</code> e <code>igorosabel</code> sería interpretado como un valor dinámico que se pasaría como <code>id</code>. </li>
 			<li>Al coincidir esta URL, se ejecutaría el módulo <code>home</code> y la acción <code>user</code></li>
 			<li>Antes de ejecutar la acción correspondiente, se pueden definir <code>filtros</code> que hacen una función previa, por ejemplo comprobar si un usuario tiene permiso para acceder a un apartado concreto.</li>
-			<li>En este caso, se ejecutará la función <code>userPage</code> de la clase <code>home</code> del archivo <code>app/controller/home.php</code></li>
+			<li>En este caso, se ejecutará la función <code>run</code> de la clase <code>userAction</code> del archivo <code>app/module/home/actions/user/user.action.php</code></li>
 			<li>Tras ejecutarse el código de la función, se carga la plantilla.</li>
-			<li>La plantilla se compone del <code>layout</code> o cuerpo principal y la plantilla asociada a cada acción. Las plantillas están en la carpeta <code>template</code> de cada módulo.</li>
+			<li>La plantilla se compone del <code>layout</code> o cuerpo principal y la plantilla asociada a cada acción. Las plantillas están en la propia carpeta de la acción, en este caso <code>app/module/home/actions/user/user.action.html</code>.</li>
 			<li>En las plantillas se pueden definir "huecos" que se substituirán con valores de la función acción.</li>
 			<li>Finalmente, se pueden utilizar archivos CSS, JS o imágenes, situados en la carpeta <code>web</code>.</li>
 		</ul>
