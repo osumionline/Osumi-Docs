@@ -4,6 +4,6 @@
 	"default_title": "Osumi Framework",
 	"lang": "es",
 	"css": ["common.min"],
-	"js": ["common"],
+	"js": ["common.min"],
 	"log_level": "ERROR"
 }
