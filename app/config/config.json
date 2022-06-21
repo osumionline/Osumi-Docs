@@ -3,7 +3,7 @@
 	"base_url": "https://framework.osumi.es/",
 	"default_title": "Osumi Framework",
 	"lang": "es",
-	"css": ["common.min"],
-	"js": ["common.min"],
+	"css": ["common.min", "prism"],
+	"js": ["common.min", "prism"],
 	"log_level": "ERROR"
 }

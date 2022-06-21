@@ -6,7 +6,7 @@
 		<p>Los módulos son las unidades lógicas de una aplicación. Puede haber tantas como se quiera o necesite y sirven para organizar el código de una manera ordenada y lógica.</p>
 		<p>Cada módulo es un archivo PHP que contiene una clase con el nombre del módulo. Por ejemplo, el módulo <code>api</code> será un archivo llamado <code>api.php</code> y su contenido inicial sería este:</p>
 
-<pre>
+<pre><code class="language-php">
 	&lt;?php declare(strict_types=1);
 
 	namespace OsumiFramework\App\Module;
@@ -18,14 +18,14 @@
 	class api extends OModule {
 		// Código del módulo
 	}
-</pre>
+</code></pre>
 
 		<p>La clase tiene que heredar de la clase <code>OModule</code> (una clase interna del framework, <a href="/es/funciones-internas#omodule">ver más</a>).</p>
 		<p>A continuación, dentro de esta clase se definen las acciones, funciones públicas de la clase que se ejecutarán al llamar a las URLs definidas en cada acción.</p>
 		<p>Estas funciones reciben un parámetro <code>$req</code> con información sobre la solicitud recibida, los parámetros recibidos, etc...</p>
 		<p>Por ejemplo, la anterior clase <code>api</code> con una acción llamada <code>getUser</code> sería así:</p>
 
-<pre>
+<pre><code class="language-php">
 	&lt;?php declare(strict_types=1);
 
 	namespace OsumiFramework\App\Module;
@@ -50,7 +50,7 @@
 			// Código de la acción
 		}
 	}
-</pre>
+</code></pre>
 
 		<p>La función <code>ORoute</code> que precede al código de la acción es la que define que esta función es el código a ejecutar al realizar una llamada.</p>
 
@@ -205,7 +205,7 @@
 		<p>Por ejemplo, en una acción llamada <code>login</code> que sirva para iniciar sesión en un sitio, se esperan dos parámetros: <code>user</code> y <code>pass</code>.</p>
 		<p>Se pueden obtener y comprobar de este modo:</p>
 
-<pre>
+<pre><code class="language-php">
 	#[ORoute('/login')]
 	public function login(ORequest $req): void {
 		$user = $req->getParam('user', false);
@@ -215,13 +215,13 @@
 			// Código a ejecutar en caso de que falte alguno de los dos parámetros esperados
 		}
 	}
-</pre>
+</code></pre>
 
 		<h2>DTOs</h2>
 		<p>En lugar de pasar un parametro <code>ORequest</code> a una acción, también se puede pasar un objeto DTO que contendrá las funciones necesarias para obtener justo los parámetros necesarios, además de tener una función <code>isValid</code> que comprobará que los datos obtenidos sean correctos (por ejemplo al recibir los datos de un formulario).</p>
 		<p>El funcionamiento de los DTO se profundiza en el apartado <a href="/es/dto">DTO</a>.</p>
 
-<pre>
+<pre><code class="language-php">
 	#[ORoute('/login')]
 	public function login(LoginDataDTO $data): void {
 		$user = $data->getUser();
@@ -231,7 +231,7 @@
 			// Código a ejecutar en caso de que falte alguno de los dos parámetros esperados
 		}
 	}
-</pre>
+</code></pre>
 
 		<h2>Pasando valores a los templates</h2>
 		<p>Una acción recibe datos, los manipula y luego devuelve la respuesta en forma de <code>template</code>. Cada acción tiene una <code>template</code> asociada.</p>
@@ -239,14 +239,14 @@
 		<p>La extensión del archivo <code>template</code> viene definida por el tipo de la acción. El valor por defecto es <code>html</code>, pero se pueden especificar archivos <code>json</code> o <code>xml</code>.
 		<p>Pero las acciones tienen que devolver información que tienen que pasar a los templates. Siguiendo el anterior ejemplo, el archivo <code>login.json</code> tendría este aspecto:</p>
 
-<pre>
+<pre><code class="language-json">
 	{
 		"status": "{{status}}",
 		"id": {{id}},
 		"fullName": "{{full_name}}",
 		"token": "{{token}}"
 	}
-</pre>
+</code></pre>
 
 		<p>Mediante la sintaxis de doble corchetes se indican campos que serán sustituidos por la acción.</p>
 		<p>Para hacer esto, el módulo puede usar una función de la clase <code>OTemplate</code>, que es insertada en cada módulo, llamando a la función <code>getTemplate</code>. Esta función devuelve un objeto <code>OTemplate</code> (<a href="/es/funciones-internas#otemplate">ver más</a>), otra clase interna del framework, que permite manipular el template.</p>
@@ -255,14 +255,14 @@
 		<h4>add</h4>
 		<p>Esta función simplemente pasa el valor indicado a uno de los campos del template. Por ejemplo:</p>
 
-<pre>
+<pre><code class="language-php">
 	#[ORoute('/login')]
 	public function login(ORequest $req): void {
 		// Código de la función
 
 		$this->getTemplate()->add('status', $status);
 	}
-</pre>
+</code></pre>
 
 		<p>Esto es:</p>
 		<ul>
@@ -279,7 +279,7 @@
 		<p>El funcionamiento es parecido al de la función <code>add</code>, se indica un lugar del template en el que realizar la substitución y "qué" es lo que se tiene que introducir.</p>
 		<p>Por ejemplo:</p>
 
-<pre>
+<pre><code class="language-php">
 	El template:
 
 	{
@@ -296,7 +296,7 @@
 
 		$this->getTemplate()->addComponent('list', 'api/user_list', ['list' => $list]);
 	}
-</pre>
+</code></pre>
 
 		<ul>
 			<li>La función recibe tres parámetros: nombre del hueco en el template, nombre del componente a incluir y valores que se pasan al componente.</li>
@@ -320,13 +320,13 @@
 
 		<p>Un componente puede contener todo tipo de código PHP ejecutable. Por ejemplo:</p>
 
-<pre>
+<pre><code class="language-php">
 	&lt;?php foreach ($values['list'] as $user): ?>
 	{
 		// datos del usuario...
 	}
 	<&lt;?php endforeach ?>
-</pre>
+</code></pre>
 
 		<p>El resultado de esta ejecución luego se incluiría en el template.</p>
 
@@ -334,7 +334,7 @@
 		<p>La clase <code>OTemplate</code> ofrece un método llamado <code>addModelComponent</code> que mapea un objeto de modelo (accesos a bases de datos, <a href="/es/modelos">ver más</a>) a un valor JSON. Esto es util por ejemplo para su uso en APIs.</p>
 		<p>Por ejemplo:</p>
 
-<pre>
+<pre><code class="language-php">
 	El template:
 
 	{
@@ -363,7 +363,7 @@
 			"twitter": "https://twitter.com/igorosabel"
 		}
 	}
-</pre>
+</code></pre>
 
 		<h2>Métodos disponibles para los módulos</h2>
 		<p>Las clases de los módulos heredan de la clase <code>OModule</code> y esta ofrece varios métodos que pueden usarse en las acciones. Por ejemplo ya se ha explicado el método <code>getTemplate</code>. Estos son los métodos disponibles:</p>

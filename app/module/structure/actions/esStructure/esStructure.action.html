@@ -61,7 +61,7 @@
 			<li>
 				Para este ejemplo, en el módulo <code>home</code> hay una <code>acción</code> llamada <code>user</code>:
 				<br>
-<pre>
+<pre><code class="language-php">
 #[OModuleAction(
   url: '/user/:id',
   services: ['user', 'photo'],
@@ -70,7 +70,7 @@
 class userAction extends OAction {
   ...
 }
-</pre>
+</code></pre>
 			</li>
 			<li>En este caso la URL coincide en <code>/user/</code> e <code>igorosabel</code> sería interpretado como un valor dinámico que se pasaría como <code>id</code>. </li>
 			<li>Al coincidir esta URL, se ejecutaría el módulo <code>home</code> y la acción <code>user</code></li>

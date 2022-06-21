@@ -13,7 +13,7 @@
 		<p>Este método recibe un parámetro de tipo <code>ORequest</code> genérico con el que cargar los valores necesarios.</p>
 
 		<h2>Ejemplo</h2>
-<pre>
+<pre><code class="language-php">
 	class UserDTO implements ODTO{
 		private int $id_user = -1;
 
@@ -35,13 +35,13 @@
 			}
 		}
 }
-</pre>
+</code></pre>
 
 		<p>En este ejemplo se define un DTO para un valor <code>id_user</code>. El método <code>load</code> obtiene el valor numérico del parámetro <code>id</code> pasado a la URL y si no es nulo lo guarda.</p>
 		<p>A continuación, el método <code>isValid</code> comprueba que el valor <code>id_user</code> sea distinto de -1, en cuyo caso fallaría la validación.
 
 		<h2>Usando el DTO en un modulo</h2>
-<pre>
+<pre><code class="language-php">
 	#[ORoute('/getUser/:id')]
 	public function getUser(UserDTO $data): void {
 		$status = 'ok';
@@ -53,7 +53,7 @@
 			$id_user = $data->getIdUser();
 		}
 	}
-</pre>
+</code></pre>
 
 		<div class="previous-next">
 			<a href="/es/modelos" class="previous">

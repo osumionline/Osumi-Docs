@@ -7,7 +7,7 @@
 		<p>El Framework ofrece una clase llamada <code>OModel</code> que permite mapear el diseño de una tabla de una base de datos a un objeto, de modo que permite obtener un único registro como una variable.</p>
 		<p>Los archivos de modelo son archivos PHP ubicados en la carpeta <code>app/model</code> en el que cada archivo tiene el nombre de la tabla a la que representa y su contenido es este, por ejemplo:</p>
 
-<pre>
+<pre><code class="language-php">
 &lt;?php declare(strict_types=1);
 
 namespace OsumiFramework\App\Model;
@@ -58,7 +58,7 @@ class Tag extends OModel {
 		return $this->get('name');
 	}
 }
-</pre>
+</code></pre>
 
 		<p>El archivo contiene una clase con el nombre de la tabla que representa y hereda de la clase <code>OModel</code>.</p>
 		<p>En su interior, la función <code>__construct</code> tiene dos variables:</p>
