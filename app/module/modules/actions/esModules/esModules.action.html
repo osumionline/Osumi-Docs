@@ -4,23 +4,29 @@
 	<main>
 		<h1>Módulos</h1>
 		<p>Los módulos son las unidades lógicas de una aplicación. Puede haber tantas como se quiera o necesite y sirven para organizar el código de una manera ordenada y lógica.</p>
-		<p>Cada módulo es un archivo PHP que contiene una clase con el nombre del módulo. Por ejemplo, el módulo <code>api</code> será un archivo llamado <code>api.php</code> y su contenido inicial sería este:</p>
+		<p>Cada módulo es un archivo PHP que contiene una clase con el nombre del módulo. Por ejemplo, el módulo <code>api</code> será un archivo llamado <code>api.module.php</code> y su contenido inicial sería este:</p>
 
 <pre><code class="language-php">
 	&lt;?php declare(strict_types=1);
 
 	namespace OsumiFramework\App\Module;
-
-	use OsumiFramework\OFW\Core\OModule;
-	use OsumiFramework\OFW\Web\ORequest;
-	use OsumiFramework\OFW\Routing\ORoute;
-
-	class api extends OModule {
-		// Código del módulo
-	}
+	
+	use OsumiFramework\OFW\Routing\OModule;
+	
+	#[OModule(
+		actions: ...'
+	)]
+	class apiModule {}
 </code></pre>
 
-		<p>La clase tiene que heredar de la clase <code>OModule</code> (una clase interna del framework, <a href="/es/funciones-internas#omodule">ver más</a>).</p>
+		<p>La clase tiene que tener la clase <code>OModule</code> (una clase interna del framework, <a href="/es/funciones-internas#omodule">ver más</a>) como clase atributo.</p>
+		<p>
+			Esta clase atributo tiene una serie de parámetros con los que configurar el módulo:
+			<ul>
+				<li>"actions": lista de funciones o páginas que forman parte del módulo. Es una lista de valores separados por comas.</li>
+				<li>"type": Tipo de contenido del módulo, por ejemplo "json", "html" o "xml".</li>
+			</ul>
+		</p>
 		<p>A continuación, dentro de esta clase se definen las acciones, funciones públicas de la clase que se ejecutarán al llamar a las URLs definidas en cada acción.</p>
 		<p>Estas funciones reciben un parámetro <code>$req</code> con información sobre la solicitud recibida, los parámetros recibidos, etc...</p>
 		<p>Por ejemplo, la anterior clase <code>api</code> con una acción llamada <code>getUser</code> sería así:</p>
