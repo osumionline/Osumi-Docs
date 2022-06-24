@@ -5,6 +5,6 @@ namespace OsumiFramework\App\Module;
 use OsumiFramework\OFW\Routing\OModule;
 
 #[OModule(
-	actions: 'esInstallation, enInstallation, euInstallation'
+	actions: ['esInstallation', 'enInstallation', 'euInstallation']
 )]
 class installationModule {}

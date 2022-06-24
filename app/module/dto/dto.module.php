@@ -5,6 +5,6 @@ namespace OsumiFramework\App\Module;
 use OsumiFramework\OFW\Routing\OModule;
 
 #[OModule(
-	actions: 'esDTO, enDTO, euDTO'
+	actions: ['esDTO', 'enDTO', 'euDTO']
 )]
 class dtoModule {}

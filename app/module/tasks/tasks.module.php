@@ -5,6 +5,6 @@ namespace OsumiFramework\App\Module;
 use OsumiFramework\OFW\Routing\OModule;
 
 #[OModule(
-	actions: 'esTasks, enTasks, euTasks'
+	actions: ['esTasks', 'enTasks', 'euTasks']
 )]
 class tasksModule {}

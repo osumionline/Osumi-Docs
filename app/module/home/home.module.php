@@ -5,6 +5,6 @@ namespace OsumiFramework\App\Module;
 use OsumiFramework\OFW\Routing\OModule;
 
 #[OModule(
-	actions: 'esStart, enStart, euStart'
+	actions: ['esStart', 'enStart', 'euStart']
 )]
 class homeModule {}

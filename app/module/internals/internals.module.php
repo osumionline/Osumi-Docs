@@ -5,6 +5,6 @@ namespace OsumiFramework\App\Module;
 use OsumiFramework\OFW\Routing\OModule;
 
 #[OModule(
-	actions: 'esInternals, enInternals, euInternals'
+	actions: ['esInternals', 'enInternals', 'euInternals']
 )]
 class internalsModule {}

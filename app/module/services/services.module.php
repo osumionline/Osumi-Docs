@@ -5,6 +5,6 @@ namespace OsumiFramework\App\Module;
 use OsumiFramework\OFW\Routing\OModule;
 
 #[OModule(
-	actions: 'esServices, enServices, euServices'
+	actions: ['esServices', 'enServices', 'euServices']
 )]
 class servicesModule {}
