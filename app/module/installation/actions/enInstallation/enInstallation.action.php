@@ -6,14 +6,13 @@ use OsumiFramework\OFW\Routing\OModuleAction;
 use OsumiFramework\OFW\Routing\OAction;
 use OsumiFramework\OFW\Web\ORequest;
 use OsumiFramework\OFW\Tools\OTools;
-use OsumiFramework\App\Component\HeaderComponent;
-use OsumiFramework\App\Component\MenuComponent;
-use OsumiFramework\App\Component\FooterComponent;
+use OsumiFramework\App\Component\Common\HeaderComponent;
+use OsumiFramework\App\Component\Common\MenuComponent;
+use OsumiFramework\App\Component\Common\FooterComponent;
 
 #[OModuleAction(
 	url: '/en/installation',
-	services: ['utils'],
-	components: ['common/header', 'common/menu', 'common/footer']
+	services: ['utils']
 )]
 class enInstallationAction extends OAction {
 	/**
