@@ -1,6 +1,6 @@
 {
 	"name": "Osumi Framework Docs",
-	"base_url": "https://framework.osumi.es/",
+	"base_url": "https://framework.osumi.dev/",
 	"default_title": "Osumi Framework",
 	"lang": "es",
 	"css": ["common.min", "prism"],
