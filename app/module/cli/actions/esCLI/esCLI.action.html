@@ -3,6 +3,43 @@
 	{{menu}}
 	<main>
 		<h1>CLI</h1>
+		<p>El <code>CLI</code> es un pequeño script de Shell para Linux o macOS que permite acceder a funciones internas de una instalación de Osumi Framework. Tiene su propio repositorio en <a href="https://github.com/igorosabel/Osumi-Framework-CLI" target="_blank">Osumi Framework CLI</a>.</p>
+		<p>Este script es independiente de un proyecto, de modo que con instalar el script en un lugar comun dentro del PATH, puede servir para multiples proyectos en la misma máquina.</p>
+		<p>El framework ofrece una serie de tareas internas (para crear módulos o componentes, realizar copias de seguridad...) e incluso se pueden crear tareas personalizadas para ejecutar desde línea de comandos, y este script es la manera de acceder a ellos.</p>
+
+		<h2>Instalación</h2>
+		<p>La instalación es realmente sencilla, solo es necesario el archivo ofw del repositorio. Se trata de un script bash creado para sistemas Debian (no ha sido probado en otras distribuciones).</p>
+		<p>Requisitos:</p>
+		<ul>
+			<li>git</li>
+			<li>php</li>
+			<li>curl</li>
+			<li>coreutils-7</li>
+		</ul>
+		<p class="mark">Instalación</p>
+		<p>Descarga el archivo <code>ofw</code> a la carpeta <code>/usr/local/bin</code> (u otra ruta de tu elección que esté en el PATH).</p>
+		<p>Dale permisos 755, de modo que cualquier usuario pueda verlo o ejecutarlo, pero solo un administrador pueda modificarlo.</p>
+
+		<p class="mark">Ejecución</p>
+		<p>Al estar instalado en una ruta del PATH, simplemente ejecuta:</p>
+		<p><code>ofw &lt;opción&gt;</code></p>
+		<ul>
+			<li>
+				<code>new</code> Crea un nuevo proyecto en blanco con la última versión del Osumi Framework. En el caso de querer usar un nombre complejo (espacios, caracteres raros...), debe indicarse entre comillas dobles y se creará una carpeta cuyo nombre será un slug del nombre indicado. Por ejemplo: <code>ofw new "esto es una prueba"</code> creará un nuevo proyecto vacío en la carpeta <code>esto-es-una-prueba</code>.
+			</li>
+			<li>
+				<code>cliUpdateCheck</code> Comprueba si se está usando la última versión disponible del CLI.
+			</li>
+			<li>
+				<code>cliUpdate</code> Actualiza el CLI a la última versión disponible. Es necesario ejecutarlo como root o con sudo.
+			</li>
+			<li>
+				Tareas propias del framework además de las opciones propias del CLI, este ejecutable permite acceder a las tareas propias del framework: <span class="mark">generateModel</span>, <span class="mark">updateUrls</span>, <span class="mark">add</span>, <span class="mark">version</span>...  Ver <a href="/es/tareas">Tareas</a>.
+			</li>
+			<li>
+				Tareas personalizadas creadas para un proyecto concreto. Por ejemplo para ejecutar una tarea llamada <code>sendEmail</code> que se encuentra en <code>app/task/sendEmail.task.php</code>, simplemente hay que ejecutar el comando <code>ofw sendEmail</code>.
+			</li>
+		</ul>
 
 		<div class="previous-next">
 			<a href="/es/instalacion" class="previous">

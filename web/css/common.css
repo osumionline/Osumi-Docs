@@ -321,6 +321,11 @@ code {
 	margin-bottom: 2px;
 }
 
+.mark {
+	font-weight: bold;
+	font-style: italic;
+}
+
 pre {
 	background-color: var(--pre-bg-color);
 	border-radius: 3px;
