@@ -5,6 +5,7 @@ $urls = [
 	'es' => [
 		'start'         => OUrl::generateUrl('home', 'esStart'),
 		'installation'  => OUrl::generateUrl('installation', 'esInstallation'),
+		'cli'           => OUrl::generateUrl('cli', 'esCLI'),
 		'structure'     => OUrl::generateUrl('structure', 'esStructure'),
 		'configuration' => OUrl::generateUrl('configuration', 'esConfiguration'),
 		'modules'       => OUrl::generateUrl('modules', 'esModules'),
@@ -14,11 +15,13 @@ $urls = [
 		'filters'       => OUrl::generateUrl('filters', 'esFilters'),
 		'internals'     => OUrl::generateUrl('internals', 'esInternals'),
 		'tasks'         => OUrl::generateUrl('tasks', 'esTasks'),
-		'translations'  => OUrl::generateUrl('translations', 'esTranslations')
+		'translations'  => OUrl::generateUrl('translations', 'esTranslations'),
+		'plugins'       => OUrl::generateUrl('plugins', 'esPlugins')
 	],
 	'en' => [
 		'start'         => OUrl::generateUrl('home', 'enStart'),
 		'installation'  => OUrl::generateUrl('installation', 'enInstallation'),
+		'cli'           => OUrl::generateUrl('cli', 'enCLI'),
 		'structure'     => OUrl::generateUrl('structure', 'enStructure'),
 		'configuration' => OUrl::generateUrl('configuration', 'enConfiguration'),
 		'modules'       => OUrl::generateUrl('modules', 'enModules'),
@@ -28,11 +31,13 @@ $urls = [
 		'filters'       => OUrl::generateUrl('filters', 'enFilters'),
 		'internals'     => OUrl::generateUrl('internals', 'enInternals'),
 		'tasks'         => OUrl::generateUrl('tasks', 'enTasks'),
-		'translations'  => OUrl::generateUrl('translations', 'enTranslations')
+		'translations'  => OUrl::generateUrl('translations', 'enTranslations'),
+		'plugins'       => OUrl::generateUrl('plugins', 'enPlugins')
 	],
 	'eu' => [
 		'start'         => OUrl::generateUrl('home', 'euStart'),
 		'installation'  => OUrl::generateUrl('installation', 'euInstallation'),
+		'cli'           => OUrl::generateUrl('cli', 'euCLI'),
 		'structure'     => OUrl::generateUrl('structure', 'euStructure'),
 		'configuration' => OUrl::generateUrl('configuration', 'euConfiguration'),
 		'modules'       => OUrl::generateUrl('modules', 'euModules'),
@@ -42,13 +47,15 @@ $urls = [
 		'filters'       => OUrl::generateUrl('filters', 'euFilters'),
 		'internals'     => OUrl::generateUrl('internals', 'euInternals'),
 		'tasks'         => OUrl::generateUrl('tasks', 'euTasks'),
-		'translations'  => OUrl::generateUrl('translations', 'euTranslations')
+		'translations'  => OUrl::generateUrl('translations', 'euTranslations'),
+		'plugins'       => OUrl::generateUrl('plugins', 'euPlugins')
 	]
 ];
 $names = [
 	'es' => [
 		'start'         => 'Inicio',
 		'installation'  => 'Instalación',
+		'cli'           => 'CLI',
 		'structure'     => 'Estructura',
 		'configuration' => 'Configuración',
 		'modules'       => 'Módulos',
@@ -58,11 +65,13 @@ $names = [
 		'filters'       => 'Filtros',
 		'internals'     => 'Funciones internas',
 		'tasks'         => 'Tareas',
-		'translations'  => 'Traducciones'
+		'translations'  => 'Traducciones',
+		'plugins'       => 'Plugins'
 	],
 	'en' => [
 		'start'         => 'Home',
 		'installation'  => 'Installation',
+		'cli'           => 'CLI',
 		'structure'     => 'Structure',
 		'configuration' => 'Configuration',
 		'modules'       => 'Modules',
@@ -72,11 +81,13 @@ $names = [
 		'filters'       => 'Filters',
 		'internals'     => 'Internal functions',
 		'tasks'         => 'Tasks',
-		'translations'  => 'Translations'
+		'translations'  => 'Translations',
+		'plugins'       => 'Plugins'
 	],
 	'eu' => [
 		'start'         => 'Hasiera',
 		'installation'  => 'Instalazioa',
+		'cli'           => 'CLI',
 		'structure'     => 'Estruktura',
 		'configuration' => 'Konfigurazioa',
 		'modules'       => 'Moduloak',
@@ -86,7 +97,8 @@ $names = [
 		'filters'       => 'Filtroak',
 		'internals'     => 'Barruko funtzioak',
 		'tasks'         => 'Atazak',
-		'translations'  => 'Itzulpenak'
+		'translations'  => 'Itzulpenak',
+		'plugins'       => 'Pluginak'
 	]
 ];
 ?>

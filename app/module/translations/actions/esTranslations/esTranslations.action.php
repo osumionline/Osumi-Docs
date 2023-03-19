@@ -26,5 +26,6 @@ class esTranslationsAction extends OAction {
 		$this->getTemplate()->add('menu',     new MenuComponent(['page' => 'translations', 'lang' => 'es']));
 		$this->getTemplate()->add('footer',   new FooterComponent());
 		$this->getTemplate()->add('previous', $this->utils_service->getIcon('previous'));
+		$this->getTemplate()->add('next',     $this->utils_service->getIcon('next'));
 	}
 }
