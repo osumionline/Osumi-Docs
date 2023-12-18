@@ -9,7 +9,12 @@
 			<li><code>ofw</code>: carpeta del framework. En esta carpeta están los archivos y carpetas que componen el Framework</li>
 			<li><code>web</code>: carpeta pública. El <code>DocumentRoot</code> debe apuntar a esta carpeta y los archivos <code>index.php</code> y <code>.htaccess</code> que hay en su interior son los encargados de recibir todas las peticiones y llamar a las funciones apropiadas.</li>
 		</ol>
-		<h2>Carpetas que componen el framework</h2>
+		<h2 id="carpetas">
+			Carpetas que componen el framework
+			<a href="#carpetas">
+				{{share}}
+			</a>
+		</h2>
 		<p>La carpeta <code>app</code> contiene el código de cada aplicación creada por el usuario.</p>
 		<ul>
 			<li><code>app/component</code>: Carpeta para los componentes. Los componentes son pequeñas piezas de código reutilizable, por ejemplo elementos de un listado. Aceptan código PHP.</li>
@@ -53,15 +58,23 @@
 			<li><code>web/css</code>: Carpeta para los archivos CSS definidos en el archivo de configuración.</li>
 			<li><code>web/js</code>: Carpeta para los archivos JavaScript definidos en el archivo de configuración.</li>
 		</ul>
-		<h2>Ciclo de ejecución</h2>
+
+		<h2 id="ciclo">
+			Ciclo de ejecución
+			<a href="#ciclo">
+				{{share}}
+			</a>
+		</h2>
 		<p>En Osumi Framework, este es el ciclo de ejecución de cada solicitud:</p>
 		<ul>
 			<li>Una URL es llamada, por ejemplo <code>/user/igorosabel</code></li>
 			<li>Se busca en las URLs de cada módulo dicha URL. En caso de no encontrarse, se devuelve un error 404 (se puede configurar donde hay que redirigir al usuario en este caso).</li>
 			<li>
-				Para este ejemplo, en el módulo <code>home</code> hay una <code>acción</code> llamada <code>user</code>:
+				Para este ejemplo, en el módulo <code>home</code> (<code>/app/module/home/</code>) hay una <code>acción</code> llamada <code>user</code> (<code>/app/module/home/actions/user/</code>):
 				<br>
-<pre><code class="language-php">
+<pre class="language-php">
+<label>/app/module/home/actions/user/user.action.php</label>
+<code>
 #[OModuleAction(
   url: '/user/:id',
   services: ['user', 'photo']
@@ -69,7 +82,8 @@
 class userAction extends OAction {
   ...
 }
-</code></pre>
+</code>
+</pre>
 			</li>
 			<li>En este caso la URL coincide en <code>/user/</code> e <code>igorosabel</code> sería interpretado como un valor dinámico que se pasaría como <code>id</code>. </li>
 			<li>Al coincidir esta URL, se ejecutaría el módulo <code>home</code> y la acción <code>user</code></li>

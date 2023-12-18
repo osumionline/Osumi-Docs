@@ -25,6 +25,7 @@ class esStructureAction extends OAction {
 		$this->getTemplate()->add('header',   new HeaderComponent(['page' => 'structure', 'lang' => 'es']));
 		$this->getTemplate()->add('menu',     new MenuComponent(['page' => 'structure', 'lang' => 'es']));
 		$this->getTemplate()->add('footer',   new FooterComponent());
+		$this->getTemplate()->add('share',    $this->utils_service->getIcon('share'));
 		$this->getTemplate()->add('previous', $this->utils_service->getIcon('previous'));
 		$this->getTemplate()->add('next',     $this->utils_service->getIcon('next'));
 	}

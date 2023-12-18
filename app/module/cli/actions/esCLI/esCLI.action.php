@@ -27,6 +27,7 @@ class esCLIAction extends OAction {
 		$this->getTemplate()->add('menu',     new MenuComponent(['page' => 'cli', 'lang' => 'es']));
 		$this->getTemplate()->add('footer',   new FooterComponent());
 		$this->getTemplate()->add('version',  OTools::getVersion());
+		$this->getTemplate()->add('share',    $this->utils_service->getIcon('share'));
 		$this->getTemplate()->add('previous', $this->utils_service->getIcon('previous'));
 		$this->getTemplate()->add('next',     $this->utils_service->getIcon('next'));
 	}

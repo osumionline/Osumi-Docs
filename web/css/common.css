@@ -236,9 +236,24 @@ main {
 	overflow: auto;
 }
 
-main h1 {
+main > h1 {
 	margin-top: 0;
 	line-height: 40px;
+}
+
+main > h2 {
+	height: 35px;
+  display: flex;
+  align-items: center;
+}
+
+main > h2 > a {
+	display: none;
+}
+
+main > h2:hover > a {
+	display: inline-block;
+	margin-left: 16px;
 }
 
 .previous-next {
@@ -319,6 +334,15 @@ code {
 	padding: 4px 6px;
 	display: inline-block;
 	margin-bottom: 2px;
+	position: relative;
+}
+
+pre > label {
+	font-weight: bold;
+  width: 100%;
+  display: inline-block;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 1em;
 }
 
 .mark {

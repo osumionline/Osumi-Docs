@@ -6,13 +6,13 @@
 		<p>Los módulos son las unidades lógicas de una aplicación. Puede haber tantas como se quiera o necesite y sirven para organizar el código de una manera ordenada y lógica.</p>
 		<p>Cada módulo es un archivo PHP que contiene una clase con el nombre del módulo. Por ejemplo, el módulo <code>api</code> será un archivo llamado <code>api.module.php</code> y su contenido inicial sería este:</p>
 
-<pre><code class="language-php">
+<pre class="language-php"><code>
 	&lt;?php declare(strict_types=1);
 
 	namespace OsumiFramework\App\Module;
-	
+
 	use OsumiFramework\OFW\Routing\OModule;
-	
+
 	#[OModule(
 		actions: ...'
 	)]
@@ -31,7 +31,7 @@
 		<p>Estas funciones reciben un parámetro <code>$req</code> con información sobre la solicitud recibida, los parámetros recibidos, etc...</p>
 		<p>Por ejemplo, la anterior clase <code>api</code> con una acción llamada <code>getUser</code> sería así:</p>
 
-<pre><code class="language-php">
+<pre class="language-php"><code>
 	&lt;?php declare(strict_types=1);
 
 	namespace OsumiFramework\App\Module;
@@ -203,7 +203,12 @@
 			</table>
 		</div>
 
-		<h2>Parámetros</h2>
+		<h2 id="parametros">
+			Parámetros
+			<a href="#parametros">
+				{{share}}
+			</a>
+		</h2>
 		<p>Todas las funciones para obtener los parámetros pueden recibir dos parámetros: el nombre del parámetro que se quiere obtener y un valor por defecto en caso de que dicho parámetro no se encuentre.</p>
 		<p>De este modo se puede inicializar variables directamente al obtener los valores que un usuario a pasado a una acción.</p>
 
@@ -211,7 +216,7 @@
 		<p>Por ejemplo, en una acción llamada <code>login</code> que sirva para iniciar sesión en un sitio, se esperan dos parámetros: <code>user</code> y <code>pass</code>.</p>
 		<p>Se pueden obtener y comprobar de este modo:</p>
 
-<pre><code class="language-php">
+<pre class="language-php"><code>
 	#[ORoute('/login')]
 	public function login(ORequest $req): void {
 		$user = $req->getParam('user', false);
@@ -227,7 +232,7 @@
 		<p>En lugar de pasar un parametro <code>ORequest</code> a una acción, también se puede pasar un objeto DTO que contendrá las funciones necesarias para obtener justo los parámetros necesarios, además de tener una función <code>isValid</code> que comprobará que los datos obtenidos sean correctos (por ejemplo al recibir los datos de un formulario).</p>
 		<p>El funcionamiento de los DTO se profundiza en el apartado <a href="/es/dto">DTO</a>.</p>
 
-<pre><code class="language-php">
+<pre class="language-php"><code>
 	#[ORoute('/login')]
 	public function login(LoginDataDTO $data): void {
 		$user = $data->getUser();
@@ -245,7 +250,7 @@
 		<p>La extensión del archivo <code>template</code> viene definida por el tipo de la acción. El valor por defecto es <code>html</code>, pero se pueden especificar archivos <code>json</code> o <code>xml</code>.
 		<p>Pero las acciones tienen que devolver información que tienen que pasar a los templates. Siguiendo el anterior ejemplo, el archivo <code>login.json</code> tendría este aspecto:</p>
 
-<pre><code class="language-json">
+<pre class="language-json"><code>
 	{
 		"status": "{{status}}",
 		"id": {{id}},
@@ -261,7 +266,7 @@
 		<h4>add</h4>
 		<p>Esta función simplemente pasa el valor indicado a uno de los campos del template. Por ejemplo:</p>
 
-<pre><code class="language-php">
+<pre class="language-php"><code>
 	#[ORoute('/login')]
 	public function login(ORequest $req): void {
 		// Código de la función
@@ -285,7 +290,7 @@
 		<p>El funcionamiento es parecido al de la función <code>add</code>, se indica un lugar del template en el que realizar la substitución y "qué" es lo que se tiene que introducir.</p>
 		<p>Por ejemplo:</p>
 
-<pre><code class="language-php">
+<pre class="language-php"><code>
 	El template:
 
 	{
@@ -326,7 +331,7 @@
 
 		<p>Un componente puede contener todo tipo de código PHP ejecutable. Por ejemplo:</p>
 
-<pre><code class="language-php">
+<pre class="language-php"><code>
 	&lt;?php foreach ($values['list'] as $user): ?>
 	{
 		// datos del usuario...
@@ -340,7 +345,7 @@
 		<p>La clase <code>OTemplate</code> ofrece un método llamado <code>addModelComponent</code> que mapea un objeto de modelo (accesos a bases de datos, <a href="/es/modelos">ver más</a>) a un valor JSON. Esto es util por ejemplo para su uso en APIs.</p>
 		<p>Por ejemplo:</p>
 
-<pre><code class="language-php">
+<pre class="language-php"><code>
 	El template:
 
 	{
