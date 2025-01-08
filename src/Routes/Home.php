@@ -5,7 +5,9 @@ namespace Osumi\OsumiFramework\Routes;
 use Osumi\OsumiFramework\Routing\ORoute;
 use Osumi\OsumiFramework\App\Layout\DefaultLayoutComponent;
 use Osumi\OsumiFramework\App\Module\Home\Start\StartComponent;
+use Osumi\OsumiFramework\App\Module\Empezar\EmpezarComponent;
 
 ORoute::layout(DefaultLayoutComponent::class, function() {
-  ORoute::get('/', StartComponent::class);
+  ORoute::get('/',        StartComponent::class);
+  ORoute::get('/empezar', EmpezarComponent::class);
 });
