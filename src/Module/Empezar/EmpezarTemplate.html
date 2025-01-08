@@ -3,5 +3,61 @@
 {{nav}}
 
 <main>
-  Empezar
+  <h1>Empezar</h1>
+
+  <p>Osumi Framework proporciona un conjunto de herramientas y una forma de diseñar aplicaciones que permite el desarrollo rápido y modular de aplicaciones web tanto pequeñas como grandes.</p>
+
+  <p>Al estar diseñado de una manera orientada a "componentes" o pequeñas piezas reutilizables, se busca la eficiencia y que la ejecución de una aplicación solo utilice aquellos recursos y conceptos estríctamente necesarios.</p>
+
+  <p>Por ejemplo, una aplicación que contenga mas de mil componentes, solo cargará y usará aquellos necesarios para la ejecución solicitada, mientras que el resto de componentes no será necesario cargarlos resultando en un impacto de recursos mínimo.</p>
+
+  <p>Esto se consigue con el uso de Composer y su sistema de "auto-load" que carga los recursos a medida que se van necesitando.</p>
+
+  <h2>Software libre</h2>
+
+  <p>Osumi Framework se distribuye como software libre de modo que es abierto y gratuito para todo el mundo. Está sujeto a la <a href="https://github.com/osumionline/framework/blob/main/LICENSE">licencia MIT</a> de modo que se permite su uso personal y comercial, ser modificado y distribuido, limitando la responsabilidad y la garantía a sus usuarios.</p>
+
+  <p>El código del framework se encuentra disponible en <a href="https://github.com/osumionline/framework">Github</a>, donde se organiza mediante releases en las que se agrupan las novedades, cambios o correcciones disponibles.</p>
+
+  <h2>Requisitos</h2>
+
+  <p>Para poder usar Osumi Framework es necesario cumplir una serie de requisitos técnicos:</p>
+
+  <ul>
+    <li><strong>PHP</strong>: versión 8.3 o superior</li>
+    <li><strong>Composer</strong>: versión 2.8 o superior</li>
+  </ul>
+
+  <p>Osumi Framework ha sido creado y diseñado para ser usado con <strong>Apache</strong> 2.4 o superior, pero en principio no habría ningún impedimento para que sea usado con cualquier otro servidor que soporte la ejecución de código PHP (tal vez requiera adaptar el archivo .htaccess que hace de controlador frontal).</p>
+
+  <p><strong>Bases de datos</strong>: para acceder a las bases de datos, Osumi Framework utiliza las librerías nativas PDO proporcionadas por PHP, de modo que es transparente el uso de cualquier motor de base de datos. Ha sido diseñado y probado para ser usado con <strong>MySQL/MariaDB</strong> 10.5 o superiores, pero en principio podría ser usado con PostgreSQL, SQLite...</p>
+
+  <h2>Instalación</h2>
+
+  <p>Para crear una nueva aplicación usando Osumi Framework, simplemente hay que ejecutar el siguiente comando:</p>
+
+  <p>
+    <code>
+      composer create-project osumionline/new
+      <a href="#" class="copy">
+        <img src="/img/copy.svg" alt="Copiar">
+      </a>
+    </code>
+  </p>
+
+  <p>Tras ejecutar este comando, se habrá creado una carpeta llamada "new" que contendrá una aplicación de demostración y el código propio de Osumi Framework.</p>
+
+  <p>Esta aplicación de demostración sirve para orientar en la estructuración del código o como ejemplos de los distintos elementos que se pueden usar.</p>
+
+  <p>En la raíz de la aplicación también se habrá creado un archivo llamado "of", es el ejecutable (o CLI) que permite ejecutar tareas desde línea de comandos.</p>
+
+  <p>Entre las opciones de este CLI, hay un comando llamado "reset" que permite limpiar todos los datos de demostración y dejar todas las carpetas en un estado inicial:</p>
+
+  <p>
+    <code>
+      php of reset
+    </code>
+  </p>
 </main>
+
+{{footer}}
