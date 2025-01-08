@@ -14,7 +14,7 @@ class StartComponent extends OComponent {
 	public function __construct() {
 		parent::__construct();
 		$this->header = new HeaderComponent();
-		$this->nav = new NavComponent();
+		$this->nav    = new NavComponent(['title' => 'Inicio']);
 	}
 
 	/**

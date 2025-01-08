@@ -1,5 +1,5 @@
 (function(){
-  window.onload = codeCopy;
+  document.addEventListener("DOMContentLoaded", codeCopy);
 
 	function codeCopy() {
     const codeBlocks = document.querySelectorAll('code');

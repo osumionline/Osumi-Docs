@@ -1,6 +1,6 @@
 (function(){
   var tabsList = [];
-  window.onload = loadTabs;
+  document.addEventListener("DOMContentLoaded", loadTabs);
 
 	function loadTabs() {
     const tabLabels = document.querySelectorAll('.tabs__header > a');

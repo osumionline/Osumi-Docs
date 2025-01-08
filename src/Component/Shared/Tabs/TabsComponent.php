@@ -7,8 +7,8 @@ use Osumi\OsumiFramework\Core\OComponent;
 class TabsComponent extends OComponent {
   public array $tabs = [];
 
-  public function __construct($tabs) {
-		parent::__construct($tabs);
+  public function __construct(array $data) {
+		parent::__construct($data);
 		$this->addInlineCss('tabs');
     $this->addInlineJs('tabs');
 	}

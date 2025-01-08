@@ -19,8 +19,8 @@ class ComponentesComponent extends OComponent {
 	public function __construct() {
 		parent::__construct();
 		$this->header = new HeaderComponent();
-		$this->nav = new NavComponent();
-		$this->tabs = new TabsComponent(['tabs' => [
+		$this->nav    = new NavComponent(['title' => 'Componentes']);
+		$this->tabs   = new TabsComponent(['tabs' => [
 			['label' => 'Descripción', 'content' => new ComponentesDescripcionComponent()],
 			['label' => 'API',         'content' => new ComponentesAPIComponent()],
 			['label' => 'Ejemplos',    'content' => new ComponentesEjemplosComponent()]
@@ -28,7 +28,7 @@ class ComponentesComponent extends OComponent {
 	}
 
 	/**
-	 * Components documentation page
+	 * Página de documentación para componentes
 	 *
 	 * @param ORequest $req Request object with method, headers, parameters and filters used
 	 * @return void

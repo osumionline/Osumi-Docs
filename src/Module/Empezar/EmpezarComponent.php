@@ -17,7 +17,7 @@ class EmpezarComponent extends OComponent {
 	public function __construct() {
 		parent::__construct();
 		$this->header = new HeaderComponent();
-		$this->nav    = new NavComponent();
+		$this->nav    = new NavComponent(['title' => 'Cómo empezar']);
 		$this->footer = new FooterComponent([
 			'next'      => EstructuraComponent::class,
 			'next_name' => 'Estructura'
@@ -25,7 +25,7 @@ class EmpezarComponent extends OComponent {
 	}
 
 	/**
-	 * Getting started page
+	 * Página de "cómo empezar"
 	 *
 	 * @param ORequest $req Request object with method, headers, parameters and filters used
 	 * @return void
