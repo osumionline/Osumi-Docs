@@ -9,7 +9,7 @@ class NavComponent extends OComponent {
 
 	public function __construct(array $data) {
 		parent::__construct($data);
-		$this->addInlineCss('nav');
-		$this->addInlineJs('nav');
+		$this->addInlineCss('nav.min');
+		$this->addInlineJs('nav.min');
 	}
 }

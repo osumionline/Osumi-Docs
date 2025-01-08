@@ -7,10 +7,10 @@ use Osumi\OsumiFramework\Tools\OTools;
 
 class HeaderComponent extends OComponent {
 	public string $version = '';
-	
+
 	public function __construct() {
 		parent::__construct();
-		$this->addInlineCss('header');
+		$this->addInlineCss('header.min');
 		$this->version = OTools::getVersion();
 	}
 }

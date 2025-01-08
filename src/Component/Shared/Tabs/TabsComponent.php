@@ -9,7 +9,7 @@ class TabsComponent extends OComponent {
 
   public function __construct(array $data) {
 		parent::__construct($data);
-		$this->addInlineCss('tabs');
-    $this->addInlineJs('tabs');
+		$this->addInlineCss('tabs.min');
+    $this->addInlineJs('tabs.min');
 	}
 }

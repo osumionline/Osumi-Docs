@@ -1,0 +1,1 @@
+header{background-color:var(--card-bg-color);margin:16px;border-radius:8px;padding:16px;display:flex;align-items:center;&>img{width:42px;margin-right:16px}&>a{margin:0;font-size:1em;font-weight:bold}&>span{padding:8px 16px;flex:1;text-align:right}}@media screen and (min-width:900px){header{&>a{font-size:2em}}}
