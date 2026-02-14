@@ -1,0 +1,40 @@
+document.addEventListener("DOMContentLoaded", () => {
+  const sections = document.querySelectorAll(".menu-section");
+  sections.forEach((section, index) => {
+    const btn = section.querySelector(".menu-title");
+
+    btn.addEventListener("click", () => {
+      section.classList.toggle("open");
+      saveMenuState();
+    });
+  });
+
+  function saveMenuState() {
+    const state = [...sections].map(sec => sec.classList.contains("open"));
+    localStorage.setItem("sidebar-state", JSON.stringify(state));
+  }
+
+  function restoreMenuState() {
+    const saved = localStorage.getItem("sidebar-state");
+    if (!saved) {
+      return;
+    }
+
+    const stateArray = JSON.parse(saved);
+    stateArray.forEach((isOpen, i) => {
+      if (isOpen) {
+        sections[i].classList.add("open");
+      }
+    });
+  }
+
+  restoreMenuState();
+  const toggle = document.getElementById("menuToggle");
+  const sidebar = document.getElementById("sidebar");
+
+  if (toggle && sidebar) {
+    toggle.addEventListener("click", () => {
+      sidebar.classList.toggle("open");
+    });
+  }
+});
