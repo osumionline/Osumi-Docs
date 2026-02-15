@@ -4,8 +4,8 @@ namespace Osumi\OsumiFramework\App\Module\Start;
 
 use Osumi\OsumiFramework\Core\OComponent;
 use Osumi\OsumiFramework\Web\ORequest;
-use Osumi\OsumiFramework\App\Component\Shared\Header\HeaderComponent;
-use Osumi\OsumiFramework\App\Component\Shared\Nav\NavComponent;
+use Osumi\OsumiFramework\App\Component\Header\HeaderComponent;
+use Osumi\OsumiFramework\App\Component\Nav\NavComponent;
 
 class StartComponent extends OComponent {
 	public ?HeaderComponent $header = null;

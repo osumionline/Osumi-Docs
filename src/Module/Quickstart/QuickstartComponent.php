@@ -4,9 +4,9 @@ namespace Osumi\OsumiFramework\App\Module\Quickstart;
 
 use Osumi\OsumiFramework\Core\OComponent;
 use Osumi\OsumiFramework\Web\ORequest;
-use Osumi\OsumiFramework\App\Component\Shared\Header\HeaderComponent;
-use Osumi\OsumiFramework\App\Component\Shared\Nav\NavComponent;
-use Osumi\OsumiFramework\App\Component\Shared\Markdown\MarkdownComponent;
+use Osumi\OsumiFramework\App\Component\Header\HeaderComponent;
+use Osumi\OsumiFramework\App\Component\Nav\NavComponent;
+use Osumi\OsumiFramework\App\Component\Markdown\MarkdownComponent;
 
 class QuickstartComponent extends OComponent {
 	public ?HeaderComponent   $header  = null;

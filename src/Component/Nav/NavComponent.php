@@ -1,6 +1,6 @@
 <?php declare(strict_types=1);
 
-namespace Osumi\OsumiFramework\App\Component\Shared\Nav;
+namespace Osumi\OsumiFramework\App\Component\Nav;
 
 use Osumi\OsumiFramework\Core\OComponent;
 
@@ -12,19 +12,18 @@ class NavComponent extends OComponent {
       'title-Core Concepts' => 'Core Concepts',
       'routing'             => 'Routing',
       'components'          => 'Components',
-      'templates'           => 'Templates & Pipes',
+      'layout'              => 'Layouts',
       'dtos'                => 'DTOs',
       'filters'             => 'Filters',
       'services'            => 'Services',
-      'model-components'    => 'Model Components',
       'orm'                 => 'ORM',
       'config'              => 'Configuration',
       'cli'                 => 'CLI',
-      'tasks'               => 'Tasks',
+      'plugins'             => 'Plugins',
       'title-Reference'     => 'Reference',
       'attributes-orm'      => 'ORM Attributes',
       'cli-commands'        => 'CLI Commands',
-      'pipe-functions'      => 'Pipe Functions',
+      'config-reference'    => 'Config Reference',
       'title-Recipes'       => 'Recipes',
       'auth'                => 'Authentication',
       'uploads'             => 'File Uploads',
@@ -35,19 +34,18 @@ class NavComponent extends OComponent {
       'title-Core Concepts' => 'Conceptos Generales',
       'routing'             => 'Enrutamiento',
       'components'          => 'Componentes',
-      'templates'           => 'Plantillas y Pipes',
+      'layout'              => 'Diseños',
       'dtos'                => 'DTOs',
       'filters'             => 'Filtros',
       'services'            => 'Servicios',
-      'model-components'    => 'Componentes de Modelo',
       'orm'                 => 'ORM',
       'config'              => 'Configuración',
       'cli'                 => 'CLI',
-      'tasks'               => 'Tareas',
+      'plugins'             => 'Plugins',
       'title-Reference'     => 'Referencia',
       'attributes-orm'      => 'Atributos ORM',
       'cli-commands'        => 'Comandos CLI',
-      'pipe-functions'      => 'Funciones Pipe',
+      'config-reference'    => 'Referencia de Configuración',
       'title-Recipes'       => 'Recetas',
       'auth'                => 'Autenticacion',
       'uploads'             => 'Subida de archivos',
@@ -58,19 +56,18 @@ class NavComponent extends OComponent {
       'title-Core Concepts' => 'Kontzeptu orokorrak',
       'routing'             => 'Bideratzea',
       'components'          => 'Osagaiak',
-      'templates'           => 'Txantiloiak eta Hodiak',
+      'layout'              => 'Diseinuak',
       'dtos'                => 'DTOak',
       'filters'             => 'Iragazkiak',
       'services'            => 'Serbitzuak',
-      'model-components'    => 'Modelo Osagaiak',
       'orm'                 => 'ORM',
       'config'              => 'Konfigurazioa',
       'cli'                 => 'CLI',
-      'tasks'               => 'Atazak',
+      'plugins'             => 'Pluginak',
       'title-Reference'     => 'Erreferentzia',
       'attributes-orm'      => 'ORM Atributuak',
       'cli-commands'        => 'CLI Komandoak',
-      'pipe-functions'      => 'Hodi Funtzioak',
+      'config-reference'    => 'Konfigurazio Erreferentzia',
       'title-Recipes'       => 'Errezetak',
       'auth'                => 'Autentifikazioa',
       'uploads'             => 'Fitxategien igoerak',
@@ -86,25 +83,24 @@ class NavComponent extends OComponent {
     [
       'title' => 'Core Concepts',
       'items' => [
+        ['url' => '/docs/:lang/concepts/config',           'title' => '', 'active' => false],
+        ['url' => '/docs/:lang/concepts/cli',              'title' => '', 'active' => false],
         ['url' => '/docs/:lang/concepts/routing',          'title' => '', 'active' => false],
         ['url' => '/docs/:lang/concepts/components',       'title' => '', 'active' => false],
-        ['url' => '/docs/:lang/concepts/templates',        'title' => '', 'active' => false],
+        ['url' => '/docs/:lang/concepts/layout',           'title' => '', 'active' => false],
         ['url' => '/docs/:lang/concepts/dtos',             'title' => '', 'active' => false],
         ['url' => '/docs/:lang/concepts/filters',          'title' => '', 'active' => false],
         ['url' => '/docs/:lang/concepts/services',         'title' => '', 'active' => false],
-        ['url' => '/docs/:lang/concepts/model-components', 'title' => '', 'active' => false],
         ['url' => '/docs/:lang/concepts/orm',              'title' => '', 'active' => false],
-        ['url' => '/docs/:lang/concepts/config',           'title' => '', 'active' => false],
-        ['url' => '/docs/:lang/concepts/cli',              'title' => '', 'active' => false],
-        ['url' => '/docs/:lang/concepts/tasks',            'title' => '', 'active' => false]
+        ['url' => '/docs/:lang/concepts/plugins',          'title' => '', 'active' => false],
       ]
     ],
     [
       'title' => 'Reference',
       'items' => [
-        ['url' => '/docs/:lang/reference/attributes-orm', 'title' => '', 'active' => false],
-        ['url' => '/docs/:lang/reference/cli-commands',   'title' => '', 'active' => false],
-        ['url' => '/docs/:lang/reference/pipe-functions', 'title' => '', 'active' => false]
+        ['url' => '/docs/:lang/reference/cli-commands',     'title' => '', 'active' => false],
+        ['url' => '/docs/:lang/reference/attributes-orm',   'title' => '', 'active' => false],
+        ['url' => '/docs/:lang/reference/config-reference', 'title' => '', 'active' => false]
       ]
     ],
     [

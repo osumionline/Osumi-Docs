@@ -1,6 +1,6 @@
 <?php declare(strict_types=1);
 
-namespace Osumi\OsumiFramework\App\Component\Shared\Markdown;
+namespace Osumi\OsumiFramework\App\Component\Markdown;
 
 use Osumi\OsumiFramework\Core\OComponent;
 use League\CommonMark\GithubFlavoredMarkdownConverter;

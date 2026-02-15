@@ -4,9 +4,9 @@ namespace Osumi\OsumiFramework\App\Module\Docs;
 
 use Osumi\OsumiFramework\Core\OComponent;
 use Osumi\OsumiFramework\Web\ORequest;
-use Osumi\OsumiFramework\App\Component\Shared\Header\HeaderComponent;
-use Osumi\OsumiFramework\App\Component\Shared\Nav\NavComponent;
-use Osumi\OsumiFramework\App\Component\Shared\Markdown\MarkdownComponent;
+use Osumi\OsumiFramework\App\Component\Header\HeaderComponent;
+use Osumi\OsumiFramework\App\Component\Nav\NavComponent;
+use Osumi\OsumiFramework\App\Component\Markdown\MarkdownComponent;
 
 class DocsComponent extends OComponent {
 	public ?HeaderComponent   $header  = null;
@@ -37,9 +37,16 @@ class DocsComponent extends OComponent {
 		$this->nav->selected = $file;
 		$this->content->lang = $lang;
 
-		$file = $this->getConfig()->getDir('ofw_base').'docs/'.$lang.'/'.$folder.'/'.$file.'.md';
-		if (file_exists($file)) {
-			$this->content->file = $file;
+		$file_md = $this->getConfig()->getDir('ofw_base').'docs/'.$lang.'/'.$folder.'/'.$file.'.md';
+		if (file_exists($file_md)) {
+			$this->content->file = $file_md;
+			$this->getConfig()->addHeadElement([
+				'item' => 'link',
+				'attributes' => [
+					'rel' => 'canonical',
+					'href' => 'https://framework.osumi.dev/docs/'.$lang.'/'.$folder.'/'.$file
+				]
+			]);
 		}
 	}
 }

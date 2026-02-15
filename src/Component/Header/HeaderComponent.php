@@ -1,6 +1,6 @@
 <?php declare(strict_types=1);
 
-namespace Osumi\OsumiFramework\App\Component\Shared\Header;
+namespace Osumi\OsumiFramework\App\Component\Header;
 
 use Osumi\OsumiFramework\Core\OComponent;
 use Osumi\OsumiFramework\Tools\OTools;
