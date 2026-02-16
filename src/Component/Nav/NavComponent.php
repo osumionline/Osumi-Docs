@@ -27,6 +27,8 @@ class NavComponent extends OComponent {
       'title-Recipes'       => 'Recipes',
       'auth'                => 'Authentication',
       'uploads'             => 'File Uploads',
+      'title-Migrations'    => 'Migrations',
+      'migrations'          => 'Migration guides',
     ],
     'es' => [
       'title-Quickstart'    => 'Inicio rápido',
@@ -49,6 +51,8 @@ class NavComponent extends OComponent {
       'title-Recipes'       => 'Recetas',
       'auth'                => 'Autenticacion',
       'uploads'             => 'Subida de archivos',
+      'title-Migrations'    => 'Migraciones',
+      'migrations'          => 'Guías de Migraciones',
     ],
     'eu' => [
       'title-Quickstart'    => 'Hasiberri Gida',
@@ -71,6 +75,8 @@ class NavComponent extends OComponent {
       'title-Recipes'       => 'Errezetak',
       'auth'                => 'Autentifikazioa',
       'uploads'             => 'Fitxategien igoerak',
+      'title-Migrations'    => 'Migrazioak',
+      'migrations'          => 'Migrazio gidak',
     ]
   ];
   public array $sections = [
@@ -109,7 +115,13 @@ class NavComponent extends OComponent {
         ['url' => '/docs/:lang/recipes/auth',    'title' => '', 'active' => false],
         ['url' => '/docs/:lang/recipes/uploads', 'title' => '', 'active' => false]
       ]
-    ]
+    ],
+    [
+      'title' => 'Migrations',
+      'items' => [
+        ['url' => '/:lang/migrations', 'title' => '', 'active' => false]
+      ]
+    ],
   ];
   public string $selected = '';
   public string $lang = 'es';

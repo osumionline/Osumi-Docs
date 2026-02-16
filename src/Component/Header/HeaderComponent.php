@@ -7,6 +7,9 @@ use Osumi\OsumiFramework\Tools\OTools;
 
 class HeaderComponent extends OComponent {
 	public string $version = '';
+	public string $es_link = '';
+	public string $en_link = '';
+	public string $eu_link = '';
 
 	public function __construct() {
 		parent::__construct();

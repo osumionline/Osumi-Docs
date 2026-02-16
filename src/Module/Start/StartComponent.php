@@ -9,7 +9,8 @@ use Osumi\OsumiFramework\App\Component\Nav\NavComponent;
 
 class StartComponent extends OComponent {
 	public ?HeaderComponent $header = null;
-	public ?NavComponent $nav = null;
+	public ?NavComponent    $nav    = null;
+	public ?string          $lang   = 'es';
 
 	public function __construct() {
 		parent::__construct();
@@ -24,61 +25,14 @@ class StartComponent extends OComponent {
 	 * @return void
 	 */
 	public function run(ORequest $req):void {
-		$this->nav->lang = 'es';
+		$this->lang = $req->getParamString('lang');
+		if (is_null($this->lang)) {
+			$this->lang = 'es';
+		}
+		$this->nav->lang = $this->lang;
+		// Enlaces de navegación a otros idiomas
+		$this->header->es_link = 'https://framework.osumi.dev/';
+		$this->header->en_link = 'https://framework.osumi.dev/en';
+		$this->header->eu_link = 'https://framework.osumi.dev/eu';
 	}
 }
-
-/*
-Home
-Quickstart
-
-Core Concepts
-  ├─ Routing
-  ├─ Components
-  ├─ Templates & Pipes
-  ├─ DTOs
-  ├─ Requests (ORequest)
-  ├─ Filters
-  ├─ Services
-  ├─ Model Components
-  ├─ ORM (Models)
-  ├─ Configuration
-  ├─ CLI
-  └─ Tasks
-
-Reference
-  ├─ Attributes (ORM)
-  ├─ Pipe Functions
-  ├─ CLI Commands
-  ├─ Component Info
-  ├─ ORequest Methods
-  └─ Configuration Keys
-
-Recipes
-  ├─ Authentication
-  ├─ File Uploads
-  ├─ Pagination
-  ├─ Model Lists
-  ├─ Caching patterns
-  └─ API patterns
-
-Advanced
-  ├─ Request Lifecycle
-  ├─ Deep Dive: Routing
-  ├─ Deep Dive: ORM
-  ├─ Deep Dive: Components
-  └─ Performance
-
-Guides
-  ├─ Building an API
-  ├─ Building a CRUD module
-  ├─ Authentication E2E
-  └─ Creating Custom Pipes
-
-Plugins
-  └─ OToken
-
-Migrations
-Changelog
-Contributing
-*/

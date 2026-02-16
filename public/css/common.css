@@ -65,7 +65,7 @@ body {
     align-items: center;
     gap: 12px;
 
-    .repo-link {
+    a {
       color: var(--link-color);
       text-decoration: none;
 
@@ -181,6 +181,86 @@ body {
   padding: 56px 30px 30px;
   width: calc(100% - 260px);
   overflow-y: auto;
+
+  .home {
+    max-width: 980px;
+    margin-inline: auto;
+    padding-block: 26px 60px;
+
+    color: #d8d8d8;
+    line-height: 1.7;
+    font-size: 16px;
+
+    /* Title */
+    > h2 {
+      color: var(--text-color);
+      font-size: 2rem;
+      font-weight: 800;
+      letter-spacing: 0.2px;
+
+      margin-block: 0.5rem 1rem;
+    }
+
+    /* Text blocks */
+    > p {
+      margin-block: 0.85rem;
+      max-width: 78ch;
+
+      /* subtle readability */
+      text-wrap: pretty;
+    }
+
+    /* Lead paragraph (first one) */
+    > p:first-of-type {
+      font-size: 1.05rem;
+      color: #e6e6e6;
+    }
+
+    /* List */
+    > ul {
+      margin-block: 1rem 1.2rem;
+      padding: 0;
+      list-style: none;
+      max-width: 78ch;
+
+      display: grid;
+      gap: 10px;
+
+      > li {
+        position: relative;
+        padding: 10px 12px 10px 40px;
+        border: 1px solid #303030;
+        border-radius: 14px;
+        background: rgba(255, 255, 255, 0.04);
+
+        /* bullet */
+        &::before {
+          content: "";
+          position: absolute;
+          inset-inline-start: 14px;
+          inset-block-start: 50%;
+          translate: 0 -50%;
+
+          width: 14px;
+          height: 14px;
+          border-radius: 999px;
+
+          background: color-mix(in srgb, var(--link-color) 55%, transparent);
+          border: 1px solid color-mix(in srgb, var(--link-color) 65%, #000);
+          box-shadow: 0 0 0 4px rgba(249, 194, 2, 0.10);
+        }
+
+        a {
+          color: var(--link-color);
+          text-decoration: none;
+
+          &:hover {
+            color: var(--link-color-hover);
+          }
+        }
+      }
+    }
+  }
 }
 
 /* MOBILE */
@@ -395,7 +475,7 @@ body {
           user-select: none;
 
           &:hover {
-            background: rgba(255, 255, 255, 0.10);
+            background-color: rgba(255, 255, 255, 0.10);
             border-color: #4a4a4a;
           }
 
@@ -456,6 +536,24 @@ body {
       max-width: 100%;
       height: auto;
       border-radius: 12px;
+    }
+  }
+
+  .footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 16px;
+    border: 1px solid #303030;
+    border-radius: 14px;
+    background: rgba(255, 255, 255, 0.04);
+
+    a {
+      color: var(--link-color);
+      text-decoration: none;
+
+      &:hover {
+        color: var(--link-color-hover);
+      }
     }
   }
 }
