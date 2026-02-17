@@ -25,6 +25,7 @@ class NavComponent extends OComponent {
       'cli-commands'        => 'CLI Commands',
       'config-reference'    => 'Config Reference',
       'title-Recipes'       => 'Recipes',
+      'common-tasks'        => 'Common tasks',
       'auth'                => 'Authentication',
       'uploads'             => 'File Uploads',
       'title-Migrations'    => 'Migrations',
@@ -49,6 +50,7 @@ class NavComponent extends OComponent {
       'cli-commands'        => 'Comandos CLI',
       'config-reference'    => 'Referencia de Configuración',
       'title-Recipes'       => 'Recetas',
+      'common-tasks'        => 'Tareas habituales',
       'auth'                => 'Autenticacion',
       'uploads'             => 'Subida de archivos',
       'title-Migrations'    => 'Migraciones',
@@ -73,6 +75,7 @@ class NavComponent extends OComponent {
       'cli-commands'        => 'CLI Komandoak',
       'config-reference'    => 'Konfigurazio Erreferentzia',
       'title-Recipes'       => 'Errezetak',
+      'common-tasks'        => 'Ataza arruntak',
       'auth'                => 'Autentifikazioa',
       'uploads'             => 'Fitxategien igoerak',
       'title-Migrations'    => 'Migrazioak',
@@ -83,7 +86,7 @@ class NavComponent extends OComponent {
     [
       'title' => 'Quickstart',
       'items' => [
-        ['url' => '/:lang/quickstart', 'title' => '', 'active' => false]
+        ['url' => '/:lang/quickstart', 'title' => '', 'active' => false],
       ]
     ],
     [
@@ -106,20 +109,21 @@ class NavComponent extends OComponent {
       'items' => [
         ['url' => '/docs/:lang/reference/cli-commands',     'title' => '', 'active' => false],
         ['url' => '/docs/:lang/reference/attributes-orm',   'title' => '', 'active' => false],
-        ['url' => '/docs/:lang/reference/config-reference', 'title' => '', 'active' => false]
+        ['url' => '/docs/:lang/reference/config-reference', 'title' => '', 'active' => false],
       ]
     ],
     [
       'title' => 'Recipes',
       'items' => [
-        ['url' => '/docs/:lang/recipes/auth',    'title' => '', 'active' => false],
-        ['url' => '/docs/:lang/recipes/uploads', 'title' => '', 'active' => false]
+        ['url' => '/docs/:lang/recipes/common-tasks', 'title' => '', 'active' => false],
+        ['url' => '/docs/:lang/recipes/auth',         'title' => '', 'active' => false],
+        ['url' => '/docs/:lang/recipes/uploads',      'title' => '', 'active' => false],
       ]
     ],
     [
       'title' => 'Migrations',
       'items' => [
-        ['url' => '/:lang/migrations', 'title' => '', 'active' => false]
+        ['url' => '/:lang/migrations', 'title' => '', 'active' => false],
       ]
     ],
   ];

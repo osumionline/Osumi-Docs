@@ -80,6 +80,14 @@ class QuickstartComponent extends OComponent {
 					'href' => 'https://framework.osumi.dev/eu/quickstart'
 				]
 			]);
+			$this->getConfig()->addHeadElement([
+				'item' => 'link',
+				'attributes' => [
+					'rel' => 'alternate',
+					'hreflang' => 'x-default',
+					'href' => 'https://framework.osumi.dev/es/quickstart'
+				]
+			]);
 		}
 		else {
 			$this->footer->lang = '';

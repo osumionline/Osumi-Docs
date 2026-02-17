@@ -83,6 +83,14 @@ class DocsComponent extends OComponent {
 					'href' => 'https://framework.osumi.dev/docs/eu/'.$folder.'/'.$file
 				]
 			]);
+			$this->getConfig()->addHeadElement([
+				'item' => 'link',
+				'attributes' => [
+					'rel' => 'alternate',
+					'hreflang' => 'x-default',
+					'href' => 'https://framework.osumi.dev/docs/es/'.$folder.'/'.$file
+				]
+			]);
 		}
 		else {
 			$this->footer->lang = '';
