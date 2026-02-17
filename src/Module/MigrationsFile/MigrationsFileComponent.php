@@ -83,6 +83,15 @@ class MigrationsFileComponent extends OComponent {
 					'href' => 'https://framework.osumi.dev/eu/migrations/'.$file
 				]
 			]);
+			// Añado librerías PrismJS
+			$this->addCss('/css/prism-toolbar.min.css');
+			$this->addCss('/css/prism-tomorrow.min.css');
+			$this->addJs('/js/prism.min.js');
+			$this->addJs('/js/prism-autoloader.min.js');
+			$this->addJs('/js/prism-toolbar.min.js');
+			$this->addJs('/js/prism-copy-to-clipboard.min.js');
+			$this->addJs('/js/prism-show-language.min.js');
+			$this->addJs('/js/prism-languages.js');
 		}
 		else {
 			$this->footer->lang = '';
