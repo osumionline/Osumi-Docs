@@ -23,7 +23,14 @@ class SeoSchemaService extends OService {
   // ============================================================
   public function setLoaded(bool $l): void { $this->loaded = $l; }
   public function setTitle(string $t): void { $this->title = $t; }
-  public function setDescription(string $d): void { $this->description = $d; }
+  public function setDescription(string $d): void {
+    if (strlen($d) > 150) {
+      $this->description = mb_substr($d, 0, 145, "UTF-8") . '...';
+    }
+    else {
+      $this->description = $d;
+    }
+  }
   public function setCanonical(string $c): void { $this->canonical = $c; }
   public function setLang(string $l): void { $this->lang = $l; }
   public function setLastmod(string $lm): void { $this->lastmod = $lm; }
