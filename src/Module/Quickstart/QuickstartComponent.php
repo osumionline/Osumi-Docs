@@ -4,12 +4,15 @@ namespace Osumi\OsumiFramework\App\Module\Quickstart;
 
 use Osumi\OsumiFramework\Core\OComponent;
 use Osumi\OsumiFramework\Web\ORequest;
+use Osumi\OsumiFramework\App\Service\SeoSchemaService;
 use Osumi\OsumiFramework\App\Component\Header\HeaderComponent;
 use Osumi\OsumiFramework\App\Component\Footer\FooterComponent;
 use Osumi\OsumiFramework\App\Component\Nav\NavComponent;
 use Osumi\OsumiFramework\App\Component\Markdown\MarkdownComponent;
+use Osumi\OsumiFramework\App\Utils\Utils;
 
 class QuickstartComponent extends OComponent {
+	private ?SeoSchemaService  $seo     = null;
 	public ?HeaderComponent   $header  = null;
 	public ?FooterComponent   $footer  = null;
 	public ?NavComponent      $nav     = null;
@@ -17,6 +20,7 @@ class QuickstartComponent extends OComponent {
 
 	public function __construct() {
 		parent::__construct();
+		$this->seo     = inject(SeoSchemaService::class);
 		$this->header  = new HeaderComponent();
 		$this->footer  = new FooterComponent();
 		$this->nav     = new NavComponent(['selected' => 'quickstart']);
@@ -37,57 +41,36 @@ class QuickstartComponent extends OComponent {
 		$this->nav->lang = $lang;
 		$this->content->lang = $lang;
 
-		$file = $this->getConfig()->getDir('ofw_base').'docs/'.$lang.'/quickstart.md';
-		if (file_exists($file)) {
+		$file_md = $this->getConfig()->getDir('ofw_base').'docs/'.$lang.'/quickstart.md';
+		if (file_exists($file_md)) {
+			$utils = new Utils();
+
 			// Contenido de la página
-			$this->content->file = $file;
+			$this->content->file = $file_md;
+			$this->content->loadFile();
+
+			// Añado contenido al SeoSchemaService
+			$canonical = $utils->buildCanonicalFromPath($this->getConfig(), $this->content->file, $this->content->lang);
+			$pathParts = $utils->computePathPartsFromCanonical($canonical);
+
+			$this->seo->setTitle($this->content->title);
+			$this->seo->setDescription($this->content->description);
+			$this->seo->setLang($this->content->lang);
+			$this->seo->setCanonical($canonical);
+			$this->seo->setLastmod($this->content->lastmod);
+			$this->seo->setHeadings($this->content->headings);
+			$this->seo->setPathParts($pathParts);
+			$this->seo->setLoaded(true);
+
 			// Enlaces de navegación a otros idiomas
 			$this->header->es_link = 'https://framework.osumi.dev/es/quickstart';
 			$this->header->en_link = 'https://framework.osumi.dev/en/quickstart';
 			$this->header->eu_link = 'https://framework.osumi.dev/eu/quickstart';
+
 			// Footer
 			$this->footer->lang = $lang;
 			$this->footer->link = 'https://framework.osumi.dev/md/'.$lang.'/quickstart';
-			// Canonicals
-			$this->getConfig()->addHeadElement([
-				'item' => 'link',
-				'attributes' => [
-					'rel' => 'canonical',
-					'href' => 'https://framework.osumi.dev/'.$lang.'/quickstart'
-				]
-			]);
-			$this->getConfig()->addHeadElement([
-				'item' => 'link',
-				'attributes' => [
-					'rel' => 'alternate',
-					'hreflang' => 'es',
-					'href' => 'https://framework.osumi.dev/es/quickstart'
-				]
-			]);
-			$this->getConfig()->addHeadElement([
-				'item' => 'link',
-				'attributes' => [
-					'rel' => 'alternate',
-					'hreflang' => 'en',
-					'href' => 'https://framework.osumi.dev/en/quickstart'
-				]
-			]);
-			$this->getConfig()->addHeadElement([
-				'item' => 'link',
-				'attributes' => [
-					'rel' => 'alternate',
-					'hreflang' => 'eu',
-					'href' => 'https://framework.osumi.dev/eu/quickstart'
-				]
-			]);
-			$this->getConfig()->addHeadElement([
-				'item' => 'link',
-				'attributes' => [
-					'rel' => 'alternate',
-					'hreflang' => 'x-default',
-					'href' => 'https://framework.osumi.dev/es/quickstart'
-				]
-			]);
+
 			// Añado librerías PrismJS
 			$this->addCss('/css/prism-toolbar.min.css');
 			$this->addCss('/css/prism-tomorrow.min.css');

@@ -5,70 +5,110 @@ namespace Osumi\OsumiFramework\App\Service;
 use Osumi\OsumiFramework\Core\OService;
 
 class SeoSchemaService extends OService {
-  /** WebSite + (opcional) SearchAction */
-  public function websiteJsonLd(): array {
-    $cfg = $this->getConfig();
-    $name = $cfg->getName() ?? 'Osumi Framework';
-    $url  = rtrim($this->getBaseUrl(), '/');
+  // ============================================================
+  // INTERNAL SEO DATA (filled by DocsComponent)
+  // ============================================================
+  private bool   $loaded = false;
+  private string $title = '';
+  private string $description = '';
+  private string $canonical = '';
+  private string $lang = 'en';
+  private string $lastmod = '';
+  private array  $headings = [];
+  private array  $pathParts = [];   // for breadcrumbs
 
-    $webSite = [
+
+  // ============================================================
+  // SETTERS (called by DocsComponent)
+  // ============================================================
+  public function setLoaded(bool $l): void { $this->loaded = $l; }
+  public function setTitle(string $t): void { $this->title = $t; }
+  public function setDescription(string $d): void { $this->description = $d; }
+  public function setCanonical(string $c): void { $this->canonical = $c; }
+  public function setLang(string $l): void { $this->lang = $l; }
+  public function setLastmod(string $lm): void { $this->lastmod = $lm; }
+  public function setHeadings(array $h): void { $this->headings = $h; }
+
+  /**
+   * Save the URL path parts for breadcrumbs.
+   * Example: ["docs","en","concepts","routing"]
+   */
+  public function setPathParts(array $pp): void {
+    $this->pathParts = $pp;
+  }
+
+
+  // ============================================================
+  // GETTERS (read by Layout)
+  // ============================================================
+  public function getLoaded(): bool { return $this->loaded; }
+  public function getTitle(): string { return $this->title; }
+  public function getDescription(): string { return $this->description; }
+  public function getCanonical(): string { return $this->canonical; }
+  public function getLang(): string { return $this->lang; }
+  public function getLastmod(): string { return $this->lastmod; }
+  public function getHeadings(): array { return $this->headings; }
+
+
+  // ============================================================
+  // JSON-LD: WebSite
+  // ============================================================
+  public function websiteJsonLd(): array {
+    $cfg  = $this->getConfig();
+    $name = $cfg->getName() ?? 'Osumi Framework';
+    $url  = $cfg->getUrl('base');
+
+    return [
       '@context' => 'https://schema.org',
       '@type'    => 'WebSite',
       'name'     => $name,
       'url'      => $url,
     ];
-
-    // Si tienes buscador en /search?q=
-    $webSite['potentialAction'] = [
-      '@type'       => 'SearchAction',
-      'target'      => $url . '/search?q={search_term_string}',
-      'query-input' => 'required name=search_term_string'
-    ];
-
-    return $webSite;
   }
 
-  /** Organization (tu marca / autoría del framework) */
+
+  // ============================================================
+  // JSON-LD: Organization
+  // ============================================================
   public function organizationJsonLd(): array {
     $cfg = $this->getConfig();
-    $url = rtrim($this->getBaseUrl(), '/');
+    $base = $cfg->getUrl('base');
 
-    $org = [
-      '@context'  => 'https://schema.org',
-      '@type'     => 'Organization',
-      'name'      => $cfg->getName() ?? 'Osumi Framework',
-      'url'       => $url,
-      // Logo opcional si lo tienes en public/img/logo.png:
-      'logo'      => $url . '/img/logo.png',
-      // Rellenar con tus redes si quieres
-      'sameAs'    => array_values(array_filter([
+    return [
+      '@context' => 'https://schema.org',
+      '@type'    => 'Organization',
+      'name'     => $cfg->getName() ?? 'Osumi Framework',
+      'url'      => $base,
+      'logo'     => $base . 'img/osumi.png',
+      'sameAs'   => array_values(array_filter([
         $cfg->getExtra('twitter') ?? null,
-        $cfg->getExtra('github')  ?? 'https://github.com/osumionline/framework',
+        $cfg->getExtra('github')  ?? null,
         $cfg->getExtra('website') ?? null
       ]))
     ];
-
-    return $org;
   }
 
-  /** Breadcrumbs a partir de /{lang}/docs/... */
-  public function breadcrumbJsonLd(string $fullUrl, string $lang): array {
-    $url = rtrim($this->getBaseUrl(), '/');
-    $path = parse_url($fullUrl, PHP_URL_PATH) ?? '/';
-    $parts = array_values(array_filter(explode('/', $path))); // ['en','docs','concepts','routing']
 
-    // Construir items acumulando la ruta
+  // ============================================================
+  // JSON-LD: BreadcrumbList
+  // Uses $this->pathParts
+  // ============================================================
+  public function breadcrumbJsonLd(): array {
+    $cfg = $this->getConfig();
+    $base = $cfg->getUrl('base');
+
     $itemList = [];
     $acc = '';
     $pos = 1;
 
-    foreach ($parts as $p) {
+    foreach ($this->pathParts as $p) {
       $acc .= '/' . $p;
+
       $itemList[] = [
         '@type'    => 'ListItem',
         'position' => $pos++,
         'name'     => $this->humanize($p),
-        'item'     => $url . $acc
+        'item'     => $base . ltrim($acc, '/')
       ];
     }
 
@@ -79,52 +119,46 @@ class SeoSchemaService extends OService {
     ];
   }
 
-  /**
-   * TechArticle para páginas de doc.
-   * $title: título de la página (h1)
-   * $description: primer párrafo o metadesc
-   * $lang: 'en'|'es'|'eu'
-   * $url: url canónica de la página
-   * $lastmod: Y-m-d (de filemtime del .md)
-   */
-  public function techArticleJsonLd(
-    string $title, string $description, string $lang, string $url, string $lastmod
-  ): array {
+
+  // ============================================================
+  // JSON-LD: TechArticle (uses stored properties)
+  // ============================================================
+  public function techArticleJsonLd(): array {
     $cfg = $this->getConfig();
-    $publisherName = $cfg->getName() ?? 'Osumi Framework';
-    $publisherUrl  = rtrim($this->getBaseUrl(), '/');
+    $publisher = $cfg->getName() ?? 'Osumi Framework';
+    $base      = $cfg->getUrl('base');
 
     return [
       '@context'     => 'https://schema.org',
       '@type'        => 'TechArticle',
-      'headline'     => $title,
-      'inLanguage'   => $lang,
-      'description'  => $description,
-      'url'          => $url,
-      'dateModified' => $lastmod, // YYYY-MM-DD
-      'publisher'    => [
+
+      'headline'     => $this->title,
+      'description'  => $this->description,
+      'inLanguage'   => $this->lang,
+      'url'          => $this->canonical,
+      'dateModified' => $this->lastmod,
+
+      'publisher' => [
         '@type' => 'Organization',
-        'name'  => $publisherName,
-        'url'   => $publisherUrl
+        'name'  => $publisher,
+        'url'   => $base
       ],
-      // Opcional: autor (si quieres dejarte a ti)
-      'author'       => [
+
+      'author' => [
         '@type' => 'Person',
         'name'  => 'Iñigo Gorosabel'
       ]
     ];
   }
 
-  /** Helper: base_url desde extra o derivada */
-  private function getBaseUrl(): string {
-    $cfg = $this->getConfig();
-    $base = $cfg->getExtra('base_url') ?? '';
-    return $base !== '' ? rtrim($base, '/') : '';
-  }
 
-  /** Helper: convierte 'model-components' -> 'Model Components', 'es' -> 'es' */
+  // ============================================================
+  // Helper for breadcrumbs: convert slug to readable
+  // ============================================================
   private function humanize(string $slug): string {
-    if (in_array($slug, ['en','es','eu'])) return strtoupper($slug);
+    if (in_array($slug, ['en','es','eu'])) {
+      return strtoupper($slug);
+    }
     $slug = str_replace(['-','_'], ' ', $slug);
     return ucwords($slug);
   }

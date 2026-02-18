@@ -1,66 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://framework.osumi.dev/</loc></url>
-
-  <!-- Quickstart -->
-  <url><loc>https://framework.osumi.dev/es/quickstart</loc></url>
-  <url><loc>https://framework.osumi.dev/en/quickstart</loc></url>
-  <url><loc>https://framework.osumi.dev/eu/quickstart</loc></url>
-
-  <!-- ES docs -->
-  <url><loc>https://framework.osumi.dev/docs/es/concepts/config</loc></url>
-  <url><loc>https://framework.osumi.dev/docs/es/concepts/cli</loc></url>
-  <url><loc>https://framework.osumi.dev/docs/es/concepts/routing</loc></url>
-  <url><loc>https://framework.osumi.dev/docs/es/concepts/components</loc></url>
-  <url><loc>https://framework.osumi.dev/docs/es/concepts/layout</loc></url>
-  <url><loc>https://framework.osumi.dev/docs/es/concepts/dtos</loc></url>
-  <url><loc>https://framework.osumi.dev/docs/es/concepts/filters</loc></url>
-  <url><loc>https://framework.osumi.dev/docs/es/concepts/services</loc></url>
-  <url><loc>https://framework.osumi.dev/docs/es/concepts/orm</loc></url>
-  <url><loc>https://framework.osumi.dev/docs/es/concepts/plugins</loc></url>
-
-  <url><loc>https://framework.osumi.dev/docs/es/reference/cli-commands</loc></url>
-  <url><loc>https://framework.osumi.dev/docs/es/reference/attributes-orm</loc></url>
-  <url><loc>https://framework.osumi.dev/docs/es/reference/config-reference</loc></url>
-
-  <url><loc>https://framework.osumi.dev/docs/es/recipes/auth</loc></url>
-  <url><loc>https://framework.osumi.dev/docs/es/recipes/uploads</loc></url>
-
-  <!-- EN docs -->
-  <url><loc>https://framework.osumi.dev/docs/en/concepts/config</loc></url>
-  <url><loc>https://framework.osumi.dev/docs/en/concepts/cli</loc></url>
-  <url><loc>https://framework.osumi.dev/docs/en/concepts/routing</loc></url>
-  <url><loc>https://framework.osumi.dev/docs/en/concepts/components</loc></url>
-  <url><loc>https://framework.osumi.dev/docs/en/concepts/layout</loc></url>
-  <url><loc>https://framework.osumi.dev/docs/en/concepts/dtos</loc></url>
-  <url><loc>https://framework.osumi.dev/docs/en/concepts/filters</loc></url>
-  <url><loc>https://framework.osumi.dev/docs/en/concepts/services</loc></url>
-  <url><loc>https://framework.osumi.dev/docs/en/concepts/orm</loc></url>
-  <url><loc>https://framework.osumi.dev/docs/en/concepts/plugins</loc></url>
-
-  <url><loc>https://framework.osumi.dev/docs/en/reference/cli-commands</loc></url>
-  <url><loc>https://framework.osumi.dev/docs/en/reference/attributes-orm</loc></url>
-  <url><loc>https://framework.osumi.dev/docs/en/reference/config-reference</loc></url>
-
-  <url><loc>https://framework.osumi.dev/docs/en/recipes/auth</loc></url>
-  <url><loc>https://framework.osumi.dev/docs/en/recipes/uploads</loc></url>
-
-  <!-- EU docs -->
-  <url><loc>https://framework.osumi.dev/docs/eu/concepts/config</loc></url>
-  <url><loc>https://framework.osumi.dev/docs/eu/concepts/cli</loc></url>
-  <url><loc>https://framework.osumi.dev/docs/eu/concepts/routing</loc></url>
-  <url><loc>https://framework.osumi.dev/docs/eu/concepts/components</loc></url>
-  <url><loc>https://framework.osumi.dev/docs/eu/concepts/layout</loc></url>
-  <url><loc>https://framework.osumi.dev/docs/eu/concepts/dtos</loc></url>
-  <url><loc>https://framework.osumi.dev/docs/eu/concepts/filters</loc></url>
-  <url><loc>https://framework.osumi.dev/docs/eu/concepts/services</loc></url>
-  <url><loc>https://framework.osumi.dev/docs/eu/concepts/orm</loc></url>
-  <url><loc>https://framework.osumi.dev/docs/eu/concepts/plugins</loc></url>
-
-  <url><loc>https://framework.osumi.dev/docs/eu/reference/cli-commands</loc></url>
-  <url><loc>https://framework.osumi.dev/docs/eu/reference/attributes-orm</loc></url>
-  <url><loc>https://framework.osumi.dev/docs/eu/reference/config-reference</loc></url>
-
-  <url><loc>https://framework.osumi.dev/docs/eu/recipes/auth</loc></url>
-  <url><loc>https://framework.osumi.dev/docs/eu/recipes/uploads</loc></url>
-</urlset>
+<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <sitemap>
+    <loc>https://framework.osumi.dev/sitemap-en.xml</loc>
+    <lastmod>2026-02-18</lastmod>
+  </sitemap>
+  <sitemap>
+    <loc>https://framework.osumi.dev/sitemap-es.xml</loc>
+    <lastmod>2026-02-18</lastmod>
+  </sitemap>
+  <sitemap>
+    <loc>https://framework.osumi.dev/sitemap-eu.xml</loc>
+    <lastmod>2026-02-18</lastmod>
+  </sitemap>
+</sitemapindex>

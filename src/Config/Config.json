@@ -1,8 +1,13 @@
 {
 	"log_level": "ERROR",
-	"base_url": "https://framework.osumi.es/",
+	"base_url": "https://framework.osumi.dev/",
 	"default_title": "Osumi Framework",
 	"lang": "es",
 	"css": ["common.min"],
-	"js": ["common.min"]
+	"js": ["common.min"],
+	"extra": {
+		"twitter": "https://x.com/osumionline",
+		"github": "https://github.com/osumionline/framework",
+		"website": "https://framework.osumi.dev"
+	}
 }

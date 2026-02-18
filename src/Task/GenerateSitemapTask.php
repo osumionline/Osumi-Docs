@@ -137,7 +137,7 @@ class GenerateSitemapTask extends OTask {
     }
 
     // === Sitemap index (prueba) ===
-    $indexPath = $publicDir . 'sitemap_prueba.xml';
+    $indexPath = $publicDir . 'sitemap.xml';
 
     $indexXml = new \SimpleXMLElement(
       '<?xml version="1.0" encoding="UTF-8"?>'
