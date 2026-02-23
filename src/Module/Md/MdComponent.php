@@ -24,7 +24,12 @@ class MdComponent extends OComponent {
 			$file = preg_replace('/(?<=\d)-(?=\d)/', '.', $file);
 		}
 
-		$file_md = $this->getConfig()->getDir('ofw_base').'docs/'.$lang.'/'.$folder.'/'.$file.'.md';
+		if (!is_null($folder)) {
+			$file_md = $this->getConfig()->getDir('ofw_base').'docs/'.$lang.'/'.$folder.'/'.$file.'.md';
+		}
+		else {
+			$file_md = $this->getConfig()->getDir('ofw_base').'docs/'.$lang.'/'.$file.'.md';
+		}
 		if (file_exists($file_md)) {
       $content = file_get_contents($file_md);
       header('Content-Type: text/markdown; charset=UTF-8');
