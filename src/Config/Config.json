@@ -6,6 +6,7 @@
 	"css": ["common.min"],
 	"js": ["common.min"],
 	"extra": {
+		"base_url": "https://framework.osumi.dev",
 		"twitter": "https://x.com/osumionline",
 		"github": "https://github.com/osumionline/framework",
 		"website": "https://framework.osumi.dev"
