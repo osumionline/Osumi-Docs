@@ -35,19 +35,24 @@ class MigrationsComponent extends OComponent {
 		$this->header->es_link = 'https://framework.osumi.dev/es/migrations';
     $this->header->en_link = 'https://framework.osumi.dev/en/migrations';
 		$this->header->eu_link = 'https://framework.osumi.dev/eu/migrations';
-    $migrations_path = $this->getConfig()->getDir('ofw_base').'docs/'.$this->lang.'/migrations/*.md';
-    $archivos_md = glob($migrations_path);
-    rsort($archivos_md);
-    foreach ($archivos_md as $archivo) {
-      $archivo = basename($archivo);
-      $nombre  = str_ireplace('.md', '', $archivo);
-      $slug    = str_ireplace('.', '-', $nombre);
-      $partes  = explode('-to-', $nombre);
-      $this->list[] = [
-        'from' => $partes[0],
-        'to'   => $partes[1],
-        'slug' => $slug
-      ];
-    }
+		$migrations_path = $this->getConfig()->getDir('ofw_base').'docs/'.$this->lang.'/migrations/*.md';
+		$archivos_md = glob($migrations_path);
+
+		foreach ($archivos_md as $archivo) {
+		  $nombre = basename($archivo, '.md');
+		  $partes = explode('-to-', $nombre);
+		  if (count($partes) !== 2) {
+		    continue; // ignora archivos que no sigan el patrón "X-to-Y"
+		  }
+		  $this->list[] = [
+		    'from' => $partes[0],
+		    'to'   => $partes[1],
+		    'slug' => str_replace('.', '-', $nombre)
+		  ];
+		}
+
+		usort($this->list, fn(array $a, array $b): int =>
+		  version_compare($b['to'], $a['to']) ?: version_compare($b['from'], $a['from'])
+		);
 	}
 }
