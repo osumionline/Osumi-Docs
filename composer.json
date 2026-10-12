@@ -15,7 +15,7 @@
   "require": {
     "php": ">=8.5",
     "league/commonmark": "^2.8",
-    "osumionline/framework": "^9.9.0"
+    "osumionline/framework": "^9.10.2"
   },
   "autoload": {
     "psr-4": {
