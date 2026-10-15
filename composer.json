@@ -1,9 +1,9 @@
 {
-  "name": "osumionline/new",
-  "description": "Aplicación esqueleto basada en Osumi Framework.",
+  "name": "osumionline/docs",
+  "description": "Documentación oficial para Osumi Framework.",
   "type": "project",
-  "keywords": ["osumi", "framework", "skeleton"],
-  "homepage": "https://github.com/osumionline/new",
+  "keywords": ["osumi", "framework", "docs"],
+  "homepage": "https://framework.osumi.dev",
   "license": "MIT",
   "authors": [
     {
@@ -15,7 +15,7 @@
   "require": {
     "php": ">=8.5",
     "league/commonmark": "^2.8",
-    "osumionline/framework": "^9.11.0"
+    "osumionline/framework": "^9.12.1"
   },
   "autoload": {
     "psr-4": {
